@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+.banner-section {
+  background-image: url("../../../public/assets/images/sec1-background.webp");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding-top: 110px;
+  padding-bottom: 100px;
+  /* height: 100vh; */
+}
+@media only screen and (max-width: 768px) {
+  .banner-section {
+    /* height: 650px; */
+    overflow: visible;
+    min-height: 0;
+  }
+}
+.slider-heading-dec {
+  color: #fff;
+  margin-right: 40px;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+.slider-dec {
+  color: #fff;
+  /* margin-right: 10px; */
+  /* font-size: 20px; */
+  font-family: sans-serif;
+  text-align: justify;
+}
+.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #f6c000 !important;
+  height: 10px;
+  width: 10px;
+}
+.swiper-pagination-bullet {
+  background-color: #cacaca;
+  height: 10px;
+  width: 10px;
+  opacity: 1;
+}
+.slider-get_btn {
+  padding: 14px 50px !important;
+  font-size: 18px !important;
+  border-radius: 33px;
+  margin-top: 15px;
+  font-weight: 600 !important;
+  position: relative;
+  background-color: #f6c000;
+  height: auto !important;
+  color: #000 !important;
+  max-width: 150px;
+}
+
+.loading_bar{
+  text-align: center;
+}
+.slider-img img {
+  width: 100%;
+}
+@media only screen and (max-width: 991px) {
+  .slider-img img {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .slider-heading-dec {
+    font-size: 20px;
+    text-align: justify;
+  }
+  .slider-dec {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .slider-heading-dec {
+    font-size: 16px;
+    text-align: justify;
+  }
+  .slider-dec {
+    font-size: 14px;
+    text-align: justify;
+  }
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="SvgjsSvg1001" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240.64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #5b2c62;
+      }
+
+      .cls-2 {
+        fill: #c1dbdc;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-linecap: round;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke: #5b2c62;
+        stroke-linejoin: round;
+        stroke-width: 8px;
+      }
+
+      .cls-3, .cls-4 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="SvgjsG1008">
+    <circle class="cls-3" cx="35.17" cy="14" r="10"/>
+    <circle class="cls-1" cx="89.1" cy="57.25" r="4.28"/>
+    <path class="cls-3" d="m20,80.64v8m0,16v8m-16-16h8m16,0h8m200-58.59v198.59h-60V37.94m-32-25.3h92v24h-92V12.64Z"/>
+    <path class="cls-3" d="m196,60.64h20v48h-20v-48Z"/>
+    <rect class="cls-3" x="44.25" y="188.64" width="88" height="36" rx="9.02" ry="9.02"/>
+    <path class="cls-3" d="m84.58,164.64h-20.18c-4.54,0-8.43,3.25-9.24,7.72l-2.82,15.72"/>
+    <path class="cls-2" d="m124.12,187.92l-2.8-15.56c-.34-1.9-1.26-3.65-2.64-5.01"/>
+    <circle class="cls-1" cx="114.25" cy="207.49" r="6"/>
+    <circle class="cls-1" cx="62.25" cy="207.49" r="6"/>
+    <path class="cls-3" d="m68,226v4.64c0,3.31-2.69,6-6,6h0c-3.31,0-6-2.69-6-6v-4.64m64,0v4.64c0,3.31-2.69,6-6,6h0c-3.31,0-6-2.69-6-6v-4.25m24.96-95.39c0,17.12-30.99,57.55-30.99,57.55,0,0-30.99-40.44-30.99-57.55,0-17.11,13.86-30.99,30.98-31s30.99,13.86,31,30.98v.02Z"/>
+    <circle class="cls-3" cx="101.97" cy="131" r="15.68"/>
+    <path class="cls-4" d="m180,128.64h56m-60,16h60m-36,0v92"/>
+  </g>
+</svg>

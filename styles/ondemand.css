@@ -1,0 +1,251 @@
+.demand_product_offer_section {
+  background-color: #fff;
+  padding: 50px 0px 10px 120px;
+}
+
+.demand_product_offer_section .demand_product_ttl {
+  text-align: center;
+  position: relative;
+}
+
+.demand_product_offer_section .demand_product_ttl h2 {
+  color: #000;
+  font-family: Open Sans;
+  font-size: 23.877px;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.demand_product_offer_section .demand_product_ttl::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 3px;
+  background-color: #f6c000;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.demand_main_box {
+  margin-top: 50px;
+  background-color: #34094c;
+  padding: 30px 16px 30px 16px;
+}
+.demand_lft_bx_row {
+  position: relative;
+  left: -135px;
+}
+/* .demand_lft_bx:hover {
+  background: linear-gradient(
+    84deg,
+    #edb3ff -1.63%,
+    rgb(243 206 255) 57.64%,
+    rgb(255 255 255) 100%
+  );
+  cursor: pointer;
+} */
+.demand_lft_bx.demand_lft_bx_active,
+.demand_lft_bx_one.demand_lft_bx_active,
+.demand_lft_bx_two.demand_lft_bx_active,
+.demand_lft_bx_three.demand_lft_bx_active {
+  background: linear-gradient(
+    84deg,
+    #edb3ff -1.63%,
+    rgb(243 206 255) 57.64%,
+    rgb(255 255 255) 100%
+  );
+  cursor: pointer;
+}
+.demand_lft_bx {
+  border-radius: 10.804px;
+  background: #fff;
+  box-shadow: 0 0 10px #00000024;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  height: 110px;
+  position: relative;
+  margin-bottom: 16px;
+  min-width: 352px;
+  z-index: 1;
+  cursor: pointer;
+}
+.demand_lft_bx_one,
+.demand_lft_bx_two,
+.demand_lft_bx_three {
+  background: #fff;
+  box-shadow: 0 0 10px #00000024;
+}
+.demand_lft_bx::after {
+  content: "01";
+  position: absolute;
+  right: 40px;
+  top: -14px;
+  font-size: 90px;
+  color: #dedede;
+  font-weight: 700;
+  opacity: 0.8;
+  z-index: -1;
+}
+.demand_lft_bx_one::after {
+  content: "02";
+}
+.demand_lft_bx_two::after {
+  content: "03";
+}
+.demand_lft_bx_three::after {
+  content: "04";
+}
+.demand_arrow {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  z-index: 1;
+}
+/* .demand_arrow svg{
+  width: 18px;
+
+} */
+.demand_lft_bx h3 {
+  color: #000;
+  font-family: Open Sans;
+  font-size: 18.007px;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin: 0 0 0 0;
+  padding-left: 16px;
+}
+.demand_main_box_row {
+  align-items: center;
+}
+.demand_main_box .demand_main_rht_bx h4 {
+  color: #fff;
+  text-shadow: 0px 3.106px 3.106px rgba(0, 0, 0, 0.25);
+  font-family: Open Sans;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.demand_main_box .demand_main_rht_bx h4 span {
+  color: #f6c000;
+}
+
+.demand_main_box .demand_main_rht_bx p {
+  color: #fff;
+  text-shadow: 0px 3.106px 3.106px rgba(0, 0, 0, 0.25);
+  font-family: Open Sans;
+  font-size: 13.978px;
+  font-weight: 400;
+  line-height: 23.297px;
+  text-align: justify;
+}
+
+.demand_bottom_col {
+  text-align: center;
+}
+
+.demand_bottom_col h5 {
+  color: #fff;
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  padding-top: 12px;
+}
+.Arrow_btn {
+  margin-bottom: 20px;
+}
+
+/* Mobile View Design css Start */
+.demand_lft_bx_mobile {
+  border-radius: 10.804px;
+  background: linear-gradient(
+    84deg,
+    #edb3ff -1.63%,
+    rgb(243 206 255) 57.64%,
+    rgb(255 255 255) 100%
+  );
+  box-shadow: 0 0 10px #00000024;
+  padding: 25px;
+
+  position: relative;
+  margin-bottom: 16px;
+  z-index: 1;
+  cursor: pointer;
+}
+.content_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title_img {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.title_img h6 {
+  font-size: 16px;
+}
+.demand_lft_answer h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.demand_lft_answer p {
+  font-size: 15px;
+  text-align: justify;
+}
+.demand_bottom_col_mobile h6 {
+  color: #000;
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  padding-top: 12px;
+}
+/* Mobile View Design css end */
+
+@media (max-width: 1280px) {
+  .demand_lft_bx {
+    min-width: 300px;
+  }
+  .demand_lft_bx::after {
+    font-size: 70px;
+    top: 0;
+  }
+}
+@media (max-width: 1024px) {
+  .demand_product_offer_section {
+    padding: 50px 180px;
+  }
+}
+@media (max-width: 991px) {
+  .demand_lft_bx_row {
+    left: 0;
+  }
+  .demand_product_offer_section {
+    padding: 50px 0;
+  }
+  .demand_main_rht_bx {
+    margin-top: 16px;
+  }
+  .demand_lft_bx {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .demand_bottom_col {
+    margin-bottom: 24px;
+  }
+  .demand_main_box .demand_main_rht_bx h4 {
+    font-size: 20px;
+  }
+  .demand_product_offer_section .demand_product_ttl h2 {
+    font-size: 20px;
+  }
+}

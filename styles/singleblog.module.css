@@ -1,0 +1,139 @@
+.contant_section li {
+  margin-left: 30px;
+}
+.contant_section h1,h2,h3,h4,h5,h6 {
+  font-size: 21px;
+  margin-top: 15px;
+}
+.contant_section a {
+  color: #f6c000;
+}
+.contant_section a:hover {
+  color: #2f0e39;
+}
+.left_content h1 {
+  font-weight: 600;
+}
+.author {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+.author img {
+  width: 80px;
+  border-radius: 50%;
+}
+.author_name {
+  font-weight: 700;
+  font-size: 18px;
+}
+.author_name span {
+  color: #f6c000;
+}
+.description {
+  line-height: 11px;
+  margin-left: 26px;
+}
+.right_image img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.right_image img:hover {
+  transform: scale(1.1);
+}
+.contant_section p {
+  font-size: 17px;
+  text-align: justify;
+}
+.contant_section h2 {
+  font-size: 22px;
+  margin-bottom: 1rem;
+}
+.contant_section img {
+  max-width: 100%;
+}
+.content_image img {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.social_icons a {
+  background: #f6c000;
+  border-radius: 500%;
+  color: #000;
+  display: inline-block;
+  font-size: 17px;
+  height: 40px;
+  line-height: 35px;
+  margin: 0 16px 10px 0;
+  text-align: center;
+  width: 41px;
+  border: 1px solid #f6c000;
+  transition: all 0.5s;
+}
+.social_icons a:hover {
+  background-color: #fff;
+  border: 1px solid #f6c000;
+  color: #000;
+}
+@media (max-width: 767px) {
+  .social_icons a {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .social_icons a {
+    display: none;
+  }
+}
+.author_box {
+  border: 1px solid #eee;
+  padding: 20px;
+}
+.author_box_content {
+  display: flex;
+}
+.author_box_content img {
+  width: 80px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 7px 3px #ccc;
+}
+.author_box_content_right {
+  margin-left: 25px;
+}
+.author_box_btn {
+  background: #f6c000;
+  border: none;
+  padding: 15px 30px 15px 30px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.author_box_btn::after {
+  border: none;
+}
+.on_demand_section {
+  padding-top: 20px;
+}
+.on_demand_section_bg {
+  background-image: url("../../../public/assets/images/shape.webp");
+  border-radius: 20px;
+  color: white;
+  padding: 30px 56px 30px 20px;
+  box-shadow: 0px 0px 6px 0px #000;
+}
+.on_demand_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.on_demand_content_btn {
+  background: #f6c000;
+  padding: 15px;
+  border: none;
+  border-radius: 40px;
+  font-weight: 700;
+  cursor: pointer;
+}

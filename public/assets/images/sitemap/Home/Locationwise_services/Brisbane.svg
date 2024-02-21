@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="SvgjsSvg1001" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 250.8">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #5c2e63;
+      }
+    </style>
+  </defs>
+  <g id="SvgjsG1008">
+    <polygon class="cls-1" points="176 226.8 72 226.8 72 142.8 80 142.8 80 218.8 168 218.8 168 142.8 176 142.8 176 226.8"/>
+    <rect class="cls-1" y="154.8" width="76" height="8"/>
+    <rect class="cls-1" x="16" y="166.8" width="60" height="8"/>
+    <rect class="cls-1" y="178.8" width="76" height="8"/>
+    <rect class="cls-1" y="218.8" width="76" height="8"/>
+    <rect class="cls-1" y="242.8" width="248" height="8"/>
+    <path class="cls-1" d="M120,250.8h-32v-20h32v20Zm-24-8h16v-4h-16v4Z"/>
+    <rect class="cls-1" x="72" y="222.8" width="8" height="24"/>
+    <rect class="cls-1" x="56" y="230.8" width="8" height="8"/>
+    <rect class="cls-1" x="40" y="230.8" width="8" height="8"/>
+    <rect class="cls-1" x="24" y="230.8" width="8" height="8"/>
+    <rect class="cls-1" x="8" y="230.8" width="8" height="8"/>
+    <rect class="cls-1" x="56" y="182.8" width="8" height="40"/>
+    <rect class="cls-1" x="40" y="182.8" width="8" height="40"/>
+    <rect class="cls-1" x="24" y="182.8" width="8" height="40"/>
+    <rect class="cls-1" x="8" y="182.8" width="8" height="40"/>
+    <rect class="cls-1" x="76" y="162.8" width="96" height="8"/>
+    <rect class="cls-1" x="68" y="138.8" width="112" height="8"/>
+    <rect class="cls-1" x="88" y="166.8" width="8" height="56"/>
+    <rect class="cls-1" x="104" y="166.8" width="8" height="56"/>
+    <rect class="cls-1" x="136" y="166.8" width="8" height="56"/>
+    <rect class="cls-1" x="120" y="166.8" width="8" height="56"/>
+    <rect class="cls-1" x="152" y="166.8" width="8" height="56"/>
+    <rect class="cls-1" x="76" y="178.8" width="96" height="8"/>
+    <polygon class="cls-1" points="178.8 146.4 124 127.2 69.2 146.4 66.8 139.2 124 118.4 181.2 139.2 178.8 146.4"/>
+    <polygon class="cls-1" points="144 110.8 136 110.8 136 62.8 112 62.8 112 110.8 104 110.8 104 54.8 144 54.8 144 110.8"/>
+    <polygon class="cls-1" points="148 130.8 140 130.8 140 114.8 108 114.8 108 130.8 100 130.8 100 106.8 148 106.8 148 130.8"/>
+    <path class="cls-1" d="M124,90.8c-6.8,0-12-5.2-12-12s5.2-12,12-12,12,5.2,12,12-5.2,12-12,12Zm0-16c-2.4,0-4,1.6-4,4s1.6,4,4,4,4-1.6,4-4-1.6-4-4-4Z"/>
+    <rect class="cls-1" x="116" y="38.8" width="16" height="8"/>
+    <path class="cls-1" d="M136,62.8h-24v-21.2L124,0l12,42.8v20Zm-16-8h8v-11.6l-4-14-4,14v11.6Z"/>
+    <rect class="cls-1" x="120" y="2.8" width="8" height="12"/>
+    <rect class="cls-1" x="172" y="154.8" width="76" height="8"/>
+    <rect class="cls-1" x="240" y="166.8" width="8" height="8"/>
+    <rect class="cls-1" x="172" y="166.8" width="60" height="8"/>
+    <rect class="cls-1" x="172" y="178.8" width="76" height="8"/>
+    <rect class="cls-1" x="172" y="218.8" width="76" height="8"/>
+    <path class="cls-1" d="M160,250.8h-32v-20h32v20Zm-24-8h16v-4h-16v4Z"/>
+    <rect class="cls-1" x="168" y="222.8" width="8" height="24"/>
+    <rect class="cls-1" x="184" y="230.8" width="8" height="8"/>
+    <rect class="cls-1" x="200" y="230.8" width="8" height="8"/>
+    <rect class="cls-1" x="216" y="230.8" width="8" height="8"/>
+    <rect class="cls-1" x="232" y="230.8" width="8" height="8"/>
+    <rect class="cls-1" x="184" y="182.8" width="8" height="40"/>
+    <rect class="cls-1" x="200" y="182.8" width="8" height="40"/>
+    <rect class="cls-1" x="216" y="182.8" width="8" height="40"/>
+    <rect class="cls-1" x="232" y="182.8" width="8" height="40"/>
+    <rect class="cls-1" y="166.8" width="8" height="8"/>
+  </g>
+</svg>

@@ -1,0 +1,560 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  /* transition: 0.1s ease; */
+}
+
+/* Common CSS Start */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common CSS End */
+
+/* Mobile App Development Company Page CSS Start */
+
+/* Banner Section Start */
+.common__banner__section {
+  width: 100%;
+  height: 100%;
+  background-image: url("../public/assets/images/MobileAppDev/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  padding: 5px;
+  color: #fff;
+  padding-bottom: 120px;
+  padding-top: 130px;
+}
+
+.common__banner__section .common_banner_lft h2 {
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.common__banner__section .common_banner_lft p {
+  text-align: justify;
+  color: #fff;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.common__banner__section .common_banner_lft .common__banner__list li {
+  list-style-type: none;
+  padding-bottom: 8px;
+  display: flex;
+}
+
+.common__banner__section
+  .common_banner_lft
+  .common__banner__list
+  li
+  .banner_list_lft_span {
+  margin-right: 14px;
+  display: block;
+}
+
+.common__banner__section
+  .common_banner_lft
+  .common__banner__list
+  li
+  .banner_list_rht_span {
+  display: block;
+}
+
+.banner__boxes {
+  display: flex;
+  align-items: center;
+  border-left: 2px solid #ffc819;
+  background: #2f0e39;
+  padding: 8px 5px;
+  height: 100%;
+}
+
+.banner__boxes h4 {
+  font-size: 15px;
+  color: #fff;
+  padding-left: 7px;
+  line-height: 140%;
+  font-weight: 600;
+  width: 100%;
+  /* text-align: center; */
+}
+
+.banner__contact__box {
+  width: 100%;
+  height: 100%;
+  background-image: url("../public/assets/images/MobileAppDev/contact-bg.png");
+  background-size: cover;
+  background-position: center center;
+  border-radius: 15px;
+  padding: 10px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.banner__contact__box .contact_header {
+  background: #2f0e39;
+  padding: 10px;
+  border-radius: 15px;
+  text-align: center;
+  animation: myanimation 5s infinite;
+}
+
+.banner__contact__box .contact_header h4 {
+  color: #fff;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.banner__contact__box .contact__body .contact__form input,
+.banner__contact__box .contact__body .contact__form textarea,
+.banner__contact__box .contact__body .contact__form select {
+  font-size: 16px;
+  font-family: inherit;
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+.banner__contact__box .contact__body .contact__form input:focus,
+.banner__contact__box .contact__body .contact__form textarea:focus,
+.banner__contact__box .contact__body .contact__form select:focus {
+  box-shadow: none;
+}
+
+.select__country .select2-container--default .select2-selection--single {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 38px;
+}
+
+.select__country
+  .select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  color: #333;
+  line-height: 38px;
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+.select__country
+  .select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  height: 38px;
+}
+
+.select__country .select2-container {
+  width: 100% !important;
+}
+
+.request__btn {
+  background: #f6c000;
+  border-radius: 50px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px 34px;
+  text-transform: uppercase;
+  border: 2px solid #f6c000;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.request__btn:hover {
+  border: 2px solid #f6c000;
+  background: transparent;
+  color: #f6c000;
+}
+
+@keyframes myanimation {
+  0% {
+    background-color: #2f0e39;
+  }
+
+  50% {
+    background-color: #323fb6;
+  }
+
+  75% {
+    background-color: #f6c000;
+  }
+
+  100% {
+    background-color: #2f0e39;
+  }
+}
+
+/* Banner Section End */
+
+/* Services Provide Section CSS Start */
+.service__provide_tab {
+  background: #2f0e39;
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  padding: 20px 10px;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.service__provide_tab:hover {
+  color: #fff;
+}
+
+.service__provide_tab_active {
+  background-color: #d6aa0b;
+}
+
+.service__provide_tab p {
+  font-size: 15px;
+  margin: 0;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+/* ================================ new design css start ================================ */
+.mobile_service_provide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.service_provide_box {
+  background: #2f0e39;
+  /* text-align: center; */
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* justify-items: center; */
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  /* align-items: center; */
+}
+/* .answer_box{
+  transition: all;
+  animation-duration: 500;
+} */
+.line_tag {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid white;
+}
+.service_provide_box:hover {
+  color: #fff;
+}
+
+.service_provide_box_active {
+  background-color: #d6aa0b;
+}
+.service_provide_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.service_provide_title {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
+.service_provide_title p {
+  font-size: 15px;
+  margin: 0;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+.service_provide_title img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  /* margin: 0 auto 10px; */
+}
+/* ================================ new design css end ================================ */
+
+.Title h3 {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 700;
+  color: #000;
+}
+
+.Title .Title_heading {
+  font-size: 22px;
+  margin-bottom: 22px;
+}
+
+.Title h3::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #f6c000;
+  display: block;
+  margin: 8px auto;
+}
+
+.Title p {
+  text-align: justify;
+  letter-spacing: 1px;
+  color: #000;
+  line-height: 30px;
+  font-size: 16px;
+}
+
+.Title .Title_para {
+  line-height: 25px;
+}
+
+.Title p a {
+  color: #d6aa0b;
+}
+
+Title .Title_Color {
+  color: #d6aa0b;
+}
+
+.service__provide_tab img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin: 0 auto 10px;
+}
+.answer p {
+  text-align: justify;
+  font-size: 14px;
+}
+@media (min-width: 1024px) {
+  .service_mobile_view {
+    display: none;
+  }
+}
+@media (max-width: 1023px) {
+  .service_desk_view {
+    display: none;
+  }
+  .banner__contact__box {
+    display: none;
+  }
+  .banner__boxes {
+    display: none;
+  }
+  .common__banner__section {
+    padding-bottom: 0px;
+  }
+}
+/* Services Provide Section CSS End */
+
+/* Work Slider Section CSS Start */
+.work_slider_section {
+  box-shadow: -4px 0px 26px #c3c3c3;
+  background: #fff;
+}
+
+.work_swiper-container .swiper-wrapper {
+  height: 60vh;
+}
+
+.work_swiper-container .swiper-slide {
+  background-size: cover;
+  background-position: 50%;
+  min-height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  /* flex-direction: column; */
+  background-color: #fff;
+  padding: 10px;
+}
+
+.work_swiper-container .swiper-slide .swiper-slide_lft {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  object-fit: cover;
+}
+
+.work_swiper-container .swiper-slide .swiper-slide_lft img {
+  box-shadow: 0px 0px 10px 0px rgb(154 154 154/75%);
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.work_swiper-container .swiper-slide .swiper-slide_rht {
+  padding: 10px;
+}
+
+.work_swiper-container .swiper-slide .swiper-slide_rht h4 {
+  font-size: 24px;
+  color: #000;
+  font-weight: 700;
+}
+
+.work_swiper-container .swiper-slide .swiper-slide_rht p {
+  font-size: 16px;
+  color: #000;
+  font-weight: 400;
+}
+
+.work_swiper-container .swiper-pagination-bullet {
+  background-color: transparent;
+  border: 1px solid #000;
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+  opacity: 1;
+}
+
+.work_swiper-container .swiper-pagination-bullet-active {
+  background-color: #f6c000;
+}
+
+.work_swiper-container .swiper-button-container {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.work_swiper-container .swiper-button-prev {
+  /* background-image: url(""); */
+  left: 25px;
+  background-size: 16px;
+}
+
+.work_swiper-container .swiper-button-next {
+  /* background-image: url(""); */
+  background-size: 16px;
+  right: 25px;
+}
+
+.work_swiper-container .swiper-slide h2 {
+  pointer-events: none;
+  opacity: 0;
+  color: #ffffff;
+  font-size: calc(5vw);
+  letter-spacing: -1px;
+  transform: translateY(-5%) scale(0.8);
+  transition: 1s ease;
+  text-transform: uppercase;
+  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.01);
+}
+
+.work_swiper-container .swiper-slide-active h2 {
+  opacity: 1;
+  transform: translateY(0%) scale(1);
+  transition: 1s ease;
+}
+
+/* Work Slider Section CSS End */
+
+/* Technologies Section CSS Start */
+.technologies__section {
+  background: linear-gradient(90deg, #201b65 0%, #57066b 100%);
+}
+
+.technologies_box h2 {
+  font-weight: 400;
+  line-height: 28px;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+
+.Title__White {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 400;
+  color: #fff;
+}
+
+.Title__White h3::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #f6c000;
+  display: block;
+  margin: 20px auto 0 auto;
+}
+
+.Title__White h3 {
+  font-size: 30px;
+  font-weight: 400s;
+}
+
+/* Technologies Section CSS End */
+
+/* Accordian Section CSS Start */
+
+/* Contact Section CSS Start */
+.contact__lft p {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.contact__rht {
+  border-left: 1px solid #fff;
+  border-left-style: dotted;
+  border-left-width: unset;
+}
+
+.contact_btn {
+  background: #f6c000;
+  padding: 14px 0;
+  display: block;
+  margin: 7px auto;
+  width: 180px;
+  text-align: center;
+  border-radius: 50px;
+  font-size: 14px;
+  color: #000;
+  font-weight: 700;
+  border: 1px solid #f6c000;
+  transition: 0.3s all;
+  text-transform: uppercase;
+}
+
+/* .contact_btn:hover {
+  border: 1px solid #351040;
+  color: #000;
+  background: #fff;
+} */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+@media (max-width: 767px) {
+  .contact-lft p {
+    font-size: 16px;
+    text-align: center;
+  }
+  .contact__rht {
+    border-left: 0;
+  }
+}
+
+/* Contact Section CSS End */
+
+/* Mobile App Development Company Page CSS End */

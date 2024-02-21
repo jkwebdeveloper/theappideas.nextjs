@@ -1,0 +1,127 @@
+.about-section {
+  padding: 60px 0px 60px 0px;
+}
+.about-heading {
+  font-size: 32px;
+  font-weight: 500;
+  font-family: sans-serif;
+  color: #000;
+  padding-bottom: 10px;
+}
+.about-heading h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #f6c000;
+  display: block;
+  margin-top: 5px;
+}
+.About-left-heading h3::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #f6c000;
+  display: block;
+  margin: 8px auto;
+}
+.About-left-heading {
+  font-size: 32px;
+  font-weight: 500;
+  font-family: sans-serif;
+  color: #000;
+  text-align: center;
+}
+.about-text {
+  font-size: 18px;
+  font-weight: 500;
+}
+.find_more_btn {
+  width: 180px;
+  background-color: #f6c000;
+  color: #000;
+  padding: 10px;
+  text-align: center;
+  border-radius: 25px;
+  font-weight: 600;
+}
+/* .find_more_btn:hover {
+  background-color: #2f0e39;
+  color: #fff;
+} */
+.achievements__section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.achievements__section .achievements_box {
+  background-image: linear-gradient(to right, #2f0e39, #600360);
+  height: 130px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 14px 20px 0;
+  flex: 1 1 22%;
+  margin: 0 16px 20px 0;
+}
+
+.achievements__section .achievements_box.achievements_box_top {
+  margin-top: 40px;
+  background-image: linear-gradient(to right, #272f6b, #2033c7);
+  /* padding: 5px; */
+}
+
+.achievements__section .achievements_box p {
+  font-size: 13px;
+}
+
+.achievements__section .achievements_box h4 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+@media (max-width: 575px) {
+  .achievements__section .achievements_box {
+    flex: 1 1 44%;
+  }
+
+  .achievements__section {
+    flex-wrap: wrap;
+  }
+  .About-left-heading {
+    padding-top: 30px;
+  }
+  .achievements__section .achievements_box.achievements_box_top {
+    margin-top: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 300px) {
+  .achievements__section .achievements_box {
+    flex: 1 1 100%;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 1022px) and (min-width: 768px) {
+  .achievements__section {
+    flex-wrap: wrap;
+  }
+
+  .achievements__section .achievements_box {
+    flex: 1 1 50%;
+  }
+
+  .achievements__section .achievements_box {
+    flex: 1 1 47%;
+    margin-right: 20px;
+  }
+
+  .achievements__section .achievements_box.achievements_box_top {
+    margin-right: 0px;
+  }
+}

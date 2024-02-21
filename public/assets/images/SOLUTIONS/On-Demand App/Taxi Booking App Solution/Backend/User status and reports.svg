@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="SvgjsSvg1014" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208 256">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #5b2c62;
+        stroke-linejoin: round;
+        stroke-width: 16px;
+      }
+    </style>
+  </defs>
+  <g id="SvgjsG1016">
+    <g>
+      <path class="cls-1" d="m64,8H24c-8.84,0-16,7.16-16,16v208c0,8.84,7.16,16,16,16h112c8.84,0,16-7.16,16-16v-72M8,48h40M8,184h144m-80,32h16"/>
+      <circle class="cls-1" cx="136" cy="72" r="64"/>
+      <path class="cls-1" d="m168,72c0,17.67-14.33,32-32,32s-32-14.33-32-32m8-24h16m16,0h16"/>
+    </g>
+  </g>
+</svg>
