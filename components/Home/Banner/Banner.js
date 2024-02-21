@@ -1,17 +1,26 @@
 import React, { useState } from "react";
 
-
-
-import bannerImg from "../../../public/assets/images/Banner/theappideassolutions.webp"
-import Image from 'next/image';
+import bannerImg from "../../../public/assets/images/Banner/theappideassolutions.webp";
+import Image from "next/image";
 import GetAQuoteModal from "../../GetAQuoteModal";
-
+import bg from "../../../public/assets/images/sec1-background.webp";
 
 const Banner = ({ setOpenModal }) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <section className="banner-section" style={{ position: "relative" }}>
+    <section
+      className="banner-section"
+      style={{
+        backgroundImage: `url(${bg.src})`,
+        position: "relative",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "bottom",
+        paddingTop: "110px",
+        paddingBottom: "100px",
+      }}
+    >
       <div style={{ position: "relative" }}>
         <div className="container">
           <div className="row" style={{ alignItems: "center" }}>
@@ -24,17 +33,17 @@ const Banner = ({ setOpenModal }) => {
                   height={497}
                   style={{
                     width: "100%",
-                   // height: "25vw",
+                    // height: "25vw",
                     objectPosition: "center",
                     objectFit: "contain",
-                    aspectRatio: "1/1"
+                    aspectRatio: "1/1",
                   }}
                 />
               </div>
             </div>
             <div className="col-lg-7 col-md-12">
               <h1 className="slider-heading-dec">
-              Web and Mobile App Development Company - The App Ideas
+                Web and Mobile App Development Company - The App Ideas
               </h1>
               <p className="slider-dec">
                 Are you deciding to make an app or an e-commerce store or even a
@@ -51,20 +60,19 @@ const Banner = ({ setOpenModal }) => {
                 been pivotal in shaping numerous online brands. Our commitment
                 lies in constructing well-equipped, customer-centric e-commerce
                 stores with features that enhance user experience and contribute
-                to consistent business conversion.
-                Additionally, We stay abreast of the latest web development
-                technologies, employing our expertise to build sophisticated,
-                feature-rich solutions across various business-niches. Whether
-                it's app development, website development, offshore software
-                development, on demand app development, clone application
-                development or other cutting-edge technologies. We are
-                well-versed in delivering performance-driven solutions that
-                align with your vision and goals.
+                to consistent business conversion. Additionally, We stay abreast
+                of the latest web development technologies, employing our
+                expertise to build sophisticated, feature-rich solutions across
+                various business-niches. Whether it's app development, website
+                development, offshore software development, on demand app
+                development, clone application development or other cutting-edge
+                technologies. We are well-versed in delivering
+                performance-driven solutions that align with your vision and
+                goals.
               </p>
               <br />
               <div className="silder-btn">
                 <div
-                  
                   className="slider-get_btn"
                   onClick={() => setOpenModal(true)}
                 >
@@ -81,8 +89,6 @@ const Banner = ({ setOpenModal }) => {
         handleCloseModal={() => setModalOpen(false)}
       />
     </section>
-    
-    
   );
 };
 

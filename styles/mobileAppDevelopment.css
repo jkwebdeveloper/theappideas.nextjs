@@ -21,7 +21,7 @@ a:hover {
 /* Mobile App Development Company Page CSS Start */
 
 /* Banner Section Start */
-.common__banner__section {
+/* .common__banner__section {
   width: 100%;
   height: 100%;
   background-image: url("../public/assets/images/MobileAppDev/bg.png");
@@ -32,7 +32,7 @@ a:hover {
   color: #fff;
   padding-bottom: 120px;
   padding-top: 130px;
-}
+} */
 
 .common__banner__section .common_banner_lft h2 {
   color: #fff;
@@ -90,7 +90,7 @@ a:hover {
   /* text-align: center; */
 }
 
-.banner__contact__box {
+/* .banner__contact__box {
   width: 100%;
   height: 100%;
   background-image: url("../public/assets/images/MobileAppDev/contact-bg.png");
@@ -100,7 +100,7 @@ a:hover {
   padding: 10px;
   max-width: 480px;
   margin: 0 auto;
-}
+} */
 
 .banner__contact__box .contact_header {
   background: #2f0e39;

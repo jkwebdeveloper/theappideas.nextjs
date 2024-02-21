@@ -8,7 +8,10 @@ import { BiErrorCircle } from "react-icons/bi";
 import axios from "axios";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import Image from 'next/image';
+import Image from "next/image";
+import banner from "../public/assets/images/MobileAppDev/bg.png";
+import contact from "../public/assets/images/MobileAppDev/contact-bg.png";
+
 
 // Live Key
 // const SITE_KEY = "6LcVilIpAAAAAGXDl8znTD4mG5OnO8T15UdoQmZX";
@@ -103,7 +106,21 @@ const HeroSection = ({
   });
 
   return (
-    <section className="common__banner__section">
+    <section
+      className="common__banner__section"
+      style={{
+        backgroundImage: `url(${banner.src})`,
+        position: "relative",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "bottom",
+        backgroundPosition: "center",
+        paddingTop: "110px",
+        paddingBottom: "100px",
+        width: "100%",
+        height: "100%",
+      }}
+    >
       <div className="container">
         <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
@@ -139,7 +156,9 @@ const HeroSection = ({
               <div className="row">
                 <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
                   <div className="banner__boxes">
-                    <Image width={36} height={36}
+                    <Image
+                      width={36}
+                      height={36}
                       src={image1}
                       alt="Mobile-App-Development"
                       className="img-fluid"
@@ -150,7 +169,9 @@ const HeroSection = ({
                 </div>
                 <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
                   <div className="banner__boxes">
-                    <Image width={36} height={36}
+                    <Image
+                      width={36}
+                      height={36}
                       src={image2}
                       alt="Mobile-Application-Development"
                       className="img-fluid"
@@ -161,7 +182,9 @@ const HeroSection = ({
                 </div>
                 <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
                   <div className="banner__boxes">
-                    <Image width={36} height={36}
+                    <Image
+                      width={36}
+                      height={36}
                       src={image3}
                       alt="Mobile-Application-Development"
                       className="img-fluid"
@@ -174,7 +197,21 @@ const HeroSection = ({
             </div>
           </div>
           <div className="col-sm-12 col-md-12 col-lg-12    col-xl-6 mb-4">
-            <div className="banner__contact__box">
+            <div
+              className="banner__contact__box"
+              style={{
+                backgroundImage: `url(${contact.src})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundPosition: "center",
+                borderRadius:"15px",
+                maxWidth:"480px",
+                padding:"10px",
+                width: "100%",
+                height: "100%",
+                margin:"0 auto"
+              }}
+            >
               <div className="contact_header">
                 <h4>Contact us</h4>
               </div>
