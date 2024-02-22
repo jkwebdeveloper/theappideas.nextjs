@@ -115,8 +115,8 @@ const HeroSection = ({
         backgroundSize: "cover",
         backgroundPosition: "bottom",
         backgroundPosition: "center",
-        paddingTop: "110px",
-        paddingBottom: "100px",
+        paddingTop: "140px",
+        paddingBottom: "180px",
         width: "100%",
         height: "100%",
       }}

@@ -52,6 +52,7 @@ a:hover {
   list-style-type: none;
   padding-bottom: 8px;
   display: flex;
+  color: white;
 }
 
 .common__banner__section
@@ -212,6 +213,7 @@ a:hover {
   border-radius: 10px;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
 .service__provide_tab:hover {
