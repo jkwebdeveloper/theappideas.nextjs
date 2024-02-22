@@ -596,8 +596,7 @@ section {
 /* Blog Listing Page CSS End */
 
 /* Work We head Section CSS Start */
-.work_head_box {
-  /* background-image: url("../img/work-we-had-bg-one.webp"); */
+/* .work_head_box {
   background-image: url("../public/assets/images/Portfolio/work-we-had-bg-one.webp");
   object-fit: cover;
   display: block;
@@ -608,15 +607,15 @@ section {
   background-position: center !important;
   box-shadow: 0 10px 6px -6px #000;
   transition: 0.1s ease;
-}
+} */
 
-.work_head_box_one {
+/* .work_head_box_one {
   background-image: url("../public/assets/images/Portfolio/work-we-had-bg-two.webp");
 }
 
 .work_head_box_two {
   background-image: url("../public/assets/images/Portfolio/work-we-had-bg-three.webp");
-}
+} */
 
 /* .work_head_box .work_head_box_link{
   height: 100%;
