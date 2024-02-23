@@ -1,49 +1,77 @@
-import React, { useEffect, useState } from 'react'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-import Link from 'next/link';
-import Image from 'next/image';
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Link from "next/link";
+import Image from "next/image";
 
-import background from '../../../public/assets/images/Home-our-services/bg-download.svg'
-import background1 from '../../../public/assets/images/Home-our-services/download (1).png'
+import background from "../../../public/assets/images/Home-our-services/bg-download.svg";
+import background1 from "../../../public/assets/images/Home-our-services/download (1).png";
 
-import Development from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/Angular-JS-Development.png'
-import Services from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/Angular-JS-Development-Services.png'
-import developer from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/Angular-JS-developer.png'
+import Development from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/Angular-JS-Development.png";
+import Services from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/Angular-JS-Development-Services.png";
+import developer from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/Angular-JS-developer.png";
 
-import Enterprise from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/1/Enterprise Apps.svg'
-import CUSTOM from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/1/CUSTOM ANGULAR APPS.svg'
-import eCOMMERCE from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/1//E-COMMERCE APPS.svg'
-import Secure from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/1/INTERACTIVE APP DEVELOPMENT.svg'
-import FASTER from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/1/FASTER TIME TO MARKET.svg'
-import Unit from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/1/TOOLS AND CUSTOM WIDGETS.svg'
+import Enterprise from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/1/Enterprise Apps.svg";
+import CUSTOM from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/1/CUSTOM ANGULAR APPS.svg";
+import eCOMMERCE from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/1//E-COMMERCE APPS.svg";
+import Secure from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/1/INTERACTIVE APP DEVELOPMENT.svg";
+import FASTER from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/1/FASTER TIME TO MARKET.svg";
+import Unit from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/1/TOOLS AND CUSTOM WIDGETS.svg";
 
-import Expertise from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/2/EXPERIENCE AND EXPERTISE.svg'
-import Sophisticated from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/2/Client Satisfaction Guarantee.svg'
-import Implement from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/2/A STRONG PORTFOLIO.svg'
-import Affordable from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/2/FASTER TIME TO MARKET.svg'
-import Time from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/2/ROBUST CUSTOMIZATION.svg'
-import Free from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/2/COMPETITIVE RATE _ SUPPORT.svg'
+import Expertise from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/2/EXPERIENCE AND EXPERTISE.svg";
+import Sophisticated from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/2/Client Satisfaction Guarantee.svg";
+import Implement from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/2/A STRONG PORTFOLIO.svg";
+import Affordable from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/2/FASTER TIME TO MARKET.svg";
+import Time from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/2/ROBUST CUSTOMIZATION.svg";
+import Free from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/2/COMPETITIVE RATE _ SUPPORT.svg";
 
-import { Helmet } from 'react-helmet'
-import Header from '../../../components/Header/Header';
-import Footer from '../../../components/Footer';
+import { Helmet } from "react-helmet";
+import Header from "../../../components/Header/Header";
+import Footer from "../../../components/Footer";
 import ContactUs from "../../../components/ContactUs";
 import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import HeroSection from '../../../components/HeroSection';
-import Whatsapp from '../../../components/Whatsapp';
-import GetAQuoteModal from '../../../components/GetAQuoteModal';
+import HeroSection from "../../../components/HeroSection";
+import Whatsapp from "../../../components/Whatsapp";
+import GetAQuoteModal from "../../../components/GetAQuoteModal";
+import axios from "axios";
+import Lottie from "lottie-react";
+import Loading from "../../../public/assets/images/loading.json";
 
 const HireAngular = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [portfolio, setPortFolios] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const handleGetPortFolios = () => {
+    setLoading(true);
+    axios
+      .get(
+        "https://the-app-ideas.onrender.com/api/portfolio?page=Hire Angular Developer",
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+      .then((res) => {
+        setPortFolios(res.data.data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setLoading(false);
+      });
+  };
+  useEffect(() => {
+    handleGetPortFolios();
+  }, []);
 
   useEffect(() => {
-    AOS.init()
-  }, [])
+    AOS.init();
+  }, []);
   return (
     <>
       <Helmet title="Hire Angular 2 Developers | Dedicated Angular JS Developers" />
-      <Header setOpenModal={setModalOpen}/>
+      <Header setOpenModal={setModalOpen} />
       {/* Banner Section Start */}
       <HeroSection
         title="Hire Angular 2 Developers In India"
@@ -72,28 +100,29 @@ const HireAngular = () => {
               India and having the global presence we deliver Angular 2
               development services to a wide variety of business niches and app
               development needs. Over the years, our developers have built a
-              wide spectrum of advanced{' '}
+              wide spectrum of advanced{" "}
               <Link
                 href="/angular-development"
                 className="Title_Color"
-                style={{ color: '#d6aa0b' }}
+                style={{ color: "#d6aa0b" }}
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                  window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
                 <b> Angular 2 web solutions</b>
-              </Link>{' '}
+              </Link>{" "}
               for a variety of clients.
             </p>
             <div className="text-center">
               <Link
-                href="/contact-us" className='text-decoration-none'
+                href="/contact-us"
+                className="text-decoration-none"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                  window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
-                <div className="contact_btn" style={{ color: '#000' }}>
-                  Contact us{' '}
+                <div className="contact_btn" style={{ color: "#000" }}>
+                  Contact us{" "}
                 </div>
               </Link>
             </div>
@@ -107,54 +136,86 @@ const HireAngular = () => {
           <div className="Title">
             <h3>Work we had done</h3>
           </div>
-          <div className="row mt-5">
-            <div className="col-12 px-0 mb-4">
-              <div
-                data-aos="fade-up"
-                className="work_head_box port_mobilebg_twentynine"
-              >
-                <Link href="/" className="work_head_box_link"></Link>
-                <div className="row w-100">
-                  <Link href="/" className="work_head_box_link"></Link>
-                  <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                    <Link href="/" className="work_head_box_link"></Link>
-                    <div className="work_head_lft">
-                      <Link href="/" className="work_head_box_link">
-                        <h2>ICare</h2>
-                      </Link>
-                      <ul className="ps-0">
-                        <Link href="/" className="work_head_box_link"></Link>
-                        <li>
-                          <Link href="/" className="work_head_box_link">
-                            {' '}
-                          </Link>
-                          <Link href="/" className="work_head_item">
-                            Angular
-                          </Link>
-                        </li>
-                        <li>
-                          {' '}
-                          <Link href="/" className="work_head_item">
-                            Mobile Application Development
-                          </Link>
-                        </li>
-                      </ul>
+          {loading ? (
+            <Lottie
+              animationData={Loading}
+              loop={true}
+              style={{
+                width: "200px",
+                margin: "0 auto",
+              }}
+            />
+          ) : portfolio.length > 0 ? (
+            <div className="row mt-5">
+              {portfolio.map((elem) => {
+                const { _id, image, bgImage, tags, title, link, technology } =
+                  elem;
+                return (
+                  <div key={_id} className="col-12 px-0 mb-4">
+                    <div
+                      data-aos="fade-up"
+                      className="work_head_box"
+                      style={{
+                        backgroundImage: `url(https://the-app-ideas.onrender.com${bgImage})`,
+                        objectFit: "cover",
+                        display: "block",
+                        width: "100%",
+                        height: "400px",
+                        backgroundSize: "cover",
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center !important",
+                        boxShadow: "0 10px 6px -6px #000",
+                        transition: "0.1s ease",
+                      }}
+                    >
+                      <div className="work_head_box_link"></div>
+                      <div className="row w-100">
+                        <div className="work_head_box_link"></div>
+                        <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
+                          <div className="work_head_box_link"></div>
+                          <div className="work_head_lft">
+                            <Link
+                              href={link}
+                              target="_blank"
+                              className="work_head_box_link"
+                            >
+                              <h2>{title}</h2>
+                            </Link>
+                            <ul className="ps-0">
+                              <div className="work_head_box_link"></div>
+                              {technology.map((tech) => {
+                                return (
+                                  <li key={tech}>
+                                    <div className="work_head_item">{tech}</div>
+                                  </li>
+                                );
+                              })}
+                            </ul>
+                          </div>
+                        </div>
+                        <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
+                          <div className="work_head_rht">
+                            <Image
+                              width={492}
+                              height={300}
+                              data-aos="fade-left"
+                              src={"https://the-app-ideas.onrender.com".concat(
+                                image
+                              )}
+                              alt="Device-Image-one"
+                              className="img-fluid"
+                            />
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
-                    <div className="work_head_rht">
-                      <Image width={492} height={300}
-                        data-aos="fade-left"
-                        src={require('../../../public/assets/images/Portfolio/port-mobile-app-mobile-twentynine.webp')}
-                        alt="port-mobile-app-mobile-twentynine"
-                        className="img-fluid"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
+                );
+              })}
             </div>
-          </div>
+          ) : (
+            <div>no data</div>
+          )}
         </div>
       </section>
       {/* Work Head Section End */}
@@ -175,7 +236,7 @@ const HireAngular = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '425px' }}
+                style={{ height: "425px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -187,10 +248,12 @@ const HireAngular = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={50} height={50}
+                  <Image
+                    width={50}
+                    height={50}
                     src={Enterprise}
                     alt="Laravel Web Application Development"
-                    style={{ width: '50px' }}
+                    style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
@@ -214,7 +277,7 @@ const HireAngular = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '425px' }}
+                style={{ height: "425px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -226,10 +289,12 @@ const HireAngular = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={50} height={50}
+                  <Image
+                    width={50}
+                    height={50}
                     src={CUSTOM}
                     alt="Offer Customization"
-                    style={{ width: '50px' }}
+                    style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
@@ -252,7 +317,7 @@ const HireAngular = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '425px' }}
+                style={{ height: "425px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -264,10 +329,12 @@ const HireAngular = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={50} height={50}
+                  <Image
+                    width={50}
+                    height={50}
                     src={eCOMMERCE}
                     alt="Laravel Features Integration"
-                    style={{ width: '50px' }}
+                    style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
@@ -290,7 +357,7 @@ const HireAngular = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '400px' }}
+                style={{ height: "400px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -302,10 +369,12 @@ const HireAngular = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={50} height={50}
+                  <Image
+                    width={50}
+                    height={50}
                     src={Secure}
                     alt="Secure Web Solutions"
-                    style={{ width: '50px' }}
+                    style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
@@ -328,7 +397,7 @@ const HireAngular = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '400px' }}
+                style={{ height: "400px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -340,10 +409,12 @@ const HireAngular = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={50} height={50}
+                  <Image
+                    width={50}
+                    height={50}
                     src={FASTER}
                     alt="Laravel Consulting Services"
-                    style={{ width: '50px' }}
+                    style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
@@ -368,7 +439,7 @@ const HireAngular = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '400px' }}
+                style={{ height: "400px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -380,10 +451,12 @@ const HireAngular = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={50} height={50}
+                  <Image
+                    width={50}
+                    height={50}
                     src={Unit}
                     alt="Unit Testing Methods"
-                    style={{ width: '50px' }}
+                    style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
@@ -426,7 +499,7 @@ const HireAngular = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '385px' }}
+                style={{ height: "385px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -438,10 +511,12 @@ const HireAngular = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={70} height={70}
+                  <Image
+                    width={70}
+                    height={70}
                     src={Expertise}
                     alt="Expertise In Web Solutions"
-                    style={{ width: '70px' }}
+                    style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
@@ -464,7 +539,7 @@ const HireAngular = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '385px' }}
+                style={{ height: "385px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -476,16 +551,18 @@ const HireAngular = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={70} height={70}
+                  <Image
+                    width={70}
+                    height={70}
                     src={Sophisticated}
                     alt="Sophisticated Portfolio"
-                    style={{ width: '70px' }}
+                    style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
                   <div>CLIENT SATISFACTION GUARANTEED</div>
                 </h5>
-                <div className="text" style={{ marginBottom: '-26px' }}>
+                <div className="text" style={{ marginBottom: "-26px" }}>
                   With a global client base and hundreds of projects completed
                   by us. We guarantee client satisfaction with our Angular 2
                   development.
@@ -503,7 +580,7 @@ const HireAngular = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '385px' }}
+                style={{ height: "385px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -515,10 +592,12 @@ const HireAngular = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={70} height={70}
+                  <Image
+                    width={70}
+                    height={70}
                     src={Implement}
                     alt="Implement Agile Methods"
-                    style={{ width: '70px' }}
+                    style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
@@ -541,7 +620,7 @@ const HireAngular = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '385px' }}
+                style={{ height: "385px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -553,16 +632,18 @@ const HireAngular = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={70} height={70}
+                  <Image
+                    width={70}
+                    height={70}
                     src={Affordable}
                     alt="Affordable Costing"
-                    style={{ width: '70px' }}
+                    style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
                   <div>TRANSPARENT AND FAST PACED</div>
                 </h5>
-                <div className="text" style={{ marginBottom: '-25px' }}>
+                <div className="text" style={{ marginBottom: "-25px" }}>
                   We offer a transparent and fast paced agile development
                   process to help customers getting the app in time while
                   gaining complete peace of mind with transparent communication
@@ -581,7 +662,7 @@ const HireAngular = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '385px' }}
+                style={{ height: "385px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -593,10 +674,12 @@ const HireAngular = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={70} height={70}
+                  <Image
+                    width={70}
+                    height={70}
                     src={Time}
                     alt="Time-Bound Deployment"
-                    style={{ width: '70px' }}
+                    style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
@@ -620,7 +703,7 @@ const HireAngular = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '385px' }}
+                style={{ height: "385px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -632,16 +715,18 @@ const HireAngular = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={70} height={70}
+                  <Image
+                    width={70}
+                    height={70}
                     src={Free}
                     alt="Free Support Services"
-                    style={{ width: '70px' }}
+                    style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
                   <div>COMPETITIVE RATE & SUPPORT</div>
                 </h5>
-                <div className="text" style={{ marginBottom: '25px' }}>
+                <div className="text" style={{ marginBottom: "25px" }}>
                   We offer a highly competitive rate for Angular 2 development
                   of apps and websites. We offer total support and upgrading
                   service to all the Angular 2 apps built by us.
@@ -661,15 +746,15 @@ const HireAngular = () => {
                   of our developers? Feel free to contact us."
       />
       {/* Contact Section End */}
-      <Whatsapp/>
+      <Whatsapp />
       <GetAQuoteModal
         setOpenModal={setModalOpen}
         openModal={modalOpen}
         handleCloseModal={() => setModalOpen(false)}
       />
-      <Footer/>
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default HireAngular
+export default HireAngular;

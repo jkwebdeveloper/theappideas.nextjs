@@ -10,6 +10,10 @@ import Image from 'next/image';
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer'
 import GetAQuoteModal from '../../components/GetAQuoteModal'
+import background from '../../public/assets/images/COMPANY/aboutUs/life.png'
+import missonbg from '../../public/assets/images/COMPANY/aboutUs/missin-banner.webp'
+import skillbg from '../../public/assets/images/COMPANY/aboutUs/about-bg.png'
+import ourprocessbg from '../../public/assets/images/COMPANY/aboutUs/about-bg.png'
 
 const ABoutUs = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -22,7 +26,7 @@ const ABoutUs = () => {
       <Helmet title="About Us | Company Overview | App Ides Infotech Pvt Ltd" />
       <Header setOpenModal={setModalOpen}/>
       {/* Banner Section Start */}
-      <section className="about_banner">
+      <section className="about_banner" style={{backgroundImage: `url(${background.src})`}}>
         <h1>Company Overview</h1>
         <p>
           We are The App Ideas, a creative bunch of thinkers and developers
@@ -68,7 +72,7 @@ const ABoutUs = () => {
       </section>
       {/* About Video Section End */}
       {/* Missin & Visin Section Start */}
-      <section className="missin_section">
+      <section className="missin_section" style={{backgroundImage:`url(${missonbg.src})`}}>
         <div className="container">
           <div className="missin_title">
             <h2>Our vision &amp; mission</h2>
@@ -139,7 +143,7 @@ const ABoutUs = () => {
       </section>
       {/* Missin & Visin Section End */}
       {/* Our Skill Section Start */}
-      <section className="skill_section">
+      <section className="skill_section" style={{backgroundImage:`url(${skillbg.src})`}}>
         <div className="missin_title mb-0">
           <h2>Our Skill</h2>
         </div>
@@ -381,7 +385,7 @@ const ABoutUs = () => {
       </section>
       {/* Achievement Section End */}
       {/* Our Process Section Start */}
-      <section className="our_process">
+      <section className="our_process" style={{backgroundImage:`url(${ourprocessbg.src})`}}>
         <div className="container">
           <div className="row">
             <div className="col-12 col-sm-12 col-md-12 col-lg-6">
@@ -496,7 +500,7 @@ const ABoutUs = () => {
       </section>
       {/* Join Us Section End */}
       {/* Our Client Section Start */}
-      <section className="client_section">
+      <section className="client_section" style={{backgroundImage:`url(${ourprocessbg.src})`}}>
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-12 col-lg-6">

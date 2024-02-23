@@ -15,7 +15,7 @@ section {
   background-repeat: no-repeat;
   background-position: top left;
   /* position: relative; */
-  background-image: url("../public/assets/images/sec1-background.webp");
+  /* background-image: url("../public/assets/images/sec1-background.webp"); */
 }
 
 .banner-one .container-fluid {
@@ -670,7 +670,7 @@ section {
 }
 
 /* Work We head Section CSS End */
-.port_mobilebg_one {
+/* .port_mobilebg_one {
   background-image: url("../public/assets/images/Portfolio/port-mobile-app-bg-onee.webp");
 }
 .port_mobilebg_two {
@@ -838,7 +838,7 @@ section {
 }
 .port_ecommerce-eleven {
   background-image: url("../public/assets/images/Portfolio/port-ecommerce-bg-eleven.webp");
-}
+} */
 
 /* PortFolio css End */
 /* --------------------------------------------------------------------------- */
@@ -1578,7 +1578,7 @@ section {
   border-radius: 8px !important;
   border: none;
 }
-
+/* 
 .port-mobile-one {
   background-image: url("../public/assets/images/MobileAppDev/React\ Native\ App/port-mobile-1.webp");
 }
@@ -1607,7 +1607,6 @@ section {
   background-image: url("../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/BG-6.jpg");
 }
 .port_mobilebg-02 {
-  /* background-image: url("../public/assets/images/Poport-mobile-app-bg-twentythree.webprtfolio/port-mobile-app-bg-fifteen.webp"); */
   background-image: url("../public/assets/images/Portfolio/port-mobile-app-bg-twentythree.webp");
 }
 .port_quiz {
@@ -1618,7 +1617,7 @@ section {
 }
 .port_mobilebg_Device {
   background-image: url("../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/work-hand/BG-48-1024x479.webp");
-}
+} */
 /* Responsive css start */
 
 @media (max-width: 991px) {
@@ -2193,7 +2192,7 @@ section {
 
 /* -------------------- Testimonial Css Start -------------------- */
 .testimonial_box {
-  background-image: url("../public/assets/images/COMPANY/testimonial/testimonial-bg.jpg");
+  /* background-image: url("../public/assets/images/COMPANY/testimonial/testimonial-bg.jpg"); */
   width: 100%;
   height: 540px;
   background-size: cover;
@@ -2865,7 +2864,7 @@ section {
 
 /* Hire Banner Section Start */
 .hire_banner {
-  background-image: url("../public/assets/images/Header/Hire Us/hire-banner.png");
+  /* background-image: url("../public/assets/images/Header/Hire Us/hire-banner.png"); */
   width: 100%;
   /* height: 100%; */
   padding: 150px 0px 120px;
@@ -3086,7 +3085,7 @@ section {
 
 /*  Our Team Banner Section Start */
 .team_banner {
-  background-image: url("../public/assets/images/COMPANY/our_team/hire-us-banner.webp");
+  /* background-image: url("../public/assets/images/COMPANY/our_team/hire-us-banner.webp"); */
   width: 100%;
   height: 100%;
   padding: 170px 0;
@@ -3097,7 +3096,7 @@ section {
 }
 .team_banner::before {
   content: "";
-  background-image: url("../public/assets/images/COMPANY/our_team/team-banner.webp");
+  /* background-image: url("../public/assets/images/COMPANY/our_team/team-banner.webp"); */
   position: absolute;
   width: 100%;
   height: 100%;
@@ -3225,7 +3224,7 @@ section {
 .about_banner {
   width: 100%;
   height: 100%;
-  background-image: url("../public/assets/images/COMPANY/aboutUs/life.png");
+  /* background-image: url("../public/assets/images/COMPANY/aboutUs/life.png"); */
   padding: 130px 16px;
   text-align: center;
   background-size: cover;
@@ -3356,7 +3355,7 @@ section {
 
 /* Missin Section CSS Start */
 .missin_section {
-  background-image: url("../public/assets/images/COMPANY/aboutUs/missin-banner.webp");
+  /* background-image: url("../public/assets/images/COMPANY/aboutUs/missin-banner.webp"); */
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -3504,7 +3503,7 @@ section {
 /* Missin Section CSS End */
 /* Our Skill Section CSS Start */
 .skill_section {
-  background-image: url("../public/assets/images/COMPANY/aboutUs/about-bg.png");
+  /* background-image: url("../public/assets/images/COMPANY/aboutUs/about-bg.png"); */
   width: 100%;
   height: 100%;
   padding: 30px 0;
@@ -3857,7 +3856,7 @@ section {
 
 /* Our Process Section CSS Start */
 .our_process {
-  background-image: url("../public/assets/images/COMPANY/aboutUs/about-bg.png");
+  /* background-image: url("../public/assets/images/COMPANY/aboutUs/about-bg.png"); */
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -3961,7 +3960,7 @@ section {
 .client_section {
   width: 100%;
   height: 100%;
-  background-image: url("../public/assets/images/COMPANY/aboutUs/about-bg.png");
+  /* background-image: url("../public/assets/images/COMPANY/aboutUs/about-bg.png"); */
   padding: 30px 0;
 }
 
@@ -4286,7 +4285,7 @@ section {
   left: 50%;
   transform: translate(-50%, 0);
   /* height: 80vh; */
-  top: 5.5rem;
+  top: 0.5rem;
   /* bottom: 3rem; */
 }
 .hover_color_bubble {
@@ -4388,7 +4387,7 @@ section {
 
 /* -------------------- Career Apply Css Start -------------------- */
 .carrer_banner {
-  background-image: url("../public/assets/images/careers/career-bg.jpg");
+  /* background-image: url("../public/assets/images/careers/career-bg.jpg"); */
   align-items: center;
   background-position: 50%;
   background-repeat: no-repeat;

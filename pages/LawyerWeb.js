@@ -1,18 +1,19 @@
-import React, { useRef, useState } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Autoplay, Navigation } from 'swiper'
-import 'swiper/css'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
-import TestiMonial from '../components/Testimonial/TestiMonial'
-import FAQ from '../components/FAQ'
-import { Helmet } from 'react-helmet'
-import Image from 'next/image';
-import Header from '../components/Header/Header'
-import Footer from '../components/Footer'
-import Whatsapp from '../components/Whatsapp'
-import GetAQuoteModal from '../components/GetAQuoteModal'
-import Link from 'next/link'
+import React, { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay, Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import TestiMonial from "../components/Testimonial/TestiMonial";
+import FAQ from "../components/FAQ";
+import { Helmet } from "react-helmet";
+import Image from "next/image";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer";
+import Whatsapp from "../components/Whatsapp";
+import GetAQuoteModal from "../components/GetAQuoteModal";
+import Link from "next/link";
+import HeroSection from "../components/HeroSection";
 //  Customer App
 // import search from "../../../public/assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/search foods online.svg";
 // import Check from "../../../public/assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Check details.svg";
@@ -25,17 +26,16 @@ import Link from 'next/link'
 // import Live from "../../../public/assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Live tracking.svg";
 
 const LawyerWeb = () => {
-  const prevRef = useRef(null)
-  const nextRef = useRef(null)
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
   const [modalOpen, setModalOpen] = useState(false);
-
 
   return (
     <>
       <Helmet title="Best Lawyer Website Design Company India - The App Ideas" />
-      <Header setOpenModal={setModalOpen}/>
+      <Header setOpenModal={setModalOpen} />
       {/* common Banner start */}
-      <section className="common__banner__section">
+      {/* <section className="common__banner__section">
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
@@ -131,7 +131,11 @@ const LawyerWeb = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+      <HeroSection
+        title="Best Lawyer Website Design"
+        des="Like all the other fields, Law firms and agencies are also implementing digitalization. This can be very helpful as they can easily showcase their expertise in front of the customers. Along with that, individuals are also investing in creating a successful website."
+      />
       {/* common banner end  */}
       <section className="work_slider_section py-5">
         <div className="container">
@@ -171,43 +175,43 @@ const LawyerWeb = () => {
               pauseOnMouseEnter: true,
             }}
             speed={500}
-            direction={'horizontal'}
+            direction={"horizontal"}
             pagination={{ clickable: true }}
             // navigation
             onSwiper={(swiper) => {
               // Delay execution for the refs to be defined
               setTimeout(() => {
                 // Override prevEl & nextEl now that refs are defined
-                swiper.params.navigation.prevEl = prevRef.current
-                swiper.params.navigation.nextEl = nextRef.current
+                swiper.params.navigation.prevEl = prevRef.current;
+                swiper.params.navigation.nextEl = nextRef.current;
 
                 // Re-init navigation
-                swiper.navigation.destroy()
-                swiper.navigation.init()
-                swiper.navigation.update()
-              })
+                swiper.navigation.destroy();
+                swiper.navigation.init();
+                swiper.navigation.update();
+              });
             }}
             //   style={{ padding: "2.5rem 0" }}
           >
-            <SwiperSlide style={{ cursor: 'pointer' }}>
+            <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
                   <Image
-                    src={require('../public/assets/images/Footer/lawyer-web/slider/lawyer_bg1.png')}
+                    src={require("../public/assets/images/Footer/lawyer-web/slider/lawyer_bg1.png")}
                     style={{
-                      width: '100%',
+                      width: "100%",
                     }}
                   />
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: 'pointer' }}>
+            <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
                   <Image
-                    src={require('../public/assets/images/Footer/lawyer-web/slider/lawyer_bg.png')}
+                    src={require("../public/assets/images/Footer/lawyer-web/slider/lawyer_bg.png")}
                     style={{
-                      width: '100%',
+                      width: "100%",
                     }}
                   />
                 </div>
@@ -281,7 +285,7 @@ const LawyerWeb = () => {
                         // src={search}
                         alt="search-food-icon"
                         className="img-fluid"
-                        style={{ width: '20%' }}
+                        style={{ width: "20%" }}
                       />
                       <h4>User login module</h4>
                       <p>
@@ -298,7 +302,7 @@ const LawyerWeb = () => {
                         // src={Check}
                         alt="Check-Details-icons"
                         className="img-fluid"
-                        style={{ width: '20%' }}
+                        style={{ width: "20%" }}
                       />
                       <h4>Find a Lawyer</h4>
                       <p>
@@ -315,7 +319,7 @@ const LawyerWeb = () => {
                         // src={Orderonline}
                         alt="Order-Online-icon"
                         className="img-fluid"
-                        style={{ width: '25%' }}
+                        style={{ width: "25%" }}
                       />
                       <h4>Check the details about the services</h4>
                       <p>
@@ -330,7 +334,7 @@ const LawyerWeb = () => {
                         // src={payonline}
                         alt="Pay-Online-icons"
                         className="img-fluid"
-                        style={{ width: '20%' }}
+                        style={{ width: "20%" }}
                       />
                       <h4>Check the testimonials</h4>
                       <p>
@@ -346,7 +350,7 @@ const LawyerWeb = () => {
                         // src={Reviews}
                         alt="Reviews-And-Ratings-icons "
                         className="img-fluid"
-                        style={{ width: '20%' }}
+                        style={{ width: "20%" }}
                       />
                       <h4>Hire a Lawyer</h4>
                       <p>
@@ -362,7 +366,7 @@ const LawyerWeb = () => {
                         // src={Get}
                         alt="Get-Cashback-icons"
                         className="img-fluid"
-                        style={{ width: '20%' }}
+                        style={{ width: "20%" }}
                       />
                       <h4>Check the case studies</h4>
                       <p>
@@ -378,7 +382,7 @@ const LawyerWeb = () => {
                         // src={Avail}
                         alt="search-food-icon"
                         className="img-fluid"
-                        style={{ width: '20%' }}
+                        style={{ width: "20%" }}
                       />
                       <h4>Chat with the experts</h4>
                       <p>
@@ -394,7 +398,7 @@ const LawyerWeb = () => {
                         // src={Checkorder}
                         alt="Check-Order-History-icons"
                         className="img-fluid"
-                        style={{ width: '20%' }}
+                        style={{ width: "20%" }}
                       />
                       <h4>Book a consultation</h4>
                       <p>
@@ -410,7 +414,7 @@ const LawyerWeb = () => {
                         // src={Live}
                         alt="Live-Tracking-icons"
                         className="img-fluid"
-                        style={{ width: '13%' }}
+                        style={{ width: "13%" }}
                       />
                       <h4>Add ratings and reviews</h4>
                       <p>
@@ -828,9 +832,7 @@ const LawyerWeb = () => {
                   >
                     <div className="row">
                       <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                        <div
-                          className="service__provide_tab service__provide_tab_active"
-                        >
+                        <div className="service__provide_tab service__provide_tab_active">
                           <Image
                             // src="../public/assets/images/positive_customer.png"
                             alt="positive_customer"
@@ -879,7 +881,7 @@ const LawyerWeb = () => {
                         </div>
                       </div>
                       <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                        <div  className="service__provide_tab">
+                        <div className="service__provide_tab">
                           <Image
                             // src="../public/assets/images/gps.png"
                             alt="gps"
@@ -891,7 +893,7 @@ const LawyerWeb = () => {
                         </div>
                       </div>
                       <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                        <div  className="service__provide_tab">
+                        <div className="service__provide_tab">
                           <Image
                             // src="../public/assets/images/customer_food.png"
                             alt="customer_food"
@@ -939,7 +941,7 @@ const LawyerWeb = () => {
           <div className="row align-items-center">
             <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
               <div className="contact__lft">
-                <p style={{ textAlign: 'left' }}>
+                <p style={{ textAlign: "left" }}>
                   Would you like to launch a successful Lawyer website in the
                   market?
                 </p>
@@ -948,7 +950,7 @@ const LawyerWeb = () => {
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
                 <Link href="/contact-us" className="contact_btn">
-                  Contact us{' '}
+                  Contact us{" "}
                 </Link>
               </div>
             </div>
@@ -956,15 +958,15 @@ const LawyerWeb = () => {
         </div>
       </section>
       {/* Contact Section End */}
-      <Whatsapp/>
+      <Whatsapp />
       <GetAQuoteModal
         setOpenModal={setModalOpen}
         openModal={modalOpen}
         handleCloseModal={() => setModalOpen(false)}
       />
-      <Footer/>
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default LawyerWeb
+export default LawyerWeb;

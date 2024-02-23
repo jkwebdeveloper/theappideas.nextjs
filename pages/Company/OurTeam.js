@@ -7,6 +7,7 @@ import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer';
 import Whatsapp from '../../components/Whatsapp';
 import GetAQuoteModal from '../../components/GetAQuoteModal';
+import teambg from '../../public/assets/images/COMPANY/our_team/hire-us-banner.png'
 
 const OurTeam = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -18,7 +19,7 @@ const OurTeam = () => {
     <>
       <Helmet title="Our Team | THE APP IDEAS" />
       <Header setOpenModal={setModalOpen}/>
-      <section className="team_banner">
+      <section className="team_banner"style={{backgroundImage:`url(${teambg.src})`}}>
         <h1>OUR TEAM</h1>
         <p>
           We are The App Ideas, a creative bunch of thinkers and developers

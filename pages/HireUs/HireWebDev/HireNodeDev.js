@@ -1,49 +1,77 @@
-import React, { useEffect, useState } from 'react'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-import Link from 'next/link';
-import Image from 'next/image';
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Link from "next/link";
+import Image from "next/image";
 
-import background from '../../../public/assets/images/Home-our-services/bg-download.svg'
-import background1 from '../../../public/assets/images/Home-our-services/download (1).png'
+import background from "../../../public/assets/images/Home-our-services/bg-download.svg";
+import background1 from "../../../public/assets/images/Home-our-services/download (1).png";
 
-import VRApplicationDeveloper from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/VRApplicationDeveloper.webp'
-import Apps from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/Mobile-Apps-Development.png'
-import Angular from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/Game-App-Development-Company.webp'
+import VRApplicationDeveloper from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/VRApplicationDeveloper.webp";
+import Apps from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/Mobile-Apps-Development.png";
+import Angular from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/Game-App-Development-Company.webp";
 
-import Offer from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/1/Faster Software Development.svg'
-import Features from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/1/Provide Customization.svg'
-import Consulting from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/1/Offer Node.Js Consulting Services.svg'
-import Secure from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/1/Complete And Secure Web Solutions.svg'
-import Laravel from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/1/Node.Js Web And App Development.svg'
-import Unit from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/1/Node.Js Features.svg'
+import Offer from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/1/Faster Software Development.svg";
+import Features from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/1/Provide Customization.svg";
+import Consulting from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/1/Offer Node.Js Consulting Services.svg";
+import Secure from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/1/Complete And Secure Web Solutions.svg";
+import Laravel from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/1/Node.Js Web And App Development.svg";
+import Unit from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/1/Node.Js Features.svg";
 
-import Expertise from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/Expertise In Cross Platforms.svg'
-import Sophisticated from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/Robust Portfolio.svg'
-import Implement from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/Best And Affordable Costing.svg'
-import Affordable from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/On-Time Delivery.svg'
-import Time from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/Agile Methodology.svg'
-import Free from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/Support And Help.svg'
+import Expertise from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/Expertise In Cross Platforms.svg";
+import Sophisticated from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/Robust Portfolio.svg";
+import Implement from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/Best And Affordable Costing.svg";
+import Affordable from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/On-Time Delivery.svg";
+import Time from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/Agile Methodology.svg";
+import Free from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/Support And Help.svg";
 
-import { Helmet } from 'react-helmet'
-import Header from '../../../components/Header/Header';
-import Footer from '../../../components/Footer';
+import { Helmet } from "react-helmet";
+import Header from "../../../components/Header/Header";
+import Footer from "../../../components/Footer";
 import ContactUs from "../../../components/ContactUs";
 import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import HeroSection from '../../../components/HeroSection';
-import Whatsapp from '../../../components/Whatsapp';
-import GetAQuoteModal from '../../../components/GetAQuoteModal';
+import HeroSection from "../../../components/HeroSection";
+import Whatsapp from "../../../components/Whatsapp";
+import GetAQuoteModal from "../../../components/GetAQuoteModal";
+import axios from "axios";
+import Lottie from "lottie-react";
+import Loading from "../../../public/assets/images/loading.json";
 
 const HireNodeDev = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [portfolio, setPortFolios] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const handleGetPortFolios = () => {
+    setLoading(true);
+    axios
+      .get(
+        "https://the-app-ideas.onrender.com/api/portfolio?page=Hire NodeJs Developer",
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+      .then((res) => {
+        setPortFolios(res.data.data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setLoading(false);
+      });
+  };
+  useEffect(() => {
+    handleGetPortFolios();
+  }, []);
 
   useEffect(() => {
-    AOS.init()
-  }, [])
+    AOS.init();
+  }, []);
   return (
     <>
       <Helmet title="Hire Top Node JS App Developers In India - The App Ideas" />
-      <Header setOpenModal={setModalOpen}/>
+      <Header setOpenModal={setModalOpen} />
       {/* Banner Section Start */}
       <HeroSection
         title="Hire Node JS App Developers In India"
@@ -65,17 +93,17 @@ const HireNodeDev = () => {
           <div className="Title">
             <h3>Our Feat in Node JS Development</h3>
             <p>
-              As a Best{' '}
+              As a Best{" "}
               <Link
                 href="/"
                 className="Title_Color"
-                style={{ color: '#d6aa0b' }}
+                style={{ color: "#d6aa0b" }}
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                  window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
                 <b> software development company</b>
-              </Link>{' '}
+              </Link>{" "}
               , we are highly experienced as well as experts in delivering the
               best Node js web platforms solution to our clients. We have 4+
               years of experience in developing the best software solution at
@@ -91,13 +119,14 @@ const HireNodeDev = () => {
             </p>
             <div className="text-center">
               <Link
-                href="/contact-us" className='text-decoration-none'
+                href="/contact-us"
+                className="text-decoration-none"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                  window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
-                <div className="contact_btn" style={{ color: '#000' }}>
-                  Contact us{' '}
+                <div className="contact_btn" style={{ color: "#000" }}>
+                  Contact us{" "}
                 </div>
               </Link>
             </div>
@@ -110,141 +139,86 @@ const HireNodeDev = () => {
           <div className="Title">
             <h3>Work we had done</h3>
           </div>
-          <div className="row mt-5">
-            <div className="col-12 px-0 mb-4">
-              <div className="work_head_box port_quiz">
-                <Link href="/" className="work_head_box_link"></Link>
-                <div className="row w-100">
-                  <Link href="/" className="work_head_box_link"></Link>
-                  <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                    <Link href="/" className="work_head_box_link"></Link>
-                    <div className="work_head_lft">
-                      <Link href="/" className="work_head_box_link">
-                        <h2>Resipsausa</h2>
-                      </Link>
-                      <ul className="ps-0">
-                        <Link href="/" className="work_head_box_link"></Link>
-                        <li>
-                          <Link href="/" className="work_head_box_link">
-                            {' '}
-                          </Link>
-                          <Link href="/" className="work_head_item">
-                            E-Commerce
-                          </Link>
-                        </li>
-                        <li>
-                          {' '}
-                          <Link href="/" className="work_head_item">
-                            Hire Wordpress
-                          </Link>
-                        </li>
-                      </ul>
+          {loading ? (
+            <Lottie
+              animationData={Loading}
+              loop={true}
+              style={{
+                width: "200px",
+                margin: "0 auto",
+              }}
+            />
+          ) : portfolio.length > 0 ? (
+            <div className="row mt-5">
+              {portfolio.map((elem) => {
+                const { _id, image, bgImage, tags, title, link, technology } =
+                  elem;
+                return (
+                  <div key={_id} className="col-12 px-0 mb-4">
+                    <div
+                      data-aos="fade-up"
+                      className="work_head_box"
+                      style={{
+                        backgroundImage: `url(https://the-app-ideas.onrender.com${bgImage})`,
+                        objectFit: "cover",
+                        display: "block",
+                        width: "100%",
+                        height: "400px",
+                        backgroundSize: "cover",
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center !important",
+                        boxShadow: "0 10px 6px -6px #000",
+                        transition: "0.1s ease",
+                      }}
+                    >
+                      <div className="work_head_box_link"></div>
+                      <div className="row w-100">
+                        <div className="work_head_box_link"></div>
+                        <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
+                          <div className="work_head_box_link"></div>
+                          <div className="work_head_lft">
+                            <Link
+                              href={link}
+                              target="_blank"
+                              className="work_head_box_link"
+                            >
+                              <h2>{title}</h2>
+                            </Link>
+                            <ul className="ps-0">
+                              <div className="work_head_box_link"></div>
+                              {technology.map((tech) => {
+                                return (
+                                  <li key={tech}>
+                                    <div className="work_head_item">{tech}</div>
+                                  </li>
+                                );
+                              })}
+                            </ul>
+                          </div>
+                        </div>
+                        <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
+                          <div className="work_head_rht">
+                            <Image
+                              width={492}
+                              height={300}
+                              data-aos="fade-left"
+                              src={"https://the-app-ideas.onrender.com".concat(
+                                image
+                              )}
+                              alt="Device-Image-one"
+                              className="img-fluid"
+                            />
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
-                    <div className="work_head_rht">
-                      <Image width={492} height={300}
-                        src={require('../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/work-hand/quiz-1536x948.webp')}
-                        alt="port-ecommerce-website"
-                        className="img-fluid"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
+                );
+              })}
             </div>
-            <div className="col-12 px-0 mb-4">
-              <div className="work_head_box port_ecommerce-Device">
-                <Link href="/" className="work_head_box_link"></Link>
-                <div className="row w-100">
-                  <Link href="/" className="work_head_box_link"></Link>
-                  <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                    <Link href="/" className="work_head_box_link"></Link>
-                    <div className="work_head_lft">
-                      <Link href="/" className="work_head_box_link">
-                        <h2>Purebodynaturals</h2>
-                      </Link>
-                      <ul className="ps-0">
-                        <Link href="/" className="work_head_box_link"></Link>
-                        <li>
-                          <Link href="/" className="work_head_box_link">
-                            {' '}
-                          </Link>
-                          <Link href="/" className="work_head_item">
-                            E-Commerce
-                          </Link>
-                        </li>
-                        <li>
-                          {' '}
-                          <Link href="/" className="work_head_item">
-                            Hire Wordpress
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
-                    <div className="work_head_rht">
-                      <Image width={492} height={300}
-                        src={require('../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/work-hand/Device-Image-5-1536x948.webp')}
-                        alt="port-ecommerce-website-one"
-                        className="img-fluid"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-12 px-0 mb-4">
-              <div className="work_head_box port_mobilebg_Device">
-                <Link href="/" className="work_head_box_link"></Link>
-                <div className="row w-100">
-                  <Link href="/" className="work_head_box_link"></Link>
-                  <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                    <Link href="/" className="work_head_box_link"></Link>
-                    <div className="work_head_lft">
-                      <Link href="/" className="work_head_box_link">
-                        <h2>Food Ordering Website</h2>
-                      </Link>
-                      <ul className="ps-0">
-                        <Link href="/" className="work_head_box_link"></Link>
-                        <li>
-                          <Link href="/" className="work_head_box_link">
-                            {' '}
-                          </Link>
-                          <Link href="/" className="work_head_item">
-                            Hire Wordpress
-                          </Link>
-                        </li>
-                        <li>
-                          {' '}
-                          <Link href="/" className="work_head_item">
-                            Web Development
-                          </Link>
-                        </li>
-                        <li>
-                          {' '}
-                          <Link href="/" className="work_head_item">
-                            {' '}
-                            Wordpress
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
-                    <div className="work_head_rht">
-                      <Image width={492} height={300}
-                        src={require('../../../public/assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/work-hand/Device-Image-50-1536x948.webp')}
-                        alt="port-webdevelop-webiste-two"
-                        className="img-fluid"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          ) : (
+            <div>no data</div>
+          )}
         </div>
       </section>
       {/* Work Head Section End */}
@@ -263,7 +237,7 @@ const HireNodeDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '425px' }}
+                style={{ height: "425px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -275,10 +249,12 @@ const HireNodeDev = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={50} height={67}
+                  <Image
+                    width={50}
+                    height={67}
                     src={Laravel}
                     alt="Laravel Web Application Development"
-                    style={{ width: '50px' }}
+                    style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
@@ -303,7 +279,7 @@ const HireNodeDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '425px' }}
+                style={{ height: "425px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -315,10 +291,12 @@ const HireNodeDev = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={50} height={50}
+                  <Image
+                    width={50}
+                    height={50}
                     src={Offer}
                     alt="Offer Customization"
-                    style={{ width: '50px' }}
+                    style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
@@ -343,7 +321,7 @@ const HireNodeDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '425px' }}
+                style={{ height: "425px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -355,10 +333,12 @@ const HireNodeDev = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={50} height={50}
+                  <Image
+                    width={50}
+                    height={50}
                     src={Features}
                     alt="CUSTOM WORDPRESS DEVELOPMENT"
-                    style={{ width: '50px' }}
+                    style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
@@ -383,7 +363,7 @@ const HireNodeDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '400px' }}
+                style={{ height: "400px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -395,10 +375,12 @@ const HireNodeDev = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={50} height={50}
+                  <Image
+                    width={50}
+                    height={50}
                     src={Secure}
                     alt="Secure Web Solutions"
-                    style={{ width: '50px' }}
+                    style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
@@ -423,7 +405,7 @@ const HireNodeDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '400px' }}
+                style={{ height: "400px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -435,10 +417,12 @@ const HireNodeDev = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={50} height={50}
+                  <Image
+                    width={50}
+                    height={50}
                     src={Consulting}
                     alt="Laravel Consulting Services"
-                    style={{ width: '50px' }}
+                    style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
@@ -463,7 +447,7 @@ const HireNodeDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '400px' }}
+                style={{ height: "400px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -475,10 +459,12 @@ const HireNodeDev = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={50} height={50}
+                  <Image
+                    width={50}
+                    height={50}
                     src={Unit}
                     alt="Unit Testing Methods"
-                    style={{ width: '50px' }}
+                    style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
@@ -522,7 +508,7 @@ const HireNodeDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '385px' }}
+                style={{ height: "385px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -534,10 +520,12 @@ const HireNodeDev = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={70} height={70}
+                  <Image
+                    width={70}
+                    height={70}
                     src={Expertise}
                     alt="Expertise In Web Solutions"
-                    style={{ width: '70px' }}
+                    style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
@@ -562,7 +550,7 @@ const HireNodeDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '385px' }}
+                style={{ height: "385px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -574,16 +562,18 @@ const HireNodeDev = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={70} height={70}
+                  <Image
+                    width={70}
+                    height={70}
                     src={Sophisticated}
                     alt="Sophisticated Portfolio"
-                    style={{ width: '70px' }}
+                    style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
                   <div>Robust Portfolio</div>
                 </h5>
-                <div className="text" style={{ marginBottom: '-26px' }}>
+                <div className="text" style={{ marginBottom: "-26px" }}>
                   With 4+ years of experience, we have worked on various Node.js
                   projects and Successful platforms for different categories or
                   niches.
@@ -601,7 +591,7 @@ const HireNodeDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '385px' }}
+                style={{ height: "385px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -613,10 +603,12 @@ const HireNodeDev = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={70} height={70}
+                  <Image
+                    width={70}
+                    height={70}
                     src={Implement}
                     alt="Implement Agile Methods"
-                    style={{ width: '70px' }}
+                    style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
@@ -641,7 +633,7 @@ const HireNodeDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '385px' }}
+                style={{ height: "385px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -653,16 +645,18 @@ const HireNodeDev = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={70} height={70}
+                  <Image
+                    width={70}
+                    height={70}
                     src={Affordable}
                     alt="Affordable Costing"
-                    style={{ width: '70px' }}
+                    style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
                   <div>On-Time Delivery</div>
                 </h5>
-                <div className="text" style={{ marginBottom: '-25px' }}>
+                <div className="text" style={{ marginBottom: "-25px" }}>
                   Along with the quotation or the costing of software
                   development, we also provide the timeline based on the
                   requirements. We strictly follow the timeline and deliver the
@@ -681,7 +675,7 @@ const HireNodeDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '385px' }}
+                style={{ height: "385px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -693,10 +687,12 @@ const HireNodeDev = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={70} height={70}
+                  <Image
+                    width={70}
+                    height={70}
                     src={Time}
                     alt="Time-Bound Deployment"
-                    style={{ width: '70px' }}
+                    style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
@@ -720,7 +716,7 @@ const HireNodeDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '385px' }}
+                style={{ height: "385px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -732,16 +728,18 @@ const HireNodeDev = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={70} height={70}
+                  <Image
+                    width={70}
+                    height={70}
                     src={Free}
                     alt="Free Support Services"
-                    style={{ width: '70px' }}
+                    style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
                   <div>Support And Help</div>
                 </h5>
-                <div className="text" style={{ marginBottom: '25px' }}>
+                <div className="text" style={{ marginBottom: "25px" }}>
                   Along with the quality of the software and on-time delivery of
                   the services, after deployment, we offer support and
                   maintenance to our clients.
@@ -761,15 +759,15 @@ const HireNodeDev = () => {
                   their expertise? Feel free to contact us."
       />
       {/* Contact Section End */}
-      <Whatsapp/>
+      <Whatsapp />
       <GetAQuoteModal
         setOpenModal={setModalOpen}
         openModal={modalOpen}
         handleCloseModal={() => setModalOpen(false)}
       />
-      <Footer/>
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default HireNodeDev
+export default HireNodeDev;

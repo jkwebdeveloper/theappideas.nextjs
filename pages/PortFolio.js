@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Helmet } from "react-helmet";
 import axios from "axios";
-import Image from 'next/image';
+import Image from "next/image";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer";
 import Whatsapp from "../components/Whatsapp";
@@ -18,7 +18,6 @@ const PortFolio = () => {
   const [filterdata, setFilterData] = useState([]);
   const [activefilter, setActiveFilter] = useState("all");
   const [modalOpen, setModalOpen] = useState(false);
-
 
   const handleGetPortFolios = () => {
     setLoading(true);
@@ -41,10 +40,8 @@ const PortFolio = () => {
   }, []);
 
   const filterItem = (cateItem) => {
-
     const updateItems = portfolio.filter((curElem) => {
-      return curElem.categories ===  cateItem
-      
+      return curElem.categories === cateItem;
     });
     setFilterData(updateItems);
   };
@@ -54,7 +51,7 @@ const PortFolio = () => {
   return (
     <>
       <Helmet title="PORTFOLIO | THE APP IDEAS" />
-      <Header setOpenModal={setModalOpen}/>
+      <Header setOpenModal={setModalOpen} />
       <section
         className="blog__section"
         style={{ paddingTop: "120px", paddingBottom: "40px" }}
@@ -168,13 +165,13 @@ const PortFolio = () => {
             >
               {loading ? (
                 <Lottie
-                animationData={Loading}
-                loop={true}
-                style={{
-                  width: "200px",
-                  margin: "0 auto",
-                }}
-              />
+                  animationData={Loading}
+                  loop={true}
+                  style={{
+                    width: "200px",
+                    margin: "0 auto",
+                  }}
+                />
               ) : portfolio.length > 0 ? (
                 <div className="row">
                   {filterdata.length > 0
@@ -195,15 +192,22 @@ const PortFolio = () => {
                               className="work_head_box"
                               style={{
                                 backgroundImage: `url(https://the-app-ideas.onrender.com${bgImage})`,
+                                objectFit: "cover",
+                                display: "block",
+                                width: "100%",
+                                height: "400px",
+                                backgroundSize: "cover",
+                                backgroundRepeat: "no-repeat",
+                                backgroundPosition: "center !important",
+                                boxShadow: "0 10px 6px -6px #000",
+                                transition: "0.1s ease",
                               }}
                             >
                               <div className="work_head_box_link"></div>
                               <div className="row w-100">
                                 <div className="work_head_box_link"></div>
                                 <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                                  <div
-                                    className="work_head_box_link"
-                                  ></div>
+                                  <div className="work_head_box_link"></div>
                                   <div className="work_head_lft">
                                     <Link
                                       href={link}
@@ -212,20 +216,14 @@ const PortFolio = () => {
                                       <h2>{title}</h2>
                                     </Link>
                                     <ul className="ps-0">
-                                      <div
-                                        className="work_head_box_link"
-                                      ></div>
+                                      <div className="work_head_box_link"></div>
                                       {technology.map((tech) => {
                                         return (
                                           <li key={tech}>
-                                            <div
-                                              className="work_head_box_link"
-                                            >
+                                            <div className="work_head_box_link">
                                               {" "}
                                             </div>
-                                            <div
-                                              className="work_head_item"
-                                            >
+                                            <div className="work_head_item">
                                               {tech}
                                             </div>
                                           </li>
@@ -270,15 +268,22 @@ const PortFolio = () => {
                               className="work_head_box"
                               style={{
                                 backgroundImage: `url(https://the-app-ideas.onrender.com${bgImage})`,
+                                objectFit: "cover",
+                                display: "block",
+                                width: "100%",
+                                height: "400px",
+                                backgroundSize: "cover",
+                                backgroundRepeat: "no-repeat",
+                                backgroundPosition: "center !important",
+                                boxShadow: "0 10px 6px -6px #000",
+                                transition: "0.1s ease",
                               }}
                             >
                               <div className="work_head_box_link"></div>
                               <div className="row w-100">
                                 <div className="work_head_box_link"></div>
                                 <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                                  <div
-                                    className="work_head_box_link"
-                                  ></div>
+                                  <div className="work_head_box_link"></div>
                                   <div className="work_head_lft">
                                     <Link
                                       href={link}
@@ -288,9 +293,7 @@ const PortFolio = () => {
                                       <h2>{title}</h2>
                                     </Link>
                                     <ul className="ps-0">
-                                      <div
-                                        className="work_head_box_link"
-                                      ></div>
+                                      <div className="work_head_box_link"></div>
                                       {technology.map((tech) => {
                                         return (
                                           <li key={tech}>
@@ -330,13 +333,13 @@ const PortFolio = () => {
           </div>
         </div>
       </section>
-      <Whatsapp/>
+      <Whatsapp />
       <GetAQuoteModal
         setOpenModal={setModalOpen}
         openModal={modalOpen}
         handleCloseModal={() => setModalOpen(false)}
       />
-      <Footer/>
+      <Footer />
     </>
   );
 };

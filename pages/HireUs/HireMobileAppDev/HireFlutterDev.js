@@ -1,51 +1,77 @@
-import React, { useEffect, useState } from 'react'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-import Link from 'next/link';
-import Image from 'next/image';
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Link from "next/link";
+import Image from "next/image";
 
-import VRApplicationDeveloper from '../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/VRApplicationDeveloper.webp'
-import appDevelopment from '../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Mobile-App-Development.png'
-import Wordpress from '../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Wordpress-Developer.png'
+import VRApplicationDeveloper from "../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/VRApplicationDeveloper.webp";
+import appDevelopment from "../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Mobile-App-Development.png";
+import Wordpress from "../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Wordpress-Developer.png";
 
-import background from '../../../public/assets/images/Home-our-services/bg-download.svg'
-import background1 from '../../../public/assets/images/Home-our-services/download (1).png'
-import Elegant from '../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/The Elegant Designing Services.svg'
-import Platforms from '../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/Cross Platforms Development.svg'
-import Deliver from '../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/Deliver Secure App Solution.svg'
-import Support from '../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/Support And Maintenance.svg'
-import Custom from '../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/Custom Flutter App Development.svg'
-import Flutter from '../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/Flutter Consulting Services.svg'
+import background from "../../../public/assets/images/Home-our-services/bg-download.svg";
+import background1 from "../../../public/assets/images/Home-our-services/download (1).png";
+import Elegant from "../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/The Elegant Designing Services.svg";
+import Platforms from "../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/Cross Platforms Development.svg";
+import Deliver from "../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/Deliver Secure App Solution.svg";
+import Support from "../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/Support And Maintenance.svg";
+import Custom from "../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/Custom Flutter App Development.svg";
+import Flutter from "../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/Flutter Consulting Services.svg";
 
-import Highly from '../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Highly Skilled Developers.svg'
-import Sophisticated from '../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Sophisticated Portfolio.svg'
-import Deployment from '../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/On-Time Deployment.svg'
-import Affordable from '../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Affordable Costing.svg'
-import Client from '../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Client Satisfaction Guarantee.svg'
-import Process from '../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Agile Development Process.svg'
+import Highly from "../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Highly Skilled Developers.svg";
+import Sophisticated from "../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Sophisticated Portfolio.svg";
+import Deployment from "../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/On-Time Deployment.svg";
+import Affordable from "../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Affordable Costing.svg";
+import Client from "../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Client Satisfaction Guarantee.svg";
+import Process from "../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Agile Development Process.svg";
 
+import { Helmet } from "react-helmet";
 
-import { Helmet } from 'react-helmet'
-
-import Header from '../../../components/Header/Header';
-import Footer from '../../../components/Footer';
+import Header from "../../../components/Header/Header";
+import Footer from "../../../components/Footer";
 import ContactUs from "../../../components/ContactUs";
 import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import HeroSection from '../../../components/HeroSection';
-import Whatsapp from '../../../components/Whatsapp';
-import GetAQuoteModal from '../../../components/GetAQuoteModal';
-
+import HeroSection from "../../../components/HeroSection";
+import Whatsapp from "../../../components/Whatsapp";
+import GetAQuoteModal from "../../../components/GetAQuoteModal";
+import axios from "axios";
+import Lottie from "lottie-react";
+import Loading from "../../../public/assets/images/loading.json";
 
 const HireFlutterDev = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [portfolio, setPortFolios] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const handleGetPortFolios = () => {
+    setLoading(true);
+    axios
+      .get(
+        "https://the-app-ideas.onrender.com/api/portfolio?page=Hire Flutter Developer",
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+      .then((res) => {
+        setPortFolios(res.data.data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setLoading(false);
+      });
+  };
+  useEffect(() => {
+    handleGetPortFolios();
+  }, []);
 
   useEffect(() => {
-    AOS.init()
-  }, [])
+    AOS.init();
+  }, []);
   return (
     <>
       <Helmet title="Hire Flutter App Developers | Offshore Flutter Developers India" />
-      <Header setOpenModal={setModalOpen}/>
+      <Header setOpenModal={setModalOpen} />
       {/* Banner Section Start */}
       <HeroSection
         title="Hire Flutter Developers In India"
@@ -87,13 +113,13 @@ const HireFlutterDev = () => {
             <div className="text-center">
               <Link
                 href="/contact-us"
-                className='text-decoration-none'
+                className="text-decoration-none"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                  window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
-                <div className="contact_btn" style={{ color: '#000' }}>
-                  Contact us{' '}
+                <div className="contact_btn" style={{ color: "#000" }}>
+                  Contact us{" "}
                 </div>
               </Link>
             </div>
@@ -106,294 +132,86 @@ const HireFlutterDev = () => {
           <div className="Title">
             <h3>Work we had done</h3>
           </div>
-          <div className="row mt-5">
-            <div className="col-12 px-0 mb-4">
-              <div data-aos="fade-up" className="work_head_box port-bg-1">
-                <div className="work_head_box_link"></div>
-                <div className="row w-100">
-                  <div className="work_head_box_link"></div>
-                  <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                    <div className="work_head_box_link"></div>
-                    <div className="work_head_lft">
-                      <div className="work_head_box_link">
-                        <h2>Spending Tracker</h2>
-                      </div>
-                      <ul className="ps-0">
+          {loading ? (
+            <Lottie
+              animationData={Loading}
+              loop={true}
+              style={{
+                width: "200px",
+                margin: "0 auto",
+              }}
+            />
+          ) : portfolio.length > 0 ? (
+            <div className="row mt-5">
+              {portfolio.map((elem) => {
+                const { _id, image, bgImage, tags, title, link, technology } =
+                  elem;
+                return (
+                  <div key={_id} className="col-12 px-0 mb-4">
+                    <div
+                      data-aos="fade-up"
+                      className="work_head_box"
+                      style={{
+                        backgroundImage: `url(https://the-app-ideas.onrender.com${bgImage})`,
+                        objectFit: "cover",
+                        display: "block",
+                        width: "100%",
+                        height: "400px",
+                        backgroundSize: "cover",
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center !important",
+                        boxShadow: "0 10px 6px -6px #000",
+                        transition: "0.1s ease",
+                      }}
+                    >
+                      <div className="work_head_box_link"></div>
+                      <div className="row w-100">
                         <div className="work_head_box_link"></div>
-                        <li>
-                          <div className="work_head_box_link">
-                            {' '}
+                        <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
+                          <div className="work_head_box_link"></div>
+                          <div className="work_head_lft">
+                            <Link
+                              href={link}
+                              target="_blank"
+                              className="work_head_box_link"
+                            >
+                              <h2>{title}</h2>
+                            </Link>
+                            <ul className="ps-0">
+                              <div className="work_head_box_link"></div>
+                              {technology.map((tech) => {
+                                return (
+                                  <li key={tech}>
+                                    <div className="work_head_item">{tech}</div>
+                                  </li>
+                                );
+                              })}
+                            </ul>
                           </div>
-                          <div className="work_head_item">
-                            Mobile Application Development{' '}
+                        </div>
+                        <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
+                          <div className="work_head_rht">
+                            <Image
+                              width={492}
+                              height={300}
+                              data-aos="fade-left"
+                              src={"https://the-app-ideas.onrender.com".concat(
+                                image
+                              )}
+                              alt="Device-Image-one"
+                              className="img-fluid"
+                            />
                           </div>
-                        </li>
-                        <li>
-                          {' '}
-                          <div className="work_head_item">
-                            React Native
-                          </div>
-                        </li>
-                        <li>
-                          {' '}
-                          <div className="work_head_item">
-                            Reactjs
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
-                    <div className="work_head_rht">
-                      <Image width={492} height={300}
-                        data-aos="fade-up-left"
-                        src={require('../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/Device-Image-53-1536x948.webp')}
-                        alt="port-mobile-app-mobile-thirteen"
-                        className="img-fluid"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-12 px-0 mb-4">
-              <div data-aos="fade-up" className="work_head_box port-bg-2">
-                <div className="work_head_box_link"></div>
-                <div className="row w-100">
-                  <div className="work_head_box_link"></div>
-                  <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                    <div className="work_head_box_link"></div>
-                    <div className="work_head_lft">
-                      <div className="work_head_box_link">
-                        <h2>Pitch App</h2>
+                        </div>
                       </div>
-                      <ul className="ps-0">
-                        <div className="work_head_box_link"></div>
-                        <li>
-                          <div className="work_head_box_link">
-                            {' '}
-                          </div>
-                          <div className="work_head_item">
-                            Mobile Application Development
-                          </div>
-                        </li>
-                        <li>
-                          {' '}
-                          <div className="work_head_item">
-                            React Native
-                          </div>
-                        </li>
-                        <li>
-                          {' '}
-                          <div className="work_head_item">
-                            Reactjs
-                          </div>
-                        </li>
-                      </ul>
                     </div>
                   </div>
-                  <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
-                    <div className="work_head_rht">
-                      <Image width={492} height={300}
-                        data-aos="fade-up-left"
-                        src={require('../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/Device-Image-52-1536x948.webp')}
-                        alt="Device-Image-one"
-                        className="img-fluid"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
+                );
+              })}
             </div>
-            <div className="col-12 px-0 mb-4">
-              <div data-aos="fade-up" className="work_head_box port-bg-3">
-                <div className="work_head_box_link"></div>
-                <div className="row w-100">
-                  <div className="work_head_box_link"></div>
-                  <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                    <div className="work_head_box_link"></div>
-                    <div className="work_head_lft">
-                      <div className="work_head_box_link">
-                        <h2>We Eat App</h2>
-                      </div>
-                      <ul className="ps-0">
-                        <div className="work_head_box_link"></div>
-                        <li>
-                          <div className="work_head_box_link">
-                            {' '}
-                          </div>
-                          <div className="work_head_item">
-                            Mobile Application Development
-                          </div>
-                        </li>
-                        <li>
-                          <div className="work_head_box_link">
-                            {' '}
-                          </div>
-                          <div className="work_head_item">
-                            React Native
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
-                    <div className="work_head_rht">
-                      <Image width={492} height={300}
-                        data-aos="fade-up-left"
-                        src={require('../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/Device-Image-51-1536x948.webp')}
-                        alt="port-mobile-app-mobile-thirteen"
-                        className="img-fluid"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-12 px-0 mb-4">
-              <div data-aos="fade-up" className="work_head_box port-bg-4">
-                <div className="work_head_box_link"></div>
-                <div className="row w-100">
-                  <div className="work_head_box_link"></div>
-                  <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                    <div className="work_head_box_link"></div>
-                    <div className="work_head_lft">
-                      <div className="work_head_box_link">
-                        <h2>Spending Tracker</h2>
-                      </div>
-                      <ul className="ps-0">
-                        <div className="work_head_box_link"></div>
-                        <li>
-                          <div className="work_head_box_link">
-                            {' '}
-                          </div>
-                          <div className="work_head_item">
-                            Mobile Application Development{' '}
-                          </div>
-                        </li>
-                        <li>
-                          {' '}
-                          <div className="work_head_item">
-                            React Native
-                          </div>
-                        </li>
-                        <li>
-                          {' '}
-                          <div className="work_head_item">
-                            Reactjs
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
-                    <div className="work_head_rht">
-                      <Image width={492} height={300}
-                        data-aos="fade-up-left"
-                        src={require('../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/Device-Image-26-1536x948.webp')}
-                        alt="port-mobile-app-mobile-thirteen"
-                        className="img-fluid"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-12 px-0 mb-4">
-              <div data-aos="fade-up" className="work_head_box port-bg-5">
-                <div className="work_head_box_link"></div>
-                <div className="row w-100">
-                  <div className="work_head_box_link"></div>
-                  <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                    <div className="work_head_box_link"></div>
-                    <div className="work_head_lft">
-                      <div className="work_head_box_link">
-                        <h2>Pitch App</h2>
-                      </div>
-                      <ul className="ps-0">
-                        <div className="work_head_box_link"></div>
-                        <li>
-                          <div className="work_head_box_link">
-                            {' '}
-                          </div>
-                          <div className="work_head_item">
-                            Mobile Application Development
-                          </div>
-                        </li>
-                        <li>
-                          {' '}
-                          <div className="work_head_item">
-                            React Native
-                          </div>
-                        </li>
-                        <li>
-                          {' '}
-                          <div className="work_head_item">
-                            Reactjs
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
-                    <div className="work_head_rht">
-                      <Image width={492} height={300}
-                        data-aos="fade-up-left"
-                        src={require('../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/app-1536x948.webp')}
-                        alt="Device-Image-one"
-                        className="img-fluid"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-12 px-0 mb-4">
-              <div data-aos="fade-up" className="work_head_box port-bg-6">
-                <div className="work_head_box_link"></div>
-                <div className="row w-100">
-                  <div className="work_head_box_link"></div>
-                  <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                    <div className="work_head_box_link"></div>
-                    <div className="work_head_lft">
-                      <div className="work_head_box_link">
-                        <h2>We Eat App</h2>
-                      </div>
-                      <ul className="ps-0">
-                        <div className="work_head_box_link"></div>
-                        <li>
-                          <div className="work_head_box_link">
-                            {' '}
-                          </div>
-                          <div className="work_head_item">
-                            Mobile Application Development
-                          </div>
-                        </li>
-                        <li>
-                          <div className="work_head_box_link">
-                            {' '}
-                          </div>
-                          <div className="work_head_item">
-                            React Native
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
-                    <div className="work_head_rht">
-                      <Image width={492} height={300}
-                        data-aos="fade-up-left"
-                        src={require('../../../public/assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/Device-Image-1-1536x948.webp')}
-                        alt="port-mobile-app-mobile-thirteen"
-                        className="img-fluid"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          ) : (
+            <div>no data</div>
+          )}
         </div>
       </section>
       {/* Work Head Section End */}
@@ -415,7 +233,7 @@ const HireFlutterDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '400px' }}
+                style={{ height: "400px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -427,10 +245,12 @@ const HireFlutterDev = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={50} height={62}
+                  <Image
+                    width={50}
+                    height={62}
                     src={Custom}
                     alt="Custom Flutter App Development"
-                    style={{ width: '50px' }}
+                    style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
@@ -455,7 +275,7 @@ const HireFlutterDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '400px' }}
+                style={{ height: "400px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -467,10 +287,12 @@ const HireFlutterDev = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={50} height={62}
+                  <Image
+                    width={50}
+                    height={62}
                     src={Elegant}
                     alt="The Elegant Designing Services"
-                    style={{ width: '50px' }}
+                    style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
@@ -494,7 +316,7 @@ const HireFlutterDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '400px' }}
+                style={{ height: "400px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -506,10 +328,12 @@ const HireFlutterDev = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={50} height={62}
+                  <Image
+                    width={50}
+                    height={62}
                     src={Platforms}
                     alt="Cross Platforms Development"
-                    style={{ width: '50px' }}
+                    style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
@@ -533,7 +357,7 @@ const HireFlutterDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '400px' }}
+                style={{ height: "400px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -545,10 +369,12 @@ const HireFlutterDev = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={50} height={62}
+                  <Image
+                    width={50}
+                    height={62}
                     src={Support}
                     alt="Support And Maintenance"
-                    style={{ width: '50px' }}
+                    style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
@@ -572,7 +398,7 @@ const HireFlutterDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '400px' }}
+                style={{ height: "400px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -584,10 +410,12 @@ const HireFlutterDev = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={50} height={62}
+                  <Image
+                    width={50}
+                    height={62}
                     src={Deliver}
                     alt="Deliver Secure App Solution"
-                    style={{ width: '50px' }}
+                    style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
@@ -612,7 +440,7 @@ const HireFlutterDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '400px' }}
+                style={{ height: "400px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -624,10 +452,12 @@ const HireFlutterDev = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={50} height={62}
+                  <Image
+                    width={50}
+                    height={62}
                     src={Flutter}
                     alt="Flutter Consulting Services"
-                    style={{ width: '50px' }}
+                    style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
@@ -670,7 +500,7 @@ const HireFlutterDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '385px' }}
+                style={{ height: "385px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -682,10 +512,12 @@ const HireFlutterDev = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={70} height={70}
+                  <Image
+                    width={70}
+                    height={70}
                     src={Highly}
                     alt="Highly Skilled Developers"
-                    style={{ width: '70px' }}
+                    style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
@@ -709,7 +541,7 @@ const HireFlutterDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '385px' }}
+                style={{ height: "385px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -721,16 +553,18 @@ const HireFlutterDev = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={70} height={70}
+                  <Image
+                    width={70}
+                    height={70}
                     src={Sophisticated}
                     alt="Sophisticated Portfolio"
-                    style={{ width: '70px' }}
+                    style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
                   <div>Sophisticated Portfolio</div>
                 </h5>
-                <div className="text" style={{ marginBottom: '-26px' }}>
+                <div className="text" style={{ marginBottom: "-26px" }}>
                   We have proven our expertise in the web and app development
                   field by creating a sophisticated portfolio of web and app
                   development services.
@@ -748,7 +582,7 @@ const HireFlutterDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '385px' }}
+                style={{ height: "385px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -760,10 +594,12 @@ const HireFlutterDev = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={70} height={70}
+                  <Image
+                    width={70}
+                    height={70}
                     src={Deployment}
                     alt="On-Time Deployment"
-                    style={{ width: '70px' }}
+                    style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
@@ -787,7 +623,7 @@ const HireFlutterDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '385px' }}
+                style={{ height: "385px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -799,16 +635,18 @@ const HireFlutterDev = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={70} height={70}
+                  <Image
+                    width={70}
+                    height={70}
                     src={Affordable}
                     alt="Affordable Costing"
-                    style={{ width: '70px' }}
+                    style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
                   <div>Affordable Costing</div>
                 </h5>
-                <div className="text" style={{ marginBottom: '-25px' }}>
+                <div className="text" style={{ marginBottom: "-25px" }}>
                   After requirements gathering, we analyze the overall projects
                   and features of the client. And based on that we offer the
                   best and competitive rates without compromising the quality of
@@ -827,7 +665,7 @@ const HireFlutterDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '385px' }}
+                style={{ height: "385px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -839,10 +677,12 @@ const HireFlutterDev = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={70} height={70}
+                  <Image
+                    width={70}
+                    height={70}
                     src={Client}
                     alt="Client Satisfaction Guarantee"
-                    style={{ width: '70px' }}
+                    style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
@@ -866,7 +706,7 @@ const HireFlutterDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '385px' }}
+                style={{ height: "385px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -878,16 +718,18 @@ const HireFlutterDev = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={70} height={70}
+                  <Image
+                    width={70}
+                    height={70}
                     src={Process}
                     alt="Agile Development Process"
-                    style={{ width: '70px' }}
+                    style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
                   <div>Agile Development Process</div>
                 </h5>
-                <div className="text" style={{ marginBottom: '25px' }}>
+                <div className="text" style={{ marginBottom: "25px" }}>
                   Our Flutter developers follow the Agile Development process to
                   ensure the fast paced development.
                 </div>
@@ -903,15 +745,15 @@ const HireFlutterDev = () => {
       {/* Contact Section Start */}
       <ContactUs question="Do you want to know more about our Flutter developers and their expertise?" />
       {/* Contact Section End */}
-      <Whatsapp/>
+      <Whatsapp />
       <GetAQuoteModal
         setOpenModal={setModalOpen}
         openModal={modalOpen}
         handleCloseModal={() => setModalOpen(false)}
       />
-      <Footer/>
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default HireFlutterDev
+export default HireFlutterDev;
