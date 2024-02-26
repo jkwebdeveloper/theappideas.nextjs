@@ -8,7 +8,7 @@ import Work from "../components/Workdone/Work";
 import Banner from "../components/Home/Banner/Banner";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer";
-import Head from 'next/head';
+import Head from "next/head";
 
 import axios from "axios";
 import OndemandProduct from "../components/Home/OndemandProducts/OndemandProduct";
@@ -20,7 +20,6 @@ const Home = ({ setOpenModal }) => {
   const [banners, setBanners] = useState([]);
   const [loading, setLoading] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
-
 
   const handleGetBanners = () => {
     setLoading(true);
@@ -45,10 +44,8 @@ const Home = ({ setOpenModal }) => {
 
   return (
     <>
-   <Head>
-        <title>
-          iPhone 12 XS Max For Sale in Colorado - Big Discounts | Apple
-        </title>
+      <Head>
+        <title>Best Web And Mobile App Development Company</title>
         <meta
           name="description"
           content="Check out iPhone 12 XR Pro and iPhone 12 Pro Max. Visit your local store and for expert advice."
@@ -65,7 +62,7 @@ const Home = ({ setOpenModal }) => {
       <TestiMonial />
       <Blog />
       <ContactUs question="Would you like to execute any project?" />
-      <Whatsapp/>
+      <Whatsapp />
       <Footer />
       <GetAQuoteModal
         setOpenModal={setModalOpen}
