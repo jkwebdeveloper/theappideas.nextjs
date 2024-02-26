@@ -308,6 +308,9 @@ li .get_a_btn {
     cursor: pointer;
     display: block;
   }
+  .wrapper .btn:hover {
+    color: white;
+  }
   .wrapper .nav-links {
     position: fixed;
     height: 100vh;
@@ -770,6 +773,18 @@ nav input {
 
 .header_mobile_menu #company_sub_menu_id li a:hover {
   color: #f6c000 !important;
+}
+
+.company_sub_menu li{
+  transition: all 1s ease;
+}
+
+.mobile_menu_open li {
+  display: block;
+}
+
+.mobile_menu_close li {
+  display: none;
 }
 
 .header_mobile_menu .sidebar-nav ul.sub-menu li a.menu-toggle {
