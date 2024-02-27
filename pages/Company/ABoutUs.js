@@ -97,7 +97,7 @@ const ABoutUs = () => {
                     high-performance, cost-competitive solutions for business
                     across the niches by leveraging the latest technologies,
                     design and development expertise and strategic decisions
-                    reached through a consistent and collaborative team effort
+                    reached through a consistent and collaborative team effort.
                   </p>
                 </div>
                 <div className="card-border">

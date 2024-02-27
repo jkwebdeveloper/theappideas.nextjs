@@ -29,7 +29,7 @@ import GetAQuoteModal from "../components/GetAQuoteModal";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 // localhost Key
-const SITE_KEY = "6Ld9hlMpAAAAAECTno-3flFDva33LDHA-zb-1aXs";
+const SITE_KEY = "6LflLYApAAAAAA94dzKNSl35WtkPT9X6VfLH5p_f";
 
 const ContactUs = () => {
   const [loading, setLoading] = useState(false);

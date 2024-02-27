@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 import iphonecompany from "../../public/assets/images/MobileAppDev/IPhone App/IPhone-App-Development-Company.png";
 import iphoneservice from "../../public/assets/images/MobileAppDev/IPhone App/IPhone-App-Development-Service.png";
 import iphonedevelopment from "../../public/assets/images/MobileAppDev/IPhone App/IPhone-Application-Development.png";
@@ -26,6 +26,9 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer";
 import Whatsapp from "../../components/Whatsapp";
 import GetAQuoteModal from "../../components/GetAQuoteModal";
+import axios from "axios";
+import Lottie from "lottie-react";
+import Loading from "../../public/assets/images/loading.json";
 
 const ServiceProvideData = [
   {
@@ -127,6 +130,32 @@ const IphoneAppDevelopment = () => {
   const [openIndustries, SetOpenIndustries] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
+  const [portfolio, setPortFolios] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const handleGetPortFolios = () => {
+    setLoading(true);
+    axios
+      .get(
+        "https://the-app-ideas.onrender.com/api/portfolio?page=IPhone App Development",
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+      .then((res) => {
+        setPortFolios(res.data.data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setLoading(false);
+      });
+  };
+  useEffect(() => {
+    handleGetPortFolios();
+  }, []);
+
   const toggleOpen = (i) => {
     if (openServicesProvide === i) {
       return SetOpenServicesProvide(false);
@@ -147,7 +176,7 @@ const IphoneAppDevelopment = () => {
   return (
     <>
       <Helmet title="iphone App Development Company India | The App Ideas" />
-      <Header setOpenModal={setModalOpen}/>
+      <Header setOpenModal={setModalOpen} />
       {/* Banner Section Start */}
       <HeroSection
         title="IPhone App Development Company"
@@ -192,7 +221,9 @@ const IphoneAppDevelopment = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../public/assets/images/MobileAppDev/Android App Development Company/Android App/Website-Redesign.png")}
                       alt="Custom-Mobile-App-Development"
                       className="img-fluid"
@@ -209,7 +240,9 @@ const IphoneAppDevelopment = () => {
                       activeService === "ui_ux" && "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../public/assets/images/MobileAppDev/Android App Development Company/Android App/Group-235.png")}
                       alt="Android-Enterprise-App-Development"
                       className="img-fluid"
@@ -227,7 +260,9 @@ const IphoneAppDevelopment = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../public/assets/images/MobileAppDev/Android App Development Company/Android App/icons8-smart-watch-100-1.png")}
                       alt="Android-Wearable-App-Development"
                       className="img-fluid"
@@ -245,7 +280,9 @@ const IphoneAppDevelopment = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../public/assets/images/MobileAppDev/Android App Development Company/Android App/Group-53.png")}
                       alt="Android-Game-App-Development"
                       className="img-fluid"
@@ -263,7 +300,9 @@ const IphoneAppDevelopment = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../public/assets/images/MobileAppDev/Android App Development Company/Android App/Group-184.png")}
                       alt="Android-App-Redesign"
                       className="img-fluid"
@@ -281,7 +320,9 @@ const IphoneAppDevelopment = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../public/assets/images/MobileAppDev/Android App Development Company/Android App/Mask-Group.png")}
                       alt="Android-Support-And-Maintenance"
                       className="img-fluid"
@@ -467,7 +508,9 @@ const IphoneAppDevelopment = () => {
                 <div className="service_provide_box">
                   <div className="service_provide_content">
                     <div className="service_provide_title">
-                      <Image width={50} height={50}
+                      <Image
+                        width={50}
+                        height={50}
                         src={item?.images}
                         alt="smartphone-tablet"
                         className="img-fluid"
@@ -504,9 +547,111 @@ const IphoneAppDevelopment = () => {
       </section>
       {/* Service Section End */}
 
-      {/* Work Head Section Start */}
-      <WorkHand />
-      {/* Work Head Section End */}
+      <>
+        {/* Work Head Section Start */}
+        <section className="work_head_section py-5">
+          <div className="container">
+            <div className="Title">
+              <h3>Work we had done</h3>
+            </div>
+            {loading ? (
+              <Lottie
+                animationData={Loading}
+                loop={true}
+                style={{
+                  width: "200px",
+                  margin: "0 auto",
+                }}
+              />
+            ) : portfolio.length > 0 ? (
+              <div className="row mt-5">
+                {portfolio.map((elem) => {
+                  const { _id, image, bgImage, tags, title, link, technology } =
+                    elem;
+                  return (
+                    <div key={_id} className="col-12 px-0 mb-4">
+                      <div
+                        data-aos="fade-up"
+                        className="work_head_box"
+                        // style={{
+                        //   backgroundImage: `url(${bg1.src})`,
+                        //   objectFit: "cover",
+                        //   display: "block",
+                        //   width: "100%",
+                        //   height: "400px",
+                        //   backgroundSize: "cover !important",
+                        //   backgroundRepeat: "no-repeat",
+                        //   backgroundPosition: "center !important",
+                        //   boxShadow: "0 10px 6px -6px #000",
+                        //   transition: "0.1s ease",
+                        // }}
+                        style={{
+                          backgroundImage: `url(https://the-app-ideas.onrender.com${bgImage})`,
+                          objectFit: "cover",
+                          display: "block",
+                          width: "100%",
+                          height: "400px",
+                          backgroundSize: "cover",
+                          backgroundRepeat: "no-repeat",
+                          backgroundPosition: "center !important",
+                          boxShadow: "0 10px 6px -6px #000",
+                          transition: "0.1s ease",
+                        }}
+                      >
+                        <div className="work_head_box_link"></div>
+                        <div className="row w-100">
+                          <div className="work_head_box_link"></div>
+                          <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
+                            <div className="work_head_box_link"></div>
+                            <div className="work_head_lft">
+                              <Link
+                                href={link}
+                                target="_blank"
+                                className="work_head_box_link"
+                              >
+                                <h2>{title}</h2>
+                              </Link>
+                              <ul className="ps-0">
+                                <div className="work_head_box_link"></div>
+                                {technology.map((tech) => {
+                                  return (
+                                    <li key={tech}>
+                                      <div className="work_head_item">
+                                        {tech}
+                                      </div>
+                                    </li>
+                                  );
+                                })}
+                              </ul>
+                            </div>
+                          </div>
+                          <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
+                            <div className="work_head_rht">
+                              <Image
+                                width={492}
+                                height={300}
+                                data-aos="fade-left"
+                                src={"https://the-app-ideas.onrender.com".concat(
+                                  image
+                                )}
+                                alt="Device-Image-one"
+                                className="img-fluid"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            ) : (
+              <div>no data</div>
+            )}
+          </div>
+        </section>
+        {/* Work Head Section End */}
+      </>
 
       {/* Service Section Start */}
       <section className="service__provide__section py-5">
@@ -527,7 +672,9 @@ const IphoneAppDevelopment = () => {
                       "service__provide_tab_active"
                     } `}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={Experience}
                       alt="Experience-and-Expertise."
                       className="img-fluid"
@@ -545,7 +692,9 @@ const IphoneAppDevelopment = () => {
                       "service__provide_tab_active"
                     } `}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={Robust}
                       alt="Robust-Portfolio"
                       className="img-fluid"
@@ -563,7 +712,9 @@ const IphoneAppDevelopment = () => {
                       "service__provide_tab_active"
                     } `}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={Lifecycle}
                       alt="Full-Lifecycle-Support"
                       className="img-fluid"
@@ -581,7 +732,9 @@ const IphoneAppDevelopment = () => {
                       "service__provide_tab_active"
                     } `}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={Agile}
                       alt="Agile-Development"
                       className="img-fluid"
@@ -599,7 +752,9 @@ const IphoneAppDevelopment = () => {
                       "service__provide_tab_active"
                     } `}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={Fast}
                       alt="Fast-Paced-Development"
                       className="img-fluid"
@@ -617,7 +772,9 @@ const IphoneAppDevelopment = () => {
                       "service__provide_tab_active"
                     } `}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={Competitive}
                       alt="Competitive-Pricing"
                       className="img-fluid"
@@ -791,7 +948,9 @@ const IphoneAppDevelopment = () => {
                 <div className="service_provide_box">
                   <div className="service_provide_content">
                     <div className="service_provide_title">
-                      <Image width={60} height={60}
+                      <Image
+                        width={60}
+                        height={60}
                         src={item?.images}
                         alt="smartphone-tablet"
                         className="img-fluid"
@@ -839,13 +998,13 @@ const IphoneAppDevelopment = () => {
       {/* Contact Section Start */}
       <ContactUs question="Are you planning to launch a Successful iPhone Mobile app in the market?" />
       {/* Contact Section End */}
-      <Whatsapp/>
+      <Whatsapp />
       <GetAQuoteModal
         setOpenModal={setModalOpen}
         openModal={modalOpen}
         handleCloseModal={() => setModalOpen(false)}
       />
-      <Footer/>
+      <Footer />
     </>
   );
 };

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Work from "../../../components/Workdone/Work";
 import AOS from "aos";
-import Image from 'next/image';
+import Image from "next/image";
 import "aos/dist/aos.css";
 // Service section image
 import MobileAppDesigning from "../../../public/assets/images/SERVICES/Designing/Services we provide/Mobile app designing.svg";
@@ -25,6 +25,8 @@ import TestiMonial from "../../../components/Testimonial/TestiMonial";
 import Whatsapp from "../../../components/Whatsapp";
 import GetAQuoteModal from "../../../components/GetAQuoteModal";
 import { getFreeQuoteSchema } from "../../../components/schemas";
+import banner from "../../../public/assets/images/MobileAppDev/bg.png";
+import contact from "../../../public/assets/images/MobileAppDev/contact-bg.png";
 
 const ServiceProvideData = [
   {
@@ -198,7 +200,6 @@ const Designing = () => {
     SetRecaptchaValue(value);
     console.log(value, "recaptcha");
   };
-  
 
   const toggleOpen = (i) => {
     if (openServicesProvide === i) {
@@ -261,9 +262,23 @@ const Designing = () => {
   return (
     <>
       <Helmet title="designing services - THE APP IDEAS" />
-      <Header setOpenModal={setModalOpen}/>
+      <Header setOpenModal={setModalOpen} />
       {/* Banner Section Start */}
-      <section className="common__banner__section">
+      <section
+        className="common__banner__section"
+        style={{
+          backgroundImage: `url(${banner.src})`,
+          position: "relative",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "bottom",
+          backgroundPosition: "center",
+          paddingTop: "140px",
+          paddingBottom: "180px",
+          width: "100%",
+          height: "100%",
+        }}
+      >
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
@@ -295,7 +310,21 @@ const Designing = () => {
               </div>
             </div>
             <div className="col-sm-12 col-md-12 col-lg-12    col-xl-6 mb-4">
-              <div className="banner__contact__box">
+              <div
+                className="banner__contact__box"
+                style={{
+                  backgroundImage: `url(${contact.src})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundPosition: "center",
+                  borderRadius: "15px",
+                  maxWidth: "480px",
+                  padding: "10px",
+                  width: "100%",
+                  height: "100%",
+                  margin: "0 auto",
+                }}
+              >
                 <div className="contact_header">
                   <h4>Request a FREE Quote</h4>
                   <p>Guaranteed Response within One Business Day!</p>
@@ -482,7 +511,6 @@ const Designing = () => {
                   onClick={() => setActiveService("banner_designing")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "banner_designing" &&
                       "service__provide_tab_active"
@@ -504,7 +532,6 @@ const Designing = () => {
                   onClick={() => setActiveService("logo_designing")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "logo_designing" &&
                       "service__provide_tab_active"
@@ -526,7 +553,6 @@ const Designing = () => {
                   onClick={() => setActiveService("custom_template_designing")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "custom_template_designing" &&
                       "service__provide_tab_active"
@@ -545,7 +571,6 @@ const Designing = () => {
                   onClick={() => setActiveService("mobile_app_designing")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "mobile_app_designing" &&
                       "service__provide_tab_active"
@@ -564,7 +589,6 @@ const Designing = () => {
                   onClick={() => setActiveService("web_app")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "web_app" &&
                       "service__provide_tab_active"
@@ -583,7 +607,6 @@ const Designing = () => {
                   onClick={() => setActiveService("redesigning")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "redesigning" &&
                       "service__provide_tab_active"
@@ -602,7 +625,6 @@ const Designing = () => {
                   onClick={() => setActiveService("brouchure_designing")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "brouchure_designing" &&
                       "service__provide_tab_active"
@@ -621,7 +643,6 @@ const Designing = () => {
                   onClick={() => setActiveService("psd_html")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "psd_html" &&
                       "service__provide_tab_active"
@@ -643,7 +664,6 @@ const Designing = () => {
                   onClick={() => setActiveService("graphic_desinging")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "graphic_desinging" &&
                       "service__provide_tab_active"
@@ -1074,7 +1094,6 @@ const Designing = () => {
                   onClick={() => setActiveWeServe("security_gaurd")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeServe === "security_gaurd" &&
                       "service__provide_tab_active"
@@ -1093,7 +1112,6 @@ const Designing = () => {
                   onClick={() => setActiveWeServe("fashion")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeServe === "fashion" &&
                       "service__provide_tab_active"
@@ -1115,7 +1133,6 @@ const Designing = () => {
                   onClick={() => setActiveWeServe("e_comm")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeServe === "e_comm" &&
                       "service__provide_tab_active"
@@ -1134,7 +1151,6 @@ const Designing = () => {
                   onClick={() => setActiveWeServe("restaurant")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeServe === "restaurant" &&
                       "service__provide_tab_active"
@@ -1153,7 +1169,6 @@ const Designing = () => {
                   onClick={() => setActiveWeServe("education")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeServe === "education" &&
                       "service__provide_tab_active"
@@ -1172,7 +1187,6 @@ const Designing = () => {
                   onClick={() => setActiveWeServe("entertainment")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeServe === "entertainment" &&
                       "service__provide_tab_active"
@@ -1191,7 +1205,6 @@ const Designing = () => {
                   onClick={() => setActiveWeServe("finance")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeServe === "finance" &&
                       "service__provide_tab_active"
@@ -1213,7 +1226,6 @@ const Designing = () => {
                   onClick={() => setActiveWeServe("healthcare")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeServe === "healthcare" &&
                       "service__provide_tab_active"
@@ -1232,7 +1244,6 @@ const Designing = () => {
                   onClick={() => setActiveWeServe("logistics")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeServe === "logistics" &&
                       "service__provide_tab_active"
@@ -1588,13 +1599,13 @@ const Designing = () => {
       {/* Client testimonial Section End */}
       <FAQ />
       <ContactUs question="Are you looking for the best Designing Agency?" />
-      <Whatsapp/>
+      <Whatsapp />
       <GetAQuoteModal
         setOpenModal={setModalOpen}
         openModal={modalOpen}
         handleCloseModal={() => setModalOpen(false)}
       />
-      <Footer/>
+      <Footer />
     </>
   );
 };

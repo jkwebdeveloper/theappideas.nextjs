@@ -4301,11 +4301,11 @@ section {
   left: -57rem;
   transition: all 0.7s ease 0s;
 }
-.contact_form_box:hover .hover_color_bubble {
+/* .contact_form_box:hover .hover_color_bubble {
   top: 2.9rem;
   background: rgb(246 192 0 / 40%);
-}
-.contact_form_box::before {
+} */
+/* .contact_form_box::before {
   content: "";
   position: absolute;
   background: rgb(246 192 0 / 8%);
@@ -4316,7 +4316,7 @@ section {
   right: -56px;
   bottom: -111px;
   border-radius: 35px;
-}
+} */
 
 .contact_form_box .comtact_header {
   border-top: 5px solid #f6c000;
@@ -4367,11 +4367,11 @@ section {
   border: none;
   cursor: pointer;
 }
-.contact_form_box:hover .submit__btn {
+/* .contact_form_box:hover .submit__btn {
   background-color: #2f0e39;
   color: #fff;
   border: none;
-}
+} */
 .ReactModal__Content {
   position: absolute !important;
   inset: 0 !important;

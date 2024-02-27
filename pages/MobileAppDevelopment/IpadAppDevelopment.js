@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Image from 'next/image';
+import Image from "next/image";
 import company from "../../public/assets/images/MobileAppDev/IPhone App/IPhone-App-Development-Company.png";
 import service from "../../public/assets/images/MobileAppDev/IPhone App/IPhone-App-Development-Service.png";
 import development from "../../public/assets/images/MobileAppDev/IPhone App/IPhone-Application-Development.png";
@@ -17,7 +17,7 @@ import Competitive from "../../public/assets/images/MobileAppDev/Android App Dev
 
 import TestiMonial from "../../components/Testimonial/TestiMonial";
 import FAQ from "../../components/FAQ";
-import WorkHand from "../../components/WorkHand";
+import Link from "next/link";
 
 import ContactUs from "../../components/ContactUs";
 import HeroSection from "../../components/HeroSection";
@@ -27,6 +27,9 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer";
 import Whatsapp from "../../components/Whatsapp";
 import GetAQuoteModal from "../../components/GetAQuoteModal";
+import axios from "axios";
+import Lottie from "lottie-react";
+import Loading from "../../public/assets/images/loading.json";
 
 const ServiceProvideData = [
   {
@@ -127,6 +130,32 @@ const IpadAppDev = () => {
   const [openServicesProvide, SetOpenServicesProvide] = useState(false);
   const [openIndustries, SetOpenIndustries] = useState(false);
 
+  const [portfolio, setPortFolios] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const handleGetPortFolios = () => {
+    setLoading(true);
+    axios
+      .get(
+        "https://the-app-ideas.onrender.com/api/portfolio?page=IPad App Development",
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+      .then((res) => {
+        setPortFolios(res.data.data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setLoading(false);
+      });
+  };
+  useEffect(() => {
+    handleGetPortFolios();
+  }, []);
+
   const toggleOpen = (i) => {
     if (openServicesProvide === i) {
       return SetOpenServicesProvide(false);
@@ -147,7 +176,7 @@ const IpadAppDev = () => {
   return (
     <>
       <Helmet title="Custom ipad Application Development Company | The app ideas" />
-      <Header setOpenModal={setModalOpen}/>
+      <Header setOpenModal={setModalOpen} />
       {/* Banner Section Start */}
       <HeroSection
         title="IPad App Development Company"
@@ -188,13 +217,14 @@ const IpadAppDev = () => {
                   onClick={() => setActiveService("ipad_enterprise")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "ipad_enterprise" &&
                       "service__provide_tab_active"
                     } `}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../public/assets/images/MobileAppDev/IPad App Development Company/enterprise.png")}
                       alt="Custom-Mobile-App-Development"
                       className="img-fluid"
@@ -207,13 +237,14 @@ const IpadAppDev = () => {
                   onClick={() => setActiveService("ipad_entertainment")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "ipad_entertainment" &&
                       "service__provide_tab_active"
                     } `}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../public/assets/images/MobileAppDev/IPad App Development Company/ipad-media.png")}
                       alt="Android-Enterprise-App-Development"
                       className="img-fluid"
@@ -228,13 +259,14 @@ const IpadAppDev = () => {
                   onClick={() => setActiveService("ipad_game")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "ipad_game" &&
                       "service__provide_tab_active"
                     } `}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../public/assets/images/MobileAppDev/IPad App Development Company/ipad-game.png")}
                       alt="Android-Wearable-App-Development"
                       className="img-fluid"
@@ -249,13 +281,14 @@ const IpadAppDev = () => {
                   onClick={() => setActiveService("ipad_ar_vr")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "ipad_ar_vr" &&
                       "service__provide_tab_active"
                     } `}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={AR}
                       alt="Android-Game-App-Development"
                       className="img-fluid"
@@ -268,13 +301,14 @@ const IpadAppDev = () => {
                   onClick={() => setActiveService("ipad_chat")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "ipad_chat" &&
                       "service__provide_tab_active"
                     } `}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={chat}
                       alt="Android-App-Redesign"
                       className="img-fluid"
@@ -290,13 +324,14 @@ const IpadAppDev = () => {
                   onClick={() => setActiveService("ipad_art_design")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "ipad_art_design" &&
                       "service__provide_tab_active"
                     } `}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../public/assets/images/MobileAppDev/IPad App Development Company/Website-Redesign.png")}
                       alt="Android-Support-And-Maintenance"
                       className="img-fluid"
@@ -470,7 +505,9 @@ const IpadAppDev = () => {
                 <div className="service_provide_box">
                   <div className="service_provide_content">
                     <div className="service_provide_title">
-                      <Image width={50} height={50}
+                      <Image
+                        width={50}
+                        height={50}
                         src={item?.images}
                         alt="smartphone-tablet"
                         className="img-fluid"
@@ -507,9 +544,111 @@ const IpadAppDev = () => {
       </section>
       {/* Service Section End */}
 
-      {/* Work Head Section Start */}
-      <WorkHand />
-      {/* Work Head Section End */}
+      <>
+        {/* Work Head Section Start */}
+        <section className="work_head_section py-5">
+          <div className="container">
+            <div className="Title">
+              <h3>Work we had done</h3>
+            </div>
+            {loading ? (
+              <Lottie
+                animationData={Loading}
+                loop={true}
+                style={{
+                  width: "200px",
+                  margin: "0 auto",
+                }}
+              />
+            ) : portfolio.length > 0 ? (
+              <div className="row mt-5">
+                {portfolio.map((elem) => {
+                  const { _id, image, bgImage, tags, title, link, technology } =
+                    elem;
+                  return (
+                    <div key={_id} className="col-12 px-0 mb-4">
+                      <div
+                        data-aos="fade-up"
+                        className="work_head_box"
+                        // style={{
+                        //   backgroundImage: `url(${bg1.src})`,
+                        //   objectFit: "cover",
+                        //   display: "block",
+                        //   width: "100%",
+                        //   height: "400px",
+                        //   backgroundSize: "cover !important",
+                        //   backgroundRepeat: "no-repeat",
+                        //   backgroundPosition: "center !important",
+                        //   boxShadow: "0 10px 6px -6px #000",
+                        //   transition: "0.1s ease",
+                        // }}
+                        style={{
+                          backgroundImage: `url(https://the-app-ideas.onrender.com${bgImage})`,
+                          objectFit: "cover",
+                          display: "block",
+                          width: "100%",
+                          height: "400px",
+                          backgroundSize: "cover",
+                          backgroundRepeat: "no-repeat",
+                          backgroundPosition: "center !important",
+                          boxShadow: "0 10px 6px -6px #000",
+                          transition: "0.1s ease",
+                        }}
+                      >
+                        <div className="work_head_box_link"></div>
+                        <div className="row w-100">
+                          <div className="work_head_box_link"></div>
+                          <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
+                            <div className="work_head_box_link"></div>
+                            <div className="work_head_lft">
+                              <Link
+                                href={link}
+                                target="_blank"
+                                className="work_head_box_link"
+                              >
+                                <h2>{title}</h2>
+                              </Link>
+                              <ul className="ps-0">
+                                <div className="work_head_box_link"></div>
+                                {technology.map((tech) => {
+                                  return (
+                                    <li key={tech}>
+                                      <div className="work_head_item">
+                                        {tech}
+                                      </div>
+                                    </li>
+                                  );
+                                })}
+                              </ul>
+                            </div>
+                          </div>
+                          <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
+                            <div className="work_head_rht">
+                              <Image
+                                width={492}
+                                height={300}
+                                data-aos="fade-left"
+                                src={"https://the-app-ideas.onrender.com".concat(
+                                  image
+                                )}
+                                alt="Device-Image-one"
+                                className="img-fluid"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            ) : (
+              <div>no data</div>
+            )}
+          </div>
+        </section>
+        {/* Work Head Section End */}
+      </>
 
       {/* Service Section Start */}
       <section className="service__provide__section py-5">
@@ -534,13 +673,14 @@ const IpadAppDev = () => {
                   onClick={() => setActiveWhyChoose("experience_expertise")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "experience_expertise" &&
                       "service__provide_tab_active"
                     } `}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={Experience}
                       alt="Experience-and-Expertise."
                       className="img-fluid"
@@ -553,13 +693,14 @@ const IpadAppDev = () => {
                   onClick={() => setActiveWhyChoose("robust_protfolio")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "robust_protfolio" &&
                       "service__provide_tab_active"
                     } `}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={Robust}
                       alt="Robust-Portfolio"
                       className="img-fluid"
@@ -575,13 +716,14 @@ const IpadAppDev = () => {
                   onClick={() => setActiveWhyChoose("full_lifestyle_support")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "full_lifestyle_support" &&
                       "service__provide_tab_active"
                     } `}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={Lifecycle}
                       alt="Full-Lifecycle-Support"
                       className="img-fluid"
@@ -594,14 +736,15 @@ const IpadAppDev = () => {
                   onClick={() => setActiveWhyChoose("agile_development")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "agile_development" &&
                       "service__provide_tab_active"
                     } `}
                   >
                     {" "}
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={Agile}
                       alt="Agile-Development"
                       className="img-fluid"
@@ -614,14 +757,15 @@ const IpadAppDev = () => {
                   onClick={() => setActiveWhyChoose("fast_paced_development")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "fast_paced_development" &&
                       "service__provide_tab_active"
                     } `}
                   >
                     {" "}
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={Fast}
                       alt="Fast-Paced-Development"
                       className="img-fluid"
@@ -636,14 +780,15 @@ const IpadAppDev = () => {
                   onClick={() => setActiveWhyChoose("competitive_price")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "competitive_price" &&
                       "service__provide_tab_active"
                     } `}
                   >
                     {" "}
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={Competitive}
                       alt="Competitive-Pricing"
                       className="img-fluid"
@@ -661,7 +806,6 @@ const IpadAppDev = () => {
                     <p className="Title_para">
                       We are from{" "}
                       <div
-                        
                         onClick={() => {
                           window.scrollTo({ top: 0, behavior: "smooth" });
                         }}
@@ -823,7 +967,9 @@ const IpadAppDev = () => {
                 <div className="service_provide_box">
                   <div className="service_provide_content">
                     <div className="service_provide_title">
-                      <Image width={60} height={60}
+                      <Image
+                        width={60}
+                        height={60}
                         src={item?.images}
                         alt="smartphone-tablet"
                         className="img-fluid"
@@ -871,13 +1017,13 @@ const IpadAppDev = () => {
       {/* Contact Section Start */}
       <ContactUs question="Are you planning to launch a Successful iPad Mobile app in the market?" />
       {/* Contact Section End */}
-      <Whatsapp/>
+      <Whatsapp />
       <GetAQuoteModal
         setOpenModal={setModalOpen}
         openModal={modalOpen}
         handleCloseModal={() => setModalOpen(false)}
       />
-      <Footer/>
+      <Footer />
     </>
   );
 };
