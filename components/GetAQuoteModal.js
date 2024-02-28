@@ -1,5 +1,5 @@
 // import { Country } from "country-state-city";
-import React, {  useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
 import ReactModal from "react-modal";
 import { useFormik } from "formik";
@@ -10,14 +10,13 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import ReCAPTCHA from "react-google-recaptcha";
 
-
 // localhost Key
-const SITE_KEY = "6Ld9hlMpAAAAAECTno-3flFDva33LDHA-zb-1aXs";
+const SITE_KEY = "6LflLYApAAAAAA94dzKNSl35WtkPT9X6VfLH5p_f";
 
 const initialValues = {
   name: "",
   email: "",
-  country: "",
+  // country: "",
   phoneNumber: "",
   projectReq: "",
   recaptchaToken: "",
@@ -41,9 +40,6 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
         name: values.name,
         email: values.email,
         phoneNumber: values.phoneNumber,
-        // skypeId: values.skypeId,
-        // budget: values.budget,
-        // country: values.country,
         projectRequirement: values.projectRequirement,
         recaptchaToken: recaptchavalue,
       },
@@ -52,7 +48,7 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
       },
     })
       .then((res) => {
-        // console.log(res.data);
+        console.log(res.data);
         SetRecaptchaValue("");
         captchaRef.current.reset();
         setLoading(false);
@@ -81,7 +77,7 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
     onSubmit: (values, action) => {
       handlePost(values);
       // console.log(values);
-      action.resetForm();
+      // action.resetForm();
     },
   });
 
@@ -94,7 +90,7 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
       contentLabel="Contact us Modal"
       // appElement={document.getElementById("root")}
       shouldCloseOnOverlayClick={true}
-      style={{  
+      style={{
         overlay: {
           zIndex: "9999",
         },
@@ -233,10 +229,11 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
                 <ReCAPTCHA
                   style={{ padding: "15px 15px" }}
                   sitekey={SITE_KEY}
+                  name="recaptchaToken"
                   onChange={onChange}
                   ref={captchaRef}
                 />
-                <span
+                {/* <span
                   className="error"
                   style={{ color: "red", fontSize: "14px" }}
                 >
@@ -250,9 +247,21 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
                       color: "red",
                     }}
                   />
-                ) : null}
+                ) : null} */}
+                {recaptchavalue !== "" ? null : (
+                  <span
+                    className="error"
+                    style={{ color: "red", fontSize: "13px" }}
+                  >
+                    {errors.recaptchaToken}
+                  </span>
+                )}
                 <div className="text-center">
-                  <button type="submit" className="submit__btn">
+                  <button
+                    type="submit"
+                    className="submit__btn"
+                    onSubmit={handleSubmit}
+                  >
                     {loading ? "loading..." : "submit"}
                   </button>
                 </div>
