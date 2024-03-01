@@ -804,14 +804,8 @@ const IpadAppDev = () => {
                   <div className="Title">
                     <h3 className="Title_heading">Experience and Expertise.</h3>
                     <p className="Title_para">
-                      We are from{" "}
-                      <div
-                        onClick={() => {
-                          window.scrollTo({ top: 0, behavior: "smooth" });
-                        }}
-                      >
-                        <b>The App Ideas</b>
-                      </div>{" "}
+                      We are from
+                      <b> The App Ideas </b>
                       is a leading web and app development company. We offer
                       website development services as well as the best iPad App
                       development service which will helps businesses to grow

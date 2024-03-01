@@ -98,7 +98,7 @@ const Work = () => {
             {works.map((work) => (
               <SwiperSlide key={work._id}>
                 <Link className="text-decoration-none"
-                  href="https://play.google.com/store/apps/details?id=com.app.mindwheel"
+                  href={work?.link}
                   // href={`/blog/slug/${blog.slug}`}
                   //       state={{ id: blog._id }}
                   target="_blank"

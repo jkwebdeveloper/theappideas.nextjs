@@ -102,7 +102,7 @@ const TestiMonial = () => {
           <div
             className="col-lg-4 col-md-12 col-sm-12"
             onClick={() => {
-              setOpenModal("https://www.youtube.com/embed/8IXVtVkGNl8");
+              setOpenModal("https://www.youtube.com/embed/Reho_MyuJEo");
             }}
           >
             <div
@@ -126,14 +126,14 @@ const TestiMonial = () => {
               />
               <div className="imgbox">
                 <Image
-                  src={require("../../public/assets/images/Testimonial/testimonial-2.webp")}
+                  src={require("../../public/assets/images/COMPANY/testimonial/testimonial-5.webp")}
                   alt=""
                   width={300}
                   height={168}
                 />
               </div>
               <h5>
-                <span>Roberto Valdovinos</span>
+                <span>Matthias Hippe</span>
               </h5>
               <br />
               

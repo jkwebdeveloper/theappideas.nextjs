@@ -45,7 +45,7 @@ const Banner = ({ setOpenModal }) => {
               <h1 className="slider-heading-dec">
                 Web and Mobile App Development Company - The App Ideas
               </h1>
-              <p className="slider-dec">
+              <p className="slider-dec mt-2">
                 Are you deciding to make an app or an e-commerce store or even a
                 website? We are right here for your service. Our custom mobile
                 application development company specializes in crafting
@@ -75,6 +75,7 @@ const Banner = ({ setOpenModal }) => {
                 <div
                   className="slider-get_btn"
                   onClick={() => setOpenModal(true)}
+                  style={{cursor:"pointer"}}
                 >
                   Contact Us
                 </div>

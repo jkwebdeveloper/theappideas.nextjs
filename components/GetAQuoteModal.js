@@ -1,26 +1,21 @@
 // import { Country } from "country-state-city";
-import React, { useRef, useState } from "react";
+import React, { Fragment, useRef, useState } from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
 import ReactModal from "react-modal";
-import { useFormik } from "formik";
-import { getAQuoteSchema } from "./schemas";
+import { Formik, useFormik } from "formik";
+import { getAQuoteSchema, getAQuoteValidation } from "./schemas";
 import { BiErrorCircle } from "react-icons/bi";
 import axios from "axios";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import ReCAPTCHA from "react-google-recaptcha";
+// import {
+//   isPossiblePhoneNumber,
+//   isValidPhoneNumber,
+// } from "react-phone-number-input";
 
 // localhost Key
 const SITE_KEY = "6LflLYApAAAAAA94dzKNSl35WtkPT9X6VfLH5p_f";
-
-const initialValues = {
-  name: "",
-  email: "",
-  // country: "",
-  phoneNumber: "",
-  projectReq: "",
-  recaptchaToken: "",
-};
 
 const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
   const [loading, setLoading] = useState(false);
@@ -33,6 +28,7 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
   const captchaRef = useRef();
 
   const handlePost = (values) => {
+    console.log(values);
     setLoading(true);
     axios("https://the-app-ideas.onrender.com/api/contact", {
       method: "post",
@@ -54,7 +50,7 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
         setLoading(false);
       })
       .catch((err) => {
-        // console.log(err);
+        console.log(err);
         setLoading(false);
       });
   };
@@ -62,24 +58,6 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
   // useEffect(() => {
   //   setCountries(Country.getAllCountries());
   // }, []);
-
-  const {
-    values,
-    errors,
-    touched,
-    handleBlur,
-    handleChange,
-    handleSubmit,
-    setFieldValue,
-  } = useFormik({
-    initialValues: initialValues,
-    validationSchema: getAQuoteSchema,
-    onSubmit: (values, action) => {
-      handlePost(values);
-      // console.log(values);
-      // action.resetForm();
-    },
-  });
 
   return (
     <ReactModal
@@ -110,162 +88,167 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
               <h2>Contact us</h2>
             </div>
             <div className="contact_body">
-              <form onSubmit={handleSubmit}>
-                <div className="mb-3">
-                  <input
-                    type="text"
-                    name="name"
-                    className="form-control"
-                    placeholder="Name"
-                    value={values.name}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                  />
-                  <span
-                    className="error"
-                    style={{ color: "red", fontSize: "14px" }}
-                  >
-                    {errors.name}
-                  </span>
-                  {errors.name && touched.name ? (
-                    <BiErrorCircle
-                      style={{
-                        float: "right",
-                        marginTop: "5px",
-                        color: "red",
-                      }}
+              <Formik
+                initialValues={getAQuoteValidation.initialState}
+                validationSchema={getAQuoteValidation.schema}
+                onSubmit={(values, action) => {
+                  console.log(values);
+                  handlePost(values);
+                  action.resetForm();
+                }}
+              >
+                {({
+                  values,
+                  errors,
+                  touched,
+                  handleBlur,
+                  handleChange,
+                  handleSubmit,
+                  setFieldValue,
+                }) => (
+                  <form onSubmit={handleSubmit}>
+                    <div className="mb-3">
+                      <input
+                        type="text"
+                        name="name"
+                        className="form-control"
+                        placeholder="Name"
+                        value={values.name}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                      />
+                      <span
+                        className="error"
+                        style={{ color: "red", fontSize: "14px" }}
+                      >
+                        {errors.name}
+                      </span>
+                      {errors.name && touched.name ? (
+                        <BiErrorCircle
+                          style={{
+                            float: "right",
+                            marginTop: "5px",
+                            color: "red",
+                          }}
+                        />
+                      ) : null}
+                    </div>
+                    <div className="mb-3">
+                      <input
+                        type="email"
+                        className="form-control"
+                        name="email"
+                        placeholder="Email"
+                        value={values.email}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                      />
+                      <span
+                        className="error"
+                        style={{ color: "red", fontSize: "14px" }}
+                      >
+                        {errors.email}
+                      </span>
+                      {errors.email && touched.email ? (
+                        <BiErrorCircle
+                          style={{
+                            float: "right",
+                            marginTop: "5px",
+                            color: "red",
+                          }}
+                        />
+                      ) : null}
+                    </div>
+                    <div className="mb-3">
+                      <PhoneInput
+                        country={"in"}
+                        countryCodeEditable={false}
+                        enableSearch={true}
+                        inputProps={{
+                          name: "phoneNumber",
+                        }}
+                        onChange={(value) =>
+                          setFieldValue("phoneNumber", "+".concat(value).trim())
+                        }
+                        value={values.phoneNumber}
+                        inputStyle={{
+                          width: "100%",
+                          padding: "1.2rem 0 1.2rem 3rem",
+                        }}
+                        // disabled={loading}
+                      />
+                      <span
+                        className="error"
+                        style={{ color: "red", fontSize: "14px" }}
+                      >
+                        {errors.phoneNumber}
+                      </span>
+                      {errors.phoneNumber && touched.phoneNumber ? (
+                        <BiErrorCircle
+                          style={{
+                            float: "right",
+                            marginTop: "5px",
+                            color: "red",
+                          }}
+                        />
+                      ) : null}
+                    </div>
+                    <div className="mb-3">
+                      <textarea
+                        className="form-control"
+                        name="projectRequirement"
+                        rows={3}
+                        placeholder="Project Requirement*"
+                        defaultValue={""}
+                        value={values.projectRequirement}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                      />
+                      <span
+                        className="error"
+                        style={{ color: "red", fontSize: "14px" }}
+                      >
+                        {errors.projectRequirement}
+                      </span>
+                      {errors.projectRequirement &&
+                      touched.projectRequirement ? (
+                        <BiErrorCircle
+                          style={{
+                            float: "right",
+                            marginTop: "5px",
+                            color: "red",
+                          }}
+                        />
+                      ) : null}
+                    </div>
+                    <ReCAPTCHA
+                      style={{ padding: "15px 15px" }}
+                      sitekey={SITE_KEY}
+                      name="recaptchaToken"
+                      onChange={onChange}
+                      ref={captchaRef}
+                      value={values.recaptchaToken}
                     />
-                  ) : null}
-                </div>
-                <div className="mb-3">
-                  <input
-                    type="email"
-                    className="form-control"
-                    name="email"
-                    placeholder="Email"
-                    value={values.email}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                  />
-                  <span
-                    className="error"
-                    style={{ color: "red", fontSize: "14px" }}
-                  >
-                    {errors.email}
-                  </span>
-                  {errors.email && touched.email ? (
-                    <BiErrorCircle
-                      style={{
-                        float: "right",
-                        marginTop: "5px",
-                        color: "red",
-                      }}
-                    />
-                  ) : null}
-                </div>
-                <div className="mb-3">
-                  <PhoneInput
-                    countryCodeEditable={false}
-                    enableSearch={true}
-                    inputProps={{
-                      name: "phoneNumber",
-                    }}
-                    inputStyle={{
-                      width: "100%",
-                      padding: "21px 0px 21px 50px",
-                    }}
-                    country={"in"}
-                    placeholder="Phone Number"
-                    value={values.phoneNumber}
-                    onChange={(value, country, event, formattedValue) => {
-                      // Set the formatted phone number value to the state using setFieldValue
-                      setFieldValue("phoneNumber", formattedValue);
-                    }}
-                    onBlur={handleBlur}
-                  />
-                  <span
-                    className="error"
-                    style={{ color: "red", fontSize: "14px" }}
-                  >
-                    {errors.phoneNumber}
-                  </span>
-                  {errors.phoneNumber && touched.phoneNumber ? (
-                    <BiErrorCircle
-                      style={{
-                        float: "right",
-                        marginTop: "5px",
-                        color: "red",
-                      }}
-                    />
-                  ) : null}
-                </div>
-                <div className="mb-3">
-                  <textarea
-                    className="form-control"
-                    name="projectRequirement"
-                    rows={3}
-                    placeholder="Project Requirement*"
-                    defaultValue={""}
-                    value={values.projectRequirement}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                  />
-                  <span
-                    className="error"
-                    style={{ color: "red", fontSize: "14px" }}
-                  >
-                    {errors.projectRequirement}
-                  </span>
-                  {errors.projectRequirement && touched.projectRequirement ? (
-                    <BiErrorCircle
-                      style={{
-                        float: "right",
-                        marginTop: "5px",
-                        color: "red",
-                      }}
-                    />
-                  ) : null}
-                </div>
-                <ReCAPTCHA
-                  style={{ padding: "15px 15px" }}
-                  sitekey={SITE_KEY}
-                  name="recaptchaToken"
-                  onChange={onChange}
-                  ref={captchaRef}
-                />
-                {/* <span
-                  className="error"
-                  style={{ color: "red", fontSize: "14px" }}
-                >
-                  {errors.recaptchaToken}
-                </span>
-                {errors.recaptchaToken && touched.recaptchaToken ? (
-                  <BiErrorCircle
-                    style={{
-                      float: "right",
-                      marginTop: "5px",
-                      color: "red",
-                    }}
-                  />
-                ) : null} */}
-                {recaptchavalue !== "" ? null : (
-                  <span
-                    className="error"
-                    style={{ color: "red", fontSize: "13px" }}
-                  >
-                    {errors.recaptchaToken}
-                  </span>
+                    {recaptchavalue !== "" ? null : (
+                      <span
+                        className="error"
+                        style={{ color: "red", fontSize: "13px" }}
+                      >
+                        {errors.recaptchaToken}
+                      </span>
+                    )}
+                    <div className="text-center">
+                      <button
+                        type="submit"
+                        className="submit__btn"
+                        // onSubmit={handleSubmit}
+                      >
+                        {loading ? "loading..." : "submit"}
+                      </button>
+                    </div>
+                  </form>
                 )}
-                <div className="text-center">
-                  <button
-                    type="submit"
-                    className="submit__btn"
-                    onSubmit={handleSubmit}
-                  >
-                    {loading ? "loading..." : "submit"}
-                  </button>
-                </div>
-              </form>
+              </Formik>
             </div>
           </div>
         </div>

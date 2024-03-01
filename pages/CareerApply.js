@@ -16,7 +16,7 @@ import Footer from "../components/Footer";
 import Whatsapp from "../components/Whatsapp";
 import GetAQuoteModal from "../components/GetAQuoteModal";
 import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import { careerApplySchema } from "../components/schemas";
 const initialValues = {
@@ -25,24 +25,24 @@ const initialValues = {
   phoneNumber: "",
   totalExperience: "",
   myFile: "",
+  recaptchaToken: ""
 };
 
 const SITE_KEY = "6LflLYApAAAAAA94dzKNSl35WtkPT9X6VfLH5p_f";
-
 
 const CareerApply = () => {
   const [careers, setCareers] = useState();
   const [loading, setLoading] = useState(true);
   const [recaptchavalue, SetRecaptchaValue] = useState("");
 
-
   const [modalOpen, setModalOpen] = useState(false);
 
   const router = useRouter();
   const { slug } = router.query;
-  console.log(slug); 
+  console.log(slug);
 
   const onChange = (value) => {
+    console.log(value);
     SetRecaptchaValue(value);
   };
   const captchaRef = useRef();
@@ -56,7 +56,7 @@ const CareerApply = () => {
       })
       .then((res) => {
         setCareers(res.data.careers);
-
+        // toast.success(res.data.message);
         // console.log(res.data.careers);
         setLoading(false);
       })
@@ -65,8 +65,8 @@ const CareerApply = () => {
       });
   };
   useEffect(() => {
-    handleGetApplyCareers();
-  });
+    slug && handleGetApplyCareers();
+  }, [slug]);
 
   const handlePost = (values) => {
     setLoading(true);
@@ -109,7 +109,7 @@ const CareerApply = () => {
     initialValues: initialValues,
     validationSchema: careerApplySchema,
     onSubmit: (values, action) => {
-      // console.log(values)
+      console.log(values)
       handlePost(values);
       action.resetForm();
     },
@@ -117,8 +117,8 @@ const CareerApply = () => {
   return (
     <>
       <Helmet title="The App Ideas Careers Application" />
-      <Header setOpenModal={setModalOpen}/>
-      
+      <Header setOpenModal={setModalOpen} />
+
       {loading ? (
         <div style={{ textAlign: "center", marginTop: "100px" }}>
           Loading...
@@ -319,10 +319,9 @@ const CareerApply = () => {
                           country={"in"}
                           placeholder="Phone Number"
                           value={values.phoneNumber}
-                          onChange={(value, country, event, formattedValue) => {
-                            // Set the formatted phone number value to the state using setFieldValue
-                            setFieldValue("phoneNumber", formattedValue);
-                          }}
+                          onChange={(value) =>
+                            setFieldValue("phoneNumber", "+".concat(value).trim())
+                          }
                           onBlur={handleBlur}
                         />
                         <span
@@ -401,13 +400,21 @@ const CareerApply = () => {
                         />
                       ) : null}
 
-                        <ReCAPTCHA
-                          style={{ padding: "15px 15px" }}
-                          sitekey={SITE_KEY}
-                          onChange={onChange}
-                          ref={captchaRef}
-                          value={recaptchavalue}
-                        />
+                      <ReCAPTCHA
+                        style={{ padding: "15px 15px" }}
+                        sitekey={SITE_KEY}
+                        onChange={onChange}
+                        ref={captchaRef}
+                        // value={values.recaptchaToken}
+                      />
+                      {recaptchavalue !== "" ? null : (
+                      <span
+                        className="error"
+                        style={{ color: "red", fontSize: "13px" }}
+                      >
+                        {errors.recaptchaToken}
+                      </span>
+                    )}
                       <div className="mb-3 mt-3 text-end">
                         <button type="submit" className="submit_btn">
                           {loading ? "loading..." : "submit"}
@@ -419,17 +426,27 @@ const CareerApply = () => {
                 </div>
               </div>
             </div>
-            
           </section>
-          <Whatsapp/>
+          <Whatsapp />
           <GetAQuoteModal
-        setOpenModal={setModalOpen}
-        openModal={modalOpen}
-        handleCloseModal={() => setModalOpen(false)}
-      />
-            <ToastContainer position="top-right" autoClose={2000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="light" />
+            setOpenModal={setModalOpen}
+            openModal={modalOpen}
+            handleCloseModal={() => setModalOpen(false)}
+          />
+          <ToastContainer
+            position="top-right"
+            autoClose={2000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
+          />
 
-          <Footer/>
+          <Footer />
         </>
       )}
     </>

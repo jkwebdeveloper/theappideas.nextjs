@@ -9,6 +9,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer";
 import Whatsapp from "../../components/Whatsapp";
 import GetAQuoteModal from "../../components/GetAQuoteModal";
+import background from "../../public/assets/images/COMPANY/testimonial/testimonial-bg.jpg"
 
 const Testimonial = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -29,7 +30,7 @@ const Testimonial = () => {
       <Helmet title="Testimonial | THE APP IDEAS" />
       <Header setOpenModal={setModalOpen}/>
       <section className="teatimonial_seaction">
-        <div className="testimonial_box testimonial_box_one">
+        <div className="testimonial_box testimonial_box_one" style={{backgroundImage: `url(${background.src})`}}>
           <div className="video_testimonial">
             <Image
               src={require("../../public/assets/images/COMPANY/testimonial/testimonial-1.webp")}
@@ -55,7 +56,7 @@ const Testimonial = () => {
             </p>
           </div>
         </div>
-        <div className="testimonial_box testimonial_box_two">
+        <div className="testimonial_box testimonial_box_two" style={{backgroundImage: `url(${background.src})`}}>
           <div className="video_testimonial_two">
             <Image
               src={require("../../public/assets/images/COMPANY/testimonial/testimonial-2.webp")}
@@ -80,7 +81,7 @@ const Testimonial = () => {
             </p>
           </div>
         </div>
-        <div className="testimonial_box testimonial_box_one">
+        <div className="testimonial_box testimonial_box_one" style={{backgroundImage: `url(${background.src})`}}>
           <div className="video_testimonial">
             <Image
               src={require("../../public/assets/images/COMPANY/testimonial/testimonial-3.webp")}
@@ -103,7 +104,7 @@ const Testimonial = () => {
             <p>We had done a Logo Design for this client.</p>
           </div>
         </div>
-        <div className="testimonial_box testimonial_box_two">
+        <div className="testimonial_box testimonial_box_two" style={{backgroundImage: `url(${background.src})`}}>
           <div className="video_testimonial_two">
             <Image
               src={require("../../public/assets/images/COMPANY/testimonial/testimonial-4.webp")}
@@ -126,7 +127,7 @@ const Testimonial = () => {
             <p>We had delivered a Website to him.</p>
           </div>
         </div>
-        <div className="testimonial_box testimonial_box_one">
+        <div className="testimonial_box testimonial_box_one" style={{backgroundImage: `url(${background.src})`}}>
           <div className="video_testimonial">
             <Image
               src={require("../../public/assets/images/COMPANY/testimonial/testimonial-5.webp")}
@@ -149,7 +150,7 @@ const Testimonial = () => {
             <p>We did a Musical Instrument App for him.</p>
           </div>
         </div>
-        <div className="testimonial_box testimonial_box_two">
+        <div className="testimonial_box testimonial_box_two" style={{backgroundImage: `url(${background.src})`}}>
           <div className="video_testimonial_two">
             <Image
               src={require("../../public/assets/images/COMPANY/testimonial/testimonial-6.webp")}
@@ -175,7 +176,7 @@ const Testimonial = () => {
             </p>
           </div>
         </div>
-        <div className="testimonial_box testimonial_box_one">
+        <div className="testimonial_box testimonial_box_one" style={{backgroundImage: `url(${background.src})`}}>
           <div className="video_testimonial">
             <Image
               src={require("../../public/assets/images/COMPANY/testimonial/testimonial-7.webp")}
@@ -198,7 +199,7 @@ const Testimonial = () => {
             <p>Founder at Footnote.world</p>
           </div>
         </div>
-        <div className="testimonial_box testimonial_box_two">
+        <div className="testimonial_box testimonial_box_two" style={{backgroundImage: `url(${background.src})`}}>
           <div className="video_testimonial_two">
             <Image
               src={require("../../public/assets/images/COMPANY/testimonial/testimonial-8.webp")}
@@ -224,7 +225,7 @@ const Testimonial = () => {
             </p>
           </div>
         </div>
-        <div className="testimonial_box testimonial_box_one">
+        <div className="testimonial_box testimonial_box_one" style={{backgroundImage: `url(${background.src})`}}>
           <div className="video_testimonial">
             <Image
               src={require("../../public/assets/images/COMPANY/testimonial/testimonial-9.jpg")}
@@ -250,7 +251,7 @@ const Testimonial = () => {
             </p>
           </div>
         </div>
-        <div className="testimonial_box testimonial_box_two">
+        <div className="testimonial_box testimonial_box_two" style={{backgroundImage: `url(${background.src})`}}>
           <div className="video_testimonial_two">
             <Image
               src={require("../../public/assets/images/COMPANY/testimonial/testimonial-10.jpg")}
