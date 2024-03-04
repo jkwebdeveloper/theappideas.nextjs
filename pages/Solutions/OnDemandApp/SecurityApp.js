@@ -10,7 +10,7 @@ import Header from "../../../components/Header/Header";
 import Footer from "../../../components/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Image from 'next/image';
+import Image from "next/image";
 // Banner
 import Development from "../../../public/assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Security-Guard-App-Development-Services.png";
 import Services from "../../../public/assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/On-Demand-Security-Guard-App-Development.png";
@@ -36,12 +36,11 @@ import PayOnline from "../../../public/assets/images/SOLUTIONS/On-Demand App/On 
 import TimeTracking from "../../../public/assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Client App/Time-Management-Tracking.svg";
 
 import ContactUs from "../../../components/ContactUs";
-import HeroSection from '../../../components/HeroSection';
+import HeroSection from "../../../components/HeroSection";
 import { Helmet } from "react-helmet";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import Whatsapp from "../../../components/Whatsapp";
 import GetAQuoteModal from "../../../components/GetAQuoteModal";
-
 
 const SecurityApp = () => {
   const [activeSection, setActiveSection] = useState("contractor_app");
@@ -62,39 +61,39 @@ const SecurityApp = () => {
       id: 1,
       images: require("../../../public/assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/why-should/Advanced-Technology-1.png"),
       que: "Advanced technology",
-      ans: "Unlike the ready-to-use security solutions, on-demand security apps are built with cutting edge technologies."
+      ans: "Unlike the ready-to-use security solutions, on-demand security apps are built with cutting edge technologies.",
     },
     {
       id: 2,
       images: require("../../../public/assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/why-should/Custom-Security-Solution-1.png"),
       que: "Custom security solution",
-      ans: "These apps incorporate custom security solutions specific to the needs of the clients."
+      ans: "These apps incorporate custom security solutions specific to the needs of the clients.",
     },
     {
       id: 3,
       images: require("../../../public/assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/why-should/Context-Aware-Security-Solution-1.png"),
       que: "Context-aware security solution",
-      ans: "On-demand security apps are built keeping the context and use cases of the clients in mind."
+      ans: "On-demand security apps are built keeping the context and use cases of the clients in mind.",
     },
     {
       id: 4,
       images: require("../../../public/assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/why-should/Seamless-Integration-1.png"),
       que: "Seamless integration",
-      ans: "Thanks to such an app in real-time any security issue or challenge can be known and accordingly on-road traffic can be reached for help."
+      ans: "Creating an On-Demand Security Guard App offers several benefits due to its seamless integration into modern technological ecosystems. The application finds and patches security holes in real time, boosting safety. The software enables you directly contact on-road security for speedy answers. Technology can help businesses and individuals avoid risks and seek assistance quickly. The program optimizes security resource allocation based on demand. This software boosts security and reassures users that help is only a click away.",
     },
     {
       id: 5,
       images: require("../../../public/assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/why-should/Scalable-Security-1.png"),
       que: "Scalable security",
-      ans: "On-demand security apps, unlike readymade security solutions, remain scalable to increasing uses and traffic."
+      ans: "On-demand security apps, unlike readymade security solutions, remain scalable to increasing uses and traffic.",
     },
     {
       id: 6,
       images: require("../../../public/assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/why-should/Continuous-Support-1.png"),
       que: "Continuous support",
-      ans: "On-demand security apps continuous and consistent support from the developers."
+      ans: "On-demand security apps continuous and consistent support from the developers.",
     },
-  ]
+  ];
 
   const SecurityData = [
     {
@@ -240,11 +239,11 @@ const SecurityApp = () => {
   return (
     <>
       <Helmet title="On Demand Security Guard App In India | The App Ideas" />
-      <Header setOpenModal={setModalOpen}/>
+      <Header setOpenModal={setModalOpen} />
       {/* common Banner start */}
       <HeroSection
         title="On Demand Security Guard App"
-        des="As the digital space and a whole array of connected gadgets are penetrating into the remote recesses of personal life, the demand for advanced and custom security solutions are steadily increasing. Our On Demand Security App Development processes take care of such varied security needs in different contexts. We built most sophisticated on-demand security apps to deal with a variety of security challenges and loopholes."
+        des="Since digital platforms and networked gadgets are now part of every area of everyday life, sophisticated and specialized security measures are needed. Demand for improved security solutions rises as the digital world invades even our most private lives."
         list1="7+ Years of experience in App Development"
         list2="Best Security Guard App Development Company"
         list3="Dedicated team for your Security Guard App Development"
@@ -318,7 +317,9 @@ const SecurityApp = () => {
                         className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4"
                       >
                         <div className="food__delivery__box">
-                          <Image width={60} height={60}
+                          <Image
+                            width={60}
+                            height={60}
                             src={image}
                             alt="search-food-icon"
                             className="img-fluid"
@@ -396,7 +397,9 @@ const SecurityApp = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     src={require("../../../public/assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/slider/security.webp")}
                     alt="security"
                     style={{
@@ -430,7 +433,9 @@ const SecurityApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/why-should/Advanced-Technology-1.png")}
                       alt="Custom-Mobile-App-Development"
                       className="img-fluid"
@@ -448,7 +453,9 @@ const SecurityApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/why-should/Custom-Security-Solution-1.png")}
                       alt="Android-Enterprise-App-Development"
                       className="img-fluid"
@@ -466,7 +473,9 @@ const SecurityApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/why-should/Context-Aware-Security-Solution-1.png")}
                       alt="Android-Wearable-App-Development"
                       className="img-fluid"
@@ -484,7 +493,9 @@ const SecurityApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/why-should/Seamless-Integration-1.png")}
                       alt="Android-Game-App-Development"
                       className="img-fluid"
@@ -502,7 +513,9 @@ const SecurityApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/why-should/Scalable-Security-1.png")}
                       alt="Android-App-Redesign"
                       className="img-fluid"
@@ -520,7 +533,9 @@ const SecurityApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/why-should/Continuous-Support-1.png")}
                       alt="Android-Support-And-Maintenance"
                       className="img-fluid"
@@ -577,9 +592,16 @@ const SecurityApp = () => {
                   <div className="Title">
                     <h3 className="Title_heading">Seamless integration</h3>
                     <p className="Title_para">
-                      Thanks to such an app in real-time any security issue or
-                      challenge can be known and accordingly on-road traffic can
-                      be reached for help.
+                      Creating an On-Demand Security Guard App offers several
+                      benefits due to its seamless integration into modern
+                      technological ecosystems. The application finds and
+                      patches security holes in real time, boosting safety. The
+                      software enables you directly contact on-road security for
+                      speedy answers. Technology can help businesses and
+                      individuals avoid risks and seek assistance quickly. The
+                      program optimizes security resource allocation based on
+                      demand. This software boosts security and reassures users
+                      that help is only a click away.
                     </p>
                   </div>
                 </div>
@@ -621,7 +643,9 @@ const SecurityApp = () => {
                 <div className="service_provide_box">
                   <div className="service_provide_content">
                     <div className="service_provide_title">
-                      <Image width={50} height={50}
+                      <Image
+                        width={50}
+                        height={50}
                         src={item?.images}
                         alt="smartphone-tablet"
                         className="img-fluid"
@@ -662,7 +686,7 @@ const SecurityApp = () => {
       {/* Contact Section Start */}
       <ContactUs question="Would you like to create an On Demand Security Guard App?" />
       {/* Contact Section End */}
-      <Whatsapp/>
+      <Whatsapp />
       <GetAQuoteModal
         setOpenModal={setModalOpen}
         openModal={modalOpen}

@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import Image from 'next/image';
+import Image from "next/image";
 import Services from "../../../public/assets/images/SERVICES/E-Commerce Website/JoomlaDev/Joomla-Development-Services.webp";
 import Development from "../../../public/assets/images/SERVICES/E-Commerce Website/JoomlaDev/Joomla-Website-Development.webp";
 import Expert from "../../../public/assets/images/SERVICES/E-Commerce Website/JoomlaDev/Joomla-Expert.webp";
@@ -25,8 +25,8 @@ const ServiceProvideData = [
     id: 1,
     images: require("../../../public/assets/images/SERVICES/E-Commerce Website/JoomlaDev/What-Do/Joomla-Website-Development.png"),
     que: "Joomla Website Development",
-    ans: "Joomla is one of the most popular E-commerce platforms development. services at this current period. The number of e-commerce users is also getting high in the market. Many of the users are now shifting towards the E-commerce website because it is convenient for accessing the services.",
-    ans2: "The App Ideas is one of the most popular software development company. We have a team of Joomla developers who have years of experience in delivering a successful platform. We build responsive custom websites for all business niches and sizes by using the power of the Joomla CMS solution.",
+    ans: "Joomla is a popular CMS for building dynamic, mobile-friendly websites with extensive features and interfaces. The straightforward interface, visual appeal, and customization possibilities of Joomla make it a popular CMS for site developers.",
+    ans2: "After a decade of Joomla development, App Ideas has created successful Joomla apps for numerous industries and genres. Our Joomla experience lets us customize solutions for customers. We develop Joomla solutions for small and big enterprises' digital development.",
   },
   {
     id: 2,
@@ -136,11 +136,11 @@ const Joomla = () => {
   return (
     <>
       <Helmet title="Joomla Development Company In India - The app ideas" />
-      <Header setOpenModal={setModalOpen}/>
+      <Header setOpenModal={setModalOpen} />
       {/* Banner Section Start */}
       <HeroSection
         title="Joomla Development Company"
-        des="The App Ideas is one of the proficient software development company. We have a team of highly skilled and experienced developers who are experts in providing the best E-commerce platforms services at the best rates. If you are planning to launch a Joomla E-commerce platform for your stores then feel free to connect with me."
+        des="App Ideas, a prominent software development company, offers affordable E-commerce platform services from a team of skilled engineers. We can build your stores' Joomla E-commerce platform. We smoothly combine features and capabilities for your organization since we specialize in Joomla development and E-commerce solutions. Our developers created profitable, scalable E-commerce solutions. To help your small or large company achieve E-commerce goals, we offer customized services. Contact us now to discuss your requirements and start building a successful Joomla E-commerce platform for your stores."
         list1="7+ Years of experience in Development"
         list2="Best Joomla Development Company"
         list3="Dedicated team for your Joomla Development"
@@ -159,14 +159,15 @@ const Joomla = () => {
           <div className="Title">
             <h3>What Do We offer in Joomla Development?</h3>
             <p>
-              Joomla is a widely popular content management system that is used
-              mostly to build dynamic mobile-friendly websites with rich
-              features and interfaces. The ease of use, visual appeal and
-              customisable elements made Joomla a popular CMS choice for web
-              developers across the spectrum. The App Ideas is a globally
-              recognised Joomla development company with decade long experience
-              and a robust portfolio of successful Joomla apps built for diverse
-              niches.
+              Joomla is a popular CMS for developing dynamic, mobile-friendly
+              websites with rich features and interfaces. Joomla's simple
+              interface, attractive design, and customizable capabilities make
+              it a popular CMS for web developers. The App Ideas, a global
+              Joomla development company with over a decade of experience and
+              successful Joomla applications for many enterprises and sectors.
+              Our extensive Joomla understanding allows us to provide bespoke
+              solutions for our clients. We provide amazing Joomla development
+              solutions for small and large businesses to boost digital growth.
             </p>
           </div>
           <div className="row mt-5">
@@ -177,13 +178,14 @@ const Joomla = () => {
                   onClick={() => setActiveWeOffer("joomla_website")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeOffer === "joomla_website" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/E-Commerce Website/JoomlaDev/What-Do/Joomla-Website-Development.png")}
                       alt="Joomla Website Development"
                       className="img-fluid"
@@ -196,13 +198,14 @@ const Joomla = () => {
                   onClick={() => setActiveWeOffer("e_comm")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeOffer === "e_comm" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/E-Commerce Website/JoomlaDev/What-Do/Joomla-E-Commerce-Development.png")}
                       alt="Joomla E-commerce Development"
                       className="img-fluid"
@@ -215,13 +218,14 @@ const Joomla = () => {
                   onClick={() => setActiveWeOffer("joomla_customization")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeOffer === "joomla_customization" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/E-Commerce Website/JoomlaDev/What-Do/Joomla-Custom-Feature-Development.png")}
                       alt="Joomla Customization"
                       className="img-fluid"
@@ -234,13 +238,14 @@ const Joomla = () => {
                   onClick={() => setActiveWeOffer("templates")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeOffer === "templates" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/E-Commerce Website/JoomlaDev/What-Do/Joomla-Template-And-Theme-Development-1.png")}
                       alt="Templates & Theme Service"
                       className="img-fluid"
@@ -253,13 +258,14 @@ const Joomla = () => {
                   onClick={() => setActiveWeOffer("joomla_maintanance_support")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeOffer === "joomla_maintanance_support" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/E-Commerce Website/JoomlaDev/What-Do/Strong-Support.png")}
                       alt="Joomla Maintenance And Support"
                       className="img-fluid"
@@ -272,13 +278,14 @@ const Joomla = () => {
                   onClick={() => setActiveWeOffer("joomla_mobile")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeOffer === "joomla_mobile" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/E-Commerce Website/JoomlaDev/What-Do/Joomla-Template-And-Theme-Development.png")}
                       alt="Joomla Mobile App Conversion"
                       className="img-fluid"
@@ -296,20 +303,18 @@ const Joomla = () => {
                       Joomla Website Development
                     </h3>
                     <p className="Title_para">
-                      Joomla is one of the most popular E-commerce platforms
-                      development. services at this current period. The number
-                      of e-commerce users is also getting high in the market.
-                      Many of the users are now shifting towards the E-commerce
-                      website because it is convenient for accessing the
-                      services.
+                      Joomla is a popular CMS for building dynamic,
+                      mobile-friendly websites with extensive features and
+                      interfaces. The straightforward interface, visual appeal,
+                      and customization possibilities of Joomla make it a
+                      popular CMS for site developers.
                     </p>
                     <p className="Title_para">
-                      The App Ideas is one of the most popular software
-                      development company. We have a team of Joomla developers
-                      who have years of experience in delivering a successful
-                      platform. We build responsive custom websites for all
-                      business niches and sizes by using the power of the Joomla
-                      CMS solution.
+                      After a decade of Joomla development, App Ideas has
+                      created successful Joomla apps for numerous industries and
+                      genres. Our Joomla experience lets us customize solutions
+                      for customers. We develop Joomla solutions for small and
+                      big enterprises' digital development.
                     </p>
                   </div>
                 </div>
@@ -462,7 +467,9 @@ const Joomla = () => {
                 <div className="service_provide_box">
                   <div className="service_provide_content">
                     <div className="service_provide_title">
-                      <Image  width={50} height={50}
+                      <Image
+                        width={50}
+                        height={50}
                         src={item?.images}
                         alt="smartphone-tablet"
                         className="img-fluid"
@@ -558,7 +565,9 @@ const Joomla = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image  width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     src={require("../../../public/assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-18.webp")}
                     style={{
                       width: "100%",
@@ -570,7 +579,9 @@ const Joomla = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image  width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     src={require("../../../public/assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-19.png")}
                     style={{
                       width: "100%",
@@ -582,7 +593,9 @@ const Joomla = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image  width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     src={require("../../../public/assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-20.png")}
                     style={{
                       width: "100%",
@@ -597,7 +610,9 @@ const Joomla = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image  width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     src={require("../../../public/assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-21.png")}
                     style={{
                       width: "100%",
@@ -612,7 +627,9 @@ const Joomla = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image  width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     src={require("../../../public/assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-22.png")}
                     style={{
                       width: "100%",
@@ -627,7 +644,9 @@ const Joomla = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image  width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     src={require("../../../public/assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-23.png")}
                     style={{
                       width: "100%",
@@ -642,7 +661,9 @@ const Joomla = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image  width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     src={require("../../../public/assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-24.webp")}
                     style={{
                       width: "100%",
@@ -657,7 +678,9 @@ const Joomla = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image  width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     src={require("../../../public/assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-26.webp")}
                     style={{
                       width: "100%",
@@ -672,7 +695,9 @@ const Joomla = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image  width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     src={require("../../../public/assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-28.webp")}
                     style={{
                       width: "100%",
@@ -701,13 +726,14 @@ const Joomla = () => {
                   onClick={() => setActiveWhyChoose("experience_expertise")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "experience_expertise" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/E-Commerce Website/JoomlaDev/Why-Choose/Experience-And-Expertise-1.png")}
                       alt="Experience and Expertise"
                       className="img-fluid"
@@ -720,13 +746,14 @@ const Joomla = () => {
                   onClick={() => setActiveWhyChoose("storng_portfolio")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "storng_portfolio" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/E-Commerce Website/MagentoDev/why-Choose/robust-portfolio.png")}
                       alt="Strong Portfolio"
                       className="img-fluid"
@@ -739,13 +766,14 @@ const Joomla = () => {
                   onClick={() => setActiveWhyChoose("industry_leading_team")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "industry_leading_team" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/E-Commerce Website/JoomlaDev/Why-Choose/Industry-Leading-Team.png")}
                       alt="Industry-leading team"
                       className="img-fluid"
@@ -758,13 +786,14 @@ const Joomla = () => {
                   onClick={() => setActiveWhyChoose("agile")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "agile" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/E-Commerce Website/JoomlaDev/Why-Choose/Agile-Development-1.png")}
                       alt="Agile development"
                       className="img-fluid"
@@ -777,13 +806,14 @@ const Joomla = () => {
                   onClick={() => setActiveWhyChoose("timely_project")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "timely_project" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/E-Commerce Website/JoomlaDev/Why-Choose/deadline.png")}
                       alt="Timely Project Completion"
                       className="img-fluid"
@@ -796,13 +826,14 @@ const Joomla = () => {
                   onClick={() => setActiveWhyChoose("competitive_pricing")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "competitive_pricing" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/E-Commerce Website/JoomlaDev/Why-Choose/competitive-pricing.png")}
                       alt="Competitive Pricing"
                       className="img-fluid"
@@ -971,7 +1002,9 @@ const Joomla = () => {
                 <div className="service_provide_box">
                   <div className="service_provide_content">
                     <div className="service_provide_title">
-                      <Image  width={50} height={50}
+                      <Image
+                        width={50}
+                        height={50}
                         src={item?.images}
                         alt="smartphone-tablet"
                         className="img-fluid"
@@ -1011,13 +1044,13 @@ const Joomla = () => {
       {/* Contact Section Start */}
       <ContactUs question="Are you planning to launch a Successful Joomla website in the market?" />
       {/* Contact Section End */}
-      <Whatsapp/>
+      <Whatsapp />
       <GetAQuoteModal
         setOpenModal={setModalOpen}
         openModal={modalOpen}
         handleCloseModal={() => setModalOpen(false)}
       />
-      <Footer/>
+      <Footer />
     </>
   );
 };

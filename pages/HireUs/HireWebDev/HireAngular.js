@@ -75,7 +75,7 @@ const HireAngular = () => {
       {/* Banner Section Start */}
       <HeroSection
         title="Hire Angular 2 Developers In India"
-        des="When a business requires creating a scalable, reliable, performance-driven and feature rich web experience for the users Angular 2 comes to their aid. By hiring Angular 2 developers from The App Ideas you give your website a solid push thanks to this client-side framework from Google. The App Ideas is one of the leading Angular 2 web development companies with a robust team of experienced Angular 2 developers capable to deliver cutting edge web solutions."
+        des="The greatest option for scalable, reliable, and feature-rich online experiences is Angular 2. App Ideas' Angular 2 developers boost your website using Google's client-side framework. The App Ideas is a top Angular 2 web development firm with competent developers that can build cutting-edge websites. We use Angular 2's full potential to provide your web project the latest features and capabilities for a seamless, dynamic browsing experience. Join us to make the most of Angular 2 and your online presence."
         list1="7+ Years of experience in App Development"
         list2="Best Angular JS Development Company"
         list3="Dedicated team for your Angular JS Development"

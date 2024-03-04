@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import Link from 'next/link';
-import Image from 'next/image';
+import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import mobileweb from "../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Web Development.svg";
@@ -29,8 +29,6 @@ import Business from "../../../public/assets/images/SERVICES/E-Commerce Website/
 import Education from "../../../public/assets/images/SERVICES/E-Commerce Website/Industries We Serve/Education Industry.svg";
 import Rental from "../../../public/assets/images/SERVICES/E-Commerce Website/Industries We Serve/Rental Industry.svg";
 import WorkSlider from "../../../components/WorkSlider";
-
-
 
 import { Helmet } from "react-helmet";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
@@ -218,9 +216,9 @@ const ECommerceWeb = () => {
   return (
     <>
       <Helmet title="Best eCommerce Web Development Company India | The App Ideas" />
-      <Header setOpenModal={setModalOpen}/>
+      <Header setOpenModal={setModalOpen} />
       {/* Banner Section Start */}
-      <HeroSection  
+      <HeroSection
         title="E-Commerce Website Development Company"
         des="Here we are at The App Ideas, which is one of the leading web and app development company. We offer software development services like website development, mobile app development, web app development as well as E-commerce platforms development services. We are expertise in offering victorious E-commerce services to all kinds of business categories at the best possible rates."
         list1="7+ Years of experience in E-commerce Development"
@@ -241,13 +239,16 @@ const ECommerceWeb = () => {
           <div className="Title">
             <h3>Services we provide</h3>
             <p>
-              With most businesses looking for the advantage of an online
-              marketplace, e-commerce websites and mobile commerce apps will
-              continue to be popular. We at The App Ideas incorporate innovation
-              and creative excellence to build powerful e-commerce web apps for
-              businesses of both B2B and B2C niches. Having a fully experienced
-              team of e-commerce web designers and developers we help businesses
-              realize their online potential.
+              E-commerce websites and mobile commerce apps are vital for digital
+              enterprises since online marketplaces are popular. Innovation and
+              creativity help App Ideas build B2B and B2C e-commerce web
+              applications. We use skilled e-commerce site designers and
+              developers to help firms succeed online. Our e-commerce
+              development approach involves strategic planning, user-centric
+              design, seamless integration of cutting-edge technology, and
+              rigorous testing to improve performance and user experience. We
+              collaborate with clients to understand company goals and develop
+              unique e-commerce solutions that improve growth and profit.
             </p>
           </div>
           <div className="row mt-5">
@@ -1397,13 +1398,13 @@ const ECommerceWeb = () => {
       {/* Client testimonial Section End */}
       <FAQ />
       <ContactUs question="Are you looking for the best E-commerce Platform development company?" />
-      <Whatsapp/>
+      <Whatsapp />
       <GetAQuoteModal
         setOpenModal={setModalOpen}
         openModal={modalOpen}
         handleCloseModal={() => setModalOpen(false)}
       />
-      <Footer/>
+      <Footer />
     </>
   );
 };

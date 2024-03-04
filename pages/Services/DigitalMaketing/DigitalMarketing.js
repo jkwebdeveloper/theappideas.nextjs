@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Work from "../../../components/Workdone/Work";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Image from 'next/image';
+import Image from "next/image";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 import mobileweb from "../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Web Development.svg";
@@ -199,7 +199,6 @@ const DigitalMarketing = () => {
   const [openIndustries, SetOpenIndustries] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
-
   const toggleOpen = (i) => {
     if (openServicesProvide === i) {
       return SetOpenServicesProvide(false);
@@ -219,7 +218,7 @@ const DigitalMarketing = () => {
   return (
     <>
       <Helmet title="#1 Digital Marketing Agency in India, USA | The app Ideas" />
-      <Header setOpenModal={setModalOpen}/>
+      <Header setOpenModal={setModalOpen} />
       {/* Banner Section Start */}
       <HeroSection
         title="Digital Marketing Agency"
@@ -242,14 +241,12 @@ const DigitalMarketing = () => {
           <div className="Title">
             <h3>Services we provide</h3>
             <p>
-              Digital Marketing is the skill-based service that helps your
-              website gain visibility in the search engine ranking with relevant
-              and unique content sought after by your intended audience. At The
-              App Ideas, we have web and SEO experts to help your website
-              contents rank in search engine listings through keyword-optimized
-              unique content. We are a white Digital Marketing Agency with a
-              consistent focus on boosting organic traffic for your website
-              through search engine ranks.
+              Digital marketing improves website rankings by providing unique,
+              relevant content for your target audience. The App Ideas' web and
+              SEO experts use keyword optimization and creative content to boost
+              website rankings. White digital marketing agencies boost search
+              engine ranks to promote organic traffic. Digital Marketing will
+              boost your website's organic traffic.
             </p>
           </div>
           <div className="row mt-5">
@@ -260,7 +257,6 @@ const DigitalMarketing = () => {
                   onClick={() => setActiveService("seo")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "seo" && "service__provide_tab_active"
                     }`}
@@ -281,7 +277,6 @@ const DigitalMarketing = () => {
                   onClick={() => setActiveService("keyword")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "keyword" &&
                       "service__provide_tab_active"
@@ -303,7 +298,6 @@ const DigitalMarketing = () => {
                   onClick={() => setActiveService("onsite_technical")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "onsite_technical" &&
                       "service__provide_tab_active"
@@ -325,7 +319,6 @@ const DigitalMarketing = () => {
                   onClick={() => setActiveService("off_page")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "off_page" &&
                       "service__provide_tab_active"
@@ -343,7 +336,6 @@ const DigitalMarketing = () => {
                   onClick={() => setActiveService("guest_blogging")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "guest_blogging" &&
                       "service__provide_tab_active"
@@ -365,7 +357,6 @@ const DigitalMarketing = () => {
                   onClick={() => setActiveService("social_marketing")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "social_marketing" &&
                       "service__provide_tab_active"
@@ -387,7 +378,6 @@ const DigitalMarketing = () => {
                   onClick={() => setActiveService("pay_per_click")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "pay_per_click" &&
                       "service__provide_tab_active"
@@ -409,7 +399,6 @@ const DigitalMarketing = () => {
                   onClick={() => setActiveService("app_store")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "app_store" &&
                       "service__provide_tab_active"
@@ -431,7 +420,6 @@ const DigitalMarketing = () => {
                   onClick={() => setActiveService("content_marketing")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "content_marketing" &&
                       "service__provide_tab_active"
@@ -869,7 +857,6 @@ const DigitalMarketing = () => {
                   onClick={() => setActiveServe("real_estate")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeServe === "real_estate" &&
                       "service__provide_tab_active"
@@ -887,7 +874,6 @@ const DigitalMarketing = () => {
                   onClick={() => setActiveServe("small_industry")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeServe === "small_industry" &&
                       "service__provide_tab_active"
@@ -909,7 +895,6 @@ const DigitalMarketing = () => {
                   onClick={() => setActiveServe("restaurant")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeServe === "restaurant" &&
                       "service__provide_tab_active"
@@ -931,7 +916,6 @@ const DigitalMarketing = () => {
                   onClick={() => setActiveServe("apparel")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeServe === "apparel" && "service__provide_tab_active"
                     }`}
@@ -952,7 +936,6 @@ const DigitalMarketing = () => {
                   onClick={() => setActiveServe("finance")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeServe === "finance" && "service__provide_tab_active"
                     }`}
@@ -973,7 +956,6 @@ const DigitalMarketing = () => {
                   onClick={() => setActiveServe("sports")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeServe === "sports" && "service__provide_tab_active"
                     }`}
@@ -994,7 +976,6 @@ const DigitalMarketing = () => {
                   onClick={() => setActiveServe("arts_entertainment")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeServe === "arts_entertainment" &&
                       "service__provide_tab_active"
@@ -1016,7 +997,6 @@ const DigitalMarketing = () => {
                   onClick={() => setActiveServe("marketplace")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeServe === "marketplace" &&
                       "service__provide_tab_active"
@@ -1038,7 +1018,6 @@ const DigitalMarketing = () => {
                   onClick={() => setActiveServe("beauty")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeServe === "beauty" && "service__provide_tab_active"
                     }`}
@@ -1394,14 +1373,14 @@ const DigitalMarketing = () => {
       {/* Client testimonial Section End */}
       <FAQ />
       <ContactUs question="Are you looking for the best Digital Marketing Agency?" />
-      <Whatsapp/>
+      <Whatsapp />
       <GetAQuoteModal
         setOpenModal={setModalOpen}
         openModal={modalOpen}
         handleCloseModal={() => setModalOpen(false)}
       />
 
-      <Footer/>
+      <Footer />
     </>
   );
 };

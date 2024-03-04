@@ -357,7 +357,7 @@ const TaxiBooking = () => {
       {/* common Banner start */}
       <HeroSection
         title="Taxi Booking App"
-        des="On Demand Taxi Booking App Development like Uber literally changed the lifestyle of urban men more than anything else. But compared to the huge market demands, still, such apps have limited access for most commuters. Every new taxi booking app has an equal opportunity to grow with this market demand. We at the App Ideas build most sophisticated, custom-featured and unique taxi booking apps that can promise a better booking experience compared all other apps in this category as of now."
+        des="Uber and on-demand taxi app development have revolutionized urban life. Despite market demand, many commuters lack such apps. Taxi booking app competitors have comparable growth potential. The App Ideas develops innovative, custom-featured taxi booking apps. We aim to provide commuters the greatest booking experience of all apps. Our innovative taxi booking app solutions meet customers' evolving needs and compete in the market."
         list1="7+ Years of experience in App Development"
         list2="Best Taxi Booking App Development Company"
         list3="Dedicated team for your Taxi Booking App Development"

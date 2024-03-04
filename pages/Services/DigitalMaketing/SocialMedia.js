@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Image from 'next/image';
+import Image from "next/image";
 import service from "../../../public/assets/images/SERVICES/Digital Marketing Agency/social_media/Social-Media-Marketing.webp";
 import Specialist from "../../../public/assets/images/SERVICES/Digital Marketing Agency/social_media/Social-Media-Marketing-Services.webp";
 import optimization from "../../../public/assets/images/SERVICES/Digital Marketing Agency/social_media/Social-Media-Marketing-Agency.webp";
@@ -19,14 +19,14 @@ const ServiceProvideData = [
     id: 1,
     images: require("../../../public/assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/1-3.png"),
     que: "Social Media Strategy",
-    ans: "Social Media marketing is one of the most demanding services which helps in increasing the traffic towards your online business platforms. More traffic towards your business can also convert into leads. Many business owners are now utilizing Social media for generating high leads.",
-    ans2: "The App Ideas is one of the leading web and app development company. Along with software development services, we also offer Social media marketing services to startups and business owners. We help our business clients with a comprehensive social media marketing strategy specific to each mobile OS platform.",
+    ans: "Companies seeking online traffic must use social media. Leads and visibility increase with traffic. Many business owners generate high-quality leads on social media.",
+    ans2: "App Ideas, a top web and app developer, now offers social media marketing. We personalize startup and business owner social media marketing to each smartphone OS. Our expertise helps organizations increase traffic, leads, and online presence via social media.",
   },
   {
     id: 2,
     images: require("../../../public/assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/2-3.png"),
     que: "Social Branding",
-    ans: "The App Ideas is one of the leading web and app development company. Along with software development services, we also offer digital marketing services like Social Media marketing. We help businesses to create a robust brand presence across a variety of social channels and boost the visibility of their business brand.",
+    ans: "App Ideas, a popular online and app development company, offers social media and digital marketing services. We assist businesses increase brand recognition and social media engagement. Strategic Social Media campaigns boost brand awareness, consumer engagement, and business growth. Our digital marketing knowledge lets us tailor our services to each client's needs and objectives for optimum impact and ROI. Let us increase your brand's online presence and success.",
   },
   {
     id: 3,
@@ -128,11 +128,11 @@ const SocialMediaMarketing = () => {
   return (
     <>
       <Helmet title="Social Media Marketing Agency in India, USA - The App Ideas" />
-      <Header setOpenModal={setModalOpen}/>
+      <Header setOpenModal={setModalOpen} />
       {/* Banner Section Start */}
       <HeroSection
         title="Social Media Marketing"
-        des="This era is mainly known as the digital era because everything is now moving towards online platforms. All the businesses are now launching their websites, mobile app and web apps for the growth of the business. If we talk about Social Media Marketing then this kind of services platform can help in promoting the services and reaching a high audience. Social Media can also help in generating leads. If you are planning of hiring Social Media marketing services then feel free to reach us."
+        des="Internet usage is widespread in the digital era. Websites, mobile apps, and web apps help businesses across industries. Service promotion and audience reach need social media marketing. Also produces leads nicely. Contact us if you're considering social media marketing to increase your online presence. Our specialty is building effective social media strategies for businesses."
         list1="7+ Years of experience in Social Media marketing"
         list2="Best Social Media Marketing Development Company"
         list3="Dedicated team for your Social Media Marketing Development"
@@ -168,13 +168,14 @@ const SocialMediaMarketing = () => {
                   onClick={() => setActiveSocialBox("social_media_stratergy")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeSocialBox === "social_media_stratergy" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/1-3.png")}
                       alt="Social Media Strategy"
                       className="img-fluid"
@@ -187,13 +188,14 @@ const SocialMediaMarketing = () => {
                   onClick={() => setActiveSocialBox("social_branding")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeSocialBox === "social_branding" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/2-3.png")}
                       alt="Social Branding"
                       className="img-fluid"
@@ -206,13 +208,14 @@ const SocialMediaMarketing = () => {
                   onClick={() => setActiveSocialBox("social_engagement")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeSocialBox === "social_engagement" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/3-2.png")}
                       alt="Social Engagement"
                       className="img-fluid"
@@ -225,13 +228,14 @@ const SocialMediaMarketing = () => {
                   onClick={() => setActiveSocialBox("social_monitoring")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeSocialBox === "social_monitoring" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/4-2.png")}
                       alt="Social Monitoring"
                       className="img-fluid"
@@ -244,13 +248,14 @@ const SocialMediaMarketing = () => {
                   onClick={() => setActiveSocialBox("social_media_paid")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeSocialBox === "social_media_paid" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/5-2.png")}
                       alt="Social Media Paid Campaigns"
                       className="img-fluid"
@@ -263,13 +268,14 @@ const SocialMediaMarketing = () => {
                   onClick={() => setActiveSocialBox("social_pr")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeSocialBox === "social_pr" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/6-2.png")}
                       alt="Social PR"
                       className="img-fluid"
@@ -285,19 +291,16 @@ const SocialMediaMarketing = () => {
                   <div className="Title">
                     <h3 className="Title_heading">Social Media Strategy</h3>
                     <p className="Title_para">
-                      Social Media marketing is one of the most demanding
-                      services which helps in increasing the traffic towards
-                      your online business platforms. More traffic towards your
-                      business can also convert into leads. Many business owners
-                      are now utilizing Social media for generating high leads.
+                      Companies seeking online traffic must use social media.
+                      Leads and visibility increase with traffic. Many business
+                      owners generate high-quality leads on social media.
                     </p>
                     <p className="Title_para">
-                      The App Ideas is one of the leading web and app
-                      development company. Along with software development
-                      services, we also offer Social media marketing services to
-                      startups and business owners. We help our business clients
-                      with a comprehensive social media marketing strategy
-                      specific to each mobile OS platform.
+                      App Ideas, a top web and app developer, now offers social
+                      media marketing. We personalize startup and business owner
+                      social media marketing to each smartphone OS. Our
+                      expertise helps organizations increase traffic, leads, and
+                      online presence via social media.
                     </p>
                   </div>
                 </div>
@@ -309,12 +312,15 @@ const SocialMediaMarketing = () => {
                   <div className="Title">
                     <h3 className="Title_heading">Social Branding</h3>
                     <p className="Title_para">
-                      The App Ideas is one of the leading web and app
-                      development company. Along with software development
-                      services, we also offer digital marketing services like
-                      Social Media marketing. We help businesses to create a
-                      robust brand presence across a variety of social channels
-                      and boost the visibility of their business brand.
+                      App Ideas, a popular online and app development company,
+                      offers social media and digital marketing services. We
+                      assist businesses increase brand recognition and social
+                      media engagement. Strategic Social Media campaigns boost
+                      brand awareness, consumer engagement, and business growth.
+                      Our digital marketing knowledge lets us tailor our
+                      services to each client's needs and objectives for optimum
+                      impact and ROI. Let us increase your brand's online
+                      presence and success.
                     </p>
                   </div>
                 </div>
@@ -432,7 +438,9 @@ const SocialMediaMarketing = () => {
                 <div className="service_provide_box">
                   <div className="service_provide_content">
                     <div className="service_provide_title">
-                      <Image width={50} height={50}
+                      <Image
+                        width={50}
+                        height={50}
                         src={item?.images}
                         alt="smartphone-tablet"
                         className="img-fluid"
@@ -481,13 +489,14 @@ const SocialMediaMarketing = () => {
                   onClick={() => setActiveWhyChoose("experience")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "experience" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/1-4.png")}
                       alt="Experience"
                       className="img-fluid"
@@ -500,13 +509,14 @@ const SocialMediaMarketing = () => {
                   onClick={() => setActiveWhyChoose("expertise")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "expertise" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/2-4.png")}
                       alt="Expertise"
                       className="img-fluid"
@@ -519,13 +529,14 @@ const SocialMediaMarketing = () => {
                   onClick={() => setActiveWhyChoose("robust_portfolio")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "robust_portfolio" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/3-3.png")}
                       alt="Robust"
                       className="img-fluid"
@@ -538,13 +549,14 @@ const SocialMediaMarketing = () => {
                   onClick={() => setActiveWhyChoose("sophisticated_tools")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "sophisticated_tools" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/4-3.png")}
                       alt="Sophisticated"
                       className="img-fluid"
@@ -557,13 +569,14 @@ const SocialMediaMarketing = () => {
                   onClick={() => setActiveWhyChoose("result_driven")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "result_driven" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/5-3.png")}
                       alt="Timebound And"
                       className="img-fluid"
@@ -576,13 +589,14 @@ const SocialMediaMarketing = () => {
                   onClick={() => setActiveWhyChoose("pricing")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "pricing" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/6-3.png")}
                       alt="Competitive"
                       className="img-fluid"
@@ -754,7 +768,9 @@ const SocialMediaMarketing = () => {
                 <div className="service_provide_box">
                   <div className="service_provide_content">
                     <div className="service_provide_title">
-                      <Image width={50} height={50}
+                      <Image
+                        width={50}
+                        height={50}
                         src={item?.images}
                         alt="smartphone-tablet"
                         className="img-fluid"
@@ -796,13 +812,13 @@ const SocialMediaMarketing = () => {
       {/* Contact Section Start */}
       <ContactUs question="Are you planning to Launch Successful Social Media Marketing in the market?" />
       {/* Contact Section End */}
-      <Whatsapp/>
+      <Whatsapp />
       <GetAQuoteModal
         setOpenModal={setModalOpen}
         openModal={modalOpen}
         handleCloseModal={() => setModalOpen(false)}
       />
-      <Footer/>
+      <Footer />
     </>
   );
 };

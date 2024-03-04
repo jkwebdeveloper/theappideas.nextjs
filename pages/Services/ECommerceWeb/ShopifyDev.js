@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import Image from 'next/image';
+import Image from "next/image";
 import mobileweb from "../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/Shopify-Website-Development.webp";
 import mobileaap from "../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/Shopify-Custom-Theme-Developmen.webp";
 import webapp from "../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/Shopify-Experts.webp";
@@ -69,8 +69,8 @@ const IndustriesData = [
     id: 1,
     images: require("../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/Why Choose/Experience-And-Expertise-1.png"),
     que: "Years of Experience",
-    ans: "The App Ideas is one of the foremost E-commerce development company. We offer the software development services like mobile app development, web app development and website development. As per the digital demand, many business or E-commerce owners are updating their digital platforms.",
-    ans2: "We are at The App Ideas, which is a leading web and app development company. We have a team of highly experienced Shopify developers who will offer future-ready E-commerce platforms. We boast of years of experience in building Shopify e-commerce stores of all types across the niches.",
+    ans: "Leading E-commerce developer App Ideas creates mobile applications, internet apps, and websites. As digital demand develops, many companies and E-commerce operators are modernizing their digital platforms to stay competitive and meet customer expectations. The App Ideas guides web and app development and builds future-ready E-commerce platforms with expert Shopify developers. We've built Shopify E-commerce enterprises in various fields. Our developers master Shopify's sophisticated features and functionalities to create unique solutions for our clients.",
+    ans2: "Our scalable, secure, and user-friendly E-commerce platforms help small and large organizations succeed online. Our quality and innovation help organizations capitalize on the internet marketplace's vast opportunities and achieve their E-commerce goals.",
   },
   {
     id: 2,
@@ -137,11 +137,11 @@ const ShopifyDev = () => {
   return (
     <>
       <Helmet title="Shopify Web & App Development Company India - The App Ideas" />
-      <Header setOpenModal={setModalOpen}/>
+      <Header setOpenModal={setModalOpen} />
       {/* Banner Section Start */}
       <HeroSection
         title="Shopify Development Company"
-        des="As per the increasing demand of the e-commerce platform, business owners and startups are now shifting their business to online platforms for increasing profit rates. There are a high number of technology platforms available in the market which you can choose for the development of your E-commerce platform. Shopify is one of the most demanding and popular E-commerce development services that offer the best features."
+        des="Companies and entrepreneurs are using e-commerce platforms to increase earnings as they become more popular. E-commerce development technology platforms are plenty, therefore choosing one is crucial. Shopify's many features make it a popular e-commerce development platform. The popular e-commerce platform Shopify offers many tools and information for starting, running, and growing an online store. Companies of all sizes like its user-friendly design, customizable themes, secure payment methods, and extensive app ecosystem. Shopify's flexibility and scalability help startups and large organizations succeed in e-commerce."
         list1="7+ Years of experience in Shopify Development"
         list2="Best Shopify Development Company"
         list3="Dedicated team for your Shopify Development"
@@ -177,13 +177,14 @@ const ShopifyDev = () => {
                   onClick={() => setActiveService("shopify_e_commerce_store")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "shopify_e_commerce_store" &&
                       "service__provide_tab_active"
                     } `}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/What Do/icons8-shopify-72.png")}
                       alt="E-Commerce Development"
                       className="img-fluid"
@@ -196,13 +197,14 @@ const ShopifyDev = () => {
                   onClick={() => setActiveService("customize")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "customize" &&
                       "service__provide_tab_active"
                     } `}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/What Do/Custom-Shopify-E-Commerce-Development.png")}
                       alt="Customize"
                       className="img-fluid"
@@ -215,13 +217,14 @@ const ShopifyDev = () => {
                   onClick={() => setActiveService("shopify_mobile_ecommerce")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "shopify_mobile_ecommerce" &&
                       "service__provide_tab_active"
                     } `}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/What Do/Shopify-Mobile-Commerce-Development.png")}
                       alt="Mobile
                       Development"
@@ -235,13 +238,14 @@ const ShopifyDev = () => {
                   onClick={() => setActiveService("shopify_plugin")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "shopify_plugin" &&
                       "service__provide_tab_active"
                     } `}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/What Do/Shopify-Plugin-Development.png")}
                       alt="Shopify Plugin development"
                       className="img-fluid"
@@ -254,13 +258,14 @@ const ShopifyDev = () => {
                   onClick={() => setActiveService("shopify_theme")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "shopify_theme" &&
                       "service__provide_tab_active"
                     } `}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/What Do/Group-184.png")}
                       alt="Shopify Theme Development"
                       className="img-fluid"
@@ -273,13 +278,14 @@ const ShopifyDev = () => {
                   onClick={() => setActiveService("support_maintanance")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "support_maintanance" &&
                       "service__provide_tab_active"
                     } `}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/What Do/Mask-Group.png")}
                       alt="Support and maintenance"
                       className="img-fluid"
@@ -468,7 +474,9 @@ const ShopifyDev = () => {
                 <div className="service_provide_box">
                   <div className="service_provide_content">
                     <div className="service_provide_title">
-                      <Image  width={50} height={50}
+                      <Image
+                        width={50}
+                        height={50}
                         src={item?.images}
                         alt="smartphone-tablet"
                         className="img-fluid"
@@ -564,7 +572,9 @@ const ShopifyDev = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image  width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     alt="baristaswag"
                     src={require("../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/baristaswag.webp")}
                     style={{
@@ -577,7 +587,9 @@ const ShopifyDev = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image  width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     alt="berripro"
                     src={require("../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/berripro.webp")}
                     style={{
@@ -590,7 +602,9 @@ const ShopifyDev = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image  width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     alt="blessestore"
                     src={require("../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/blessestore.webp")}
                     style={{
@@ -606,7 +620,9 @@ const ShopifyDev = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image  width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     alt="dashwallets"
                     src={require("../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/dashwallets.webp")}
                     style={{
@@ -622,7 +638,9 @@ const ShopifyDev = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image  width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     alt="glowrecipe"
                     src={require("../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/glowrecipe.webp")}
                     style={{
@@ -638,7 +656,9 @@ const ShopifyDev = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image  width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     alt="momzjoy"
                     src={require("../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/momzjoy.webp")}
                     style={{
@@ -654,7 +674,9 @@ const ShopifyDev = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image  width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     alt="monbebecouture"
                     src={require("../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/monbebecouture.webp")}
                     style={{
@@ -670,7 +692,9 @@ const ShopifyDev = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image  width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     alt="moroccanfurniturebazaar"
                     src={require("../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/moroccanfurniturebazaar.webp")}
                     style={{
@@ -686,7 +710,9 @@ const ShopifyDev = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image  width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     alt="purebodynaturals"
                     src={require("../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/purebodynaturals.webp")}
                     style={{
@@ -702,7 +728,9 @@ const ShopifyDev = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image  width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     alt="resipsausa"
                     src={require("../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/resipsausa.webp")}
                     style={{
@@ -718,7 +746,9 @@ const ShopifyDev = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image  width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     alt="terracomo"
                     src={require("../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/terracomo.webp")}
                     style={{
@@ -748,13 +778,14 @@ const ShopifyDev = () => {
                   onClick={() => setActiveWhyChoose("years_experience")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "years_experience" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/Why Choose/Experience-And-Expertise-1.png")}
                       alt="Years of Experience"
                       className="img-fluid"
@@ -767,13 +798,14 @@ const ShopifyDev = () => {
                   onClick={() => setActiveWhyChoose("robust")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "robust" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/Why Choose/robust-portfolio.png")}
                       alt="Robust Portfolio"
                       className="img-fluid"
@@ -786,13 +818,14 @@ const ShopifyDev = () => {
                   onClick={() => setActiveWhyChoose("business")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "business" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/Why Choose/icons8-business-network-72.png")}
                       alt="Business Specific"
                       className="img-fluid"
@@ -805,13 +838,14 @@ const ShopifyDev = () => {
                   onClick={() => setActiveWhyChoose("dedicated_project")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "dedicated_project" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/Why Choose/Smart-Retail.png")}
                       alt="Dedicated Project Manager"
                       className="img-fluid"
@@ -824,13 +858,14 @@ const ShopifyDev = () => {
                   onClick={() => setActiveWhyChoose("highly_result")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "highly_result" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/Why Choose/Performance-Driven..png")}
                       alt="Highly Result Driven"
                       className="img-fluid"
@@ -843,13 +878,14 @@ const ShopifyDev = () => {
                   onClick={() => setActiveWhyChoose("competitive_pricing")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "competitive_pricing" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/E-Commerce Website/ShopifyDev/Why Choose/competitive-pricing.png")}
                       alt="Competitive Pricing"
                       className="img-fluid"
@@ -865,19 +901,24 @@ const ShopifyDev = () => {
                   <div className="Title">
                     <h3 className="Title_heading">Years of Experience</h3>
                     <p className="Title_para">
-                      The App Ideas is one of the foremost E-commerce
-                      development company. We offer the software development
-                      services like mobile app development, web app development
-                      and website development. As per the digital demand, many
-                      business or E-commerce owners are updating their digital
-                      platforms.
+                      Leading E-commerce developer App Ideas creates mobile
+                      applications, internet apps, and websites. As digital
+                      demand develops, many companies and E-commerce operators
+                      are modernizing their digital platforms to stay
+                      competitive and meet customer expectations. The App Ideas
+                      guides web and app development and builds future-ready
+                      E-commerce platforms with expert Shopify developers. We've
+                      built Shopify E-commerce enterprises in various fields.
+                      Our developers master Shopify's sophisticated features and
+                      functionalities to create unique solutions for our
+                      clients.
                     </p>
                     <p className="Title_para">
-                      We are at The App Ideas, which is a leading web and app
-                      development company. We have a team of highly experienced
-                      Shopify developers who will offer future-ready E-commerce
-                      platforms. We boast of years of experience in building
-                      Shopify e-commerce stores of all types across the niches.
+                      Our scalable, secure, and user-friendly E-commerce
+                      platforms help small and large organizations succeed
+                      online. Our quality and innovation help organizations
+                      capitalize on the internet marketplace's vast
+                      opportunities and achieve their E-commerce goals.
                     </p>
                   </div>
                 </div>
@@ -1020,7 +1061,9 @@ const ShopifyDev = () => {
                 <div className="service_provide_box">
                   <div className="service_provide_content">
                     <div className="service_provide_title">
-                      <Image  width={50} height={50}
+                      <Image
+                        width={50}
+                        height={50}
                         src={item?.images}
                         alt="smartphone-tablet"
                         className="img-fluid"
@@ -1060,13 +1103,13 @@ const ShopifyDev = () => {
       {/* Contact Section Start */}
       <ContactUs question="Are you planning to launch a Successful Shopify E-commerce platform in the market?" />
       {/* Contact Section End */}
-      <Whatsapp/>
+      <Whatsapp />
       <GetAQuoteModal
         setOpenModal={setModalOpen}
         openModal={modalOpen}
         handleCloseModal={() => setModalOpen(false)}
       />
-      <Footer/>
+      <Footer />
     </>
   );
 };

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import Image from 'next/image';
+import Image from "next/image";
 import SoftwareDevelopment from "../../../public/assets/images/SERVICES/Software development/Software Development.svg";
 import Custom from "../../../public/assets/images/SERVICES/Software development/Custom Softwrare Development.svg";
 import SoftwareDeveloper from "../../../public/assets/images/SERVICES/Software development/Software Developer.svg";
@@ -129,9 +129,7 @@ const IndustriesData = [
     id: 2,
     images: Fintech,
     que: "Fintech Industry",
-    ans: "The App Ideas is one of the foremost software development company. We have a group of people who are highly skilled in developing successful software solutions for all kinds of businesses. Fintech businesses are also investing in developing software solutions that can help them in saving the data and using it. Having a software solution for a fintech can make the process briskly.",
-    ans2: "Are you planning to launch a Fintech Industry Software?",
-    ans3: "If yes, then this is probably the best time for you to launch software for your Fintech industry. We are highly experienced in developing software solutions for all kinds of industries at the best possible rates. If you are into the fintech industry then feel free to connect with us, discuss your requirements for fintech software development and get a free quotation.",
+    ans: "Creative innovations are needed to compete in today's financial industry. App Ideas creates innovative software for digital financial organizations. Our fintech-savvy developers grasp its challenges and opportunities. If you're a startup disrupting banking or an established institution upgrading services, we'll assist. From safe payment gateways and blockchain solutions to robo-advisors and mobile banking applications, we can execute your fintech ideas. Our innovative software solutions focus on compliance, scalability, and user experience to promote growth and efficiency.",
   },
   {
     id: 3,
@@ -217,11 +215,11 @@ const SoftwareDev = () => {
   return (
     <>
       <Helmet title="Software Development Services in India | The App ideas" />
-      <Header setOpenModal={setModalOpen}/>
+      <Header setOpenModal={setModalOpen} />
       {/* Banner Section Start */}
       <HeroSection
         title="Software development company"
-        des="We at The App Ideas has a group of experienced developers as well as designers who are proficient in developing software that can be helpful for the employees, customers and business owners. We have worked on various software development services like developing CRM, software management and also in custom software development services which can be very obliging for the users. For more details, feel free to connect with us and get a free quotation for a victorious Software service."
+        des="The App Ideas' skilled developers and designers produce applications for workers, customers, and business owners. CRM, SMS, and custom software development are our expertise. Our expertise spans several industries, providing users with efficient solutions. Request a free quotation for our excellent software services. Let us assist you reach software goals and commercial success."
         list1="7+ Years of experience in Software Development"
         list2="Best Software Development Company"
         list3="Dedicated team for your Software Development"
@@ -240,13 +238,28 @@ const SoftwareDev = () => {
           <div className="Title">
             <h3>Services we provide</h3>
             <p>
-              Software Development is one of the most demanding online platforms
-              in the market. For most businesses, owners are launching software
-              development services that can make the work more efficient for the
-              users. It is advantageous to have a Software solution that can
-              help manage the data easily as well as track the services which
-              can save a lot of time. A software service platform can be used as
-              a B2B business and can be also useful for B2C Services.
+              Software development is a popular online platform. Software
+              development services improve user efficiency, and businesses are
+              understanding this. Software that streamlines data and service
+              tracking saves time. A platform like this may serve B2B and B2C
+              sectors with different needs. Companies competing in the digital
+              era should invest in software to enhance internal processes and
+              customer experiences. Innovative software streamlines processes
+              and boosts industry success.
+            </p>
+            <p>
+              Academic and Education(add relevant info instead of company info
+              to all below H3)
+            </p>
+            <p>
+              App Ideas develops the best educational software! App Ideas knows
+              educational institutions have unique challenges and opportunities.
+              We can create innovative digital solutions for educational
+              institutions, learning platforms, and instructors from your ideas.
+              Our talented developers produce software that enhances learning,
+              classroom management, and academic performance. We can execute
+              your concept utilizing interactive learning apps, virtual
+              classrooms, administrative tools, and assessments.
             </p>
           </div>
           <div className="row mt-5">
@@ -257,7 +270,6 @@ const SoftwareDev = () => {
                   onClick={() => setActiveService("desktop_application")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "desktop_application" &&
                       "service__provide_tab_active"
@@ -276,7 +288,6 @@ const SoftwareDev = () => {
                   onClick={() => setActiveService("web_application")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "web_application" &&
                       "service__provide_tab_active"
@@ -298,7 +309,6 @@ const SoftwareDev = () => {
                   onClick={() => setActiveService("crm_solution")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "crm_solution" &&
                       "service__provide_tab_active"
@@ -316,7 +326,6 @@ const SoftwareDev = () => {
                   onClick={() => setActiveService("erp_solution")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "erp_solution" &&
                       "service__provide_tab_active"
@@ -334,7 +343,6 @@ const SoftwareDev = () => {
                   onClick={() => setActiveService("hrms_system")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "hrms_system" &&
                       "service__provide_tab_active"
@@ -352,7 +360,6 @@ const SoftwareDev = () => {
                   onClick={() => setActiveService("software_maintanance")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "software_maintanance" &&
                       "service__provide_tab_active"
@@ -374,7 +381,6 @@ const SoftwareDev = () => {
                   onClick={() => setActiveService("software_integration")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "software_integration" &&
                       "service__provide_tab_active"
@@ -396,7 +402,6 @@ const SoftwareDev = () => {
                   onClick={() => setActiveService("software_ui_ux")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "software_ui_ux" &&
                       "service__provide_tab_active"
@@ -418,7 +423,6 @@ const SoftwareDev = () => {
                   onClick={() => setActiveService("software_consulting")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeService === "software_consulting" &&
                       "service__provide_tab_active"
@@ -830,7 +834,6 @@ const SoftwareDev = () => {
                   onClick={() => setActiveServe("academic_education")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeServe === "academic_education" &&
                       "service__provide_tab_active"
@@ -852,7 +855,6 @@ const SoftwareDev = () => {
                   onClick={() => setActiveServe("fintech")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeServe === "fintech" && "service__provide_tab_active"
                     }`}
@@ -873,7 +875,6 @@ const SoftwareDev = () => {
                   onClick={() => setActiveServe("real_estate")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeServe === "real_estate" &&
                       "service__provide_tab_active"
@@ -891,7 +892,6 @@ const SoftwareDev = () => {
                   onClick={() => setActiveServe("restaurant_business")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeServe === "restaurant_business" &&
                       "service__provide_tab_active"
@@ -913,7 +913,6 @@ const SoftwareDev = () => {
                   onClick={() => setActiveServe("travel_tourism")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeServe === "travel_tourism" &&
                       "service__provide_tab_active"
@@ -935,7 +934,6 @@ const SoftwareDev = () => {
                   onClick={() => setActiveServe("construction")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeServe === "construction" &&
                       "service__provide_tab_active"
@@ -957,7 +955,6 @@ const SoftwareDev = () => {
                   onClick={() => setActiveServe("IT_industry")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeServe === "IT_industry" &&
                       "service__provide_tab_active"
@@ -975,7 +972,6 @@ const SoftwareDev = () => {
                   onClick={() => setActiveServe("healthcare")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeServe === "healthcare" &&
                       "service__provide_tab_active"
@@ -997,7 +993,6 @@ const SoftwareDev = () => {
                   onClick={() => setActiveServe("entertainment")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeServe === "entertainment" &&
                       "service__provide_tab_active"
@@ -1055,25 +1050,17 @@ const SoftwareDev = () => {
                   <div className="Title">
                     <h3 className="Title_heading">Fintech Industry</h3>
                     <p className="Title_para">
-                      The App Ideas is one of the foremost software development
-                      company. We have a group of people who are highly skilled
-                      in developing successful software solutions for all kinds
-                      of businesses. Fintech businesses are also investing in
-                      developing software solutions that can help them in saving
-                      the data and using it. Having a software solution for a
-                      fintech can make the process briskly.
-                    </p>
-                    <p className="Title_para">
-                      Are you planning to launch a Fintech Industry Software?
-                    </p>
-                    <p className="Title_para">
-                      If yes, then this is probably the best time for you to
-                      launch software for your Fintech industry. We are highly
-                      experienced in developing software solutions for all kinds
-                      of industries at the best possible rates. If you are into
-                      the fintech industry then feel free to connect with us,
-                      discuss your requirements for fintech software development
-                      and get a free quotation.
+                      Creative innovations are needed to compete in today's
+                      financial industry. App Ideas creates innovative software
+                      for digital financial organizations. Our fintech-savvy
+                      developers grasp its challenges and opportunities. If
+                      you're a startup disrupting banking or an established
+                      institution upgrading services, we'll assist. From safe
+                      payment gateways and blockchain solutions to robo-advisors
+                      and mobile banking applications, we can execute your
+                      fintech ideas. Our innovative software solutions focus on
+                      compliance, scalability, and user experience to promote
+                      growth and efficiency.
                     </p>
                   </div>
                 </div>
@@ -1085,27 +1072,16 @@ const SoftwareDev = () => {
                   <div className="Title">
                     <h3 className="Title_heading">Real Estate industry</h3>
                     <p className="Title_para">
-                      The App Ideas is one of the foremost software development
-                      company. We have skilled software developers who are
-                      providing unique designing and advanced features services
-                      for all kinds of software development services. If we talk
-                      about the Real Estate industry then a software solution
-                      can make the process much easier for them by digitalizing
-                      the platform.
-                    </p>
-                    <p className="Title_para">
-                      Are you planning to launch a Real Estate Industry
-                      Software?
-                    </p>
-                    <p className="Title_para">
-                      If yes, then without wasting much feel free to connect
-                      with us and get a free quotation for your real estate
-                      software development services. We are highly experts in
-                      providing the best services like mobile app development,
-                      web app development and website development. We are just a
-                      click away, feel free to connect with us, share your
-                      requirements and get the best quotation for real estate
-                      software development.
+                      A dynamic market like real estate needs digital
+                      innovation. App Ideas develops real estate agent and
+                      corporate applications. Our skilled developers understand
+                      real estate's intricacy. Brokerages, property management
+                      organizations, and real estate tech startups may use our
+                      services to create robust digital solutions. We increase
+                      your business with property listing platforms, CRM
+                      systems, virtual property tours, and analytics dashboards.
+                      To exceed your expectations, we focus usability,
+                      scalability, and security in our software solution.
                     </p>
                   </div>
                 </div>
@@ -1359,13 +1335,13 @@ const SoftwareDev = () => {
       {/* Client testimonial Section End */}
       <FAQ />
       <ContactUs question="Are you looking for the best Software development Agency?" />
-      <Whatsapp/>
+      <Whatsapp />
       <GetAQuoteModal
         setOpenModal={setModalOpen}
         openModal={modalOpen}
         handleCloseModal={() => setModalOpen(false)}
       />
-      <Footer/>
+      <Footer />
     </>
   );
 };

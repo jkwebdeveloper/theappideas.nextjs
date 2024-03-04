@@ -10,7 +10,7 @@ import Footer from "../../../components/Footer";
 import FAQ from "../../../components/FAQ";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Image from 'next/image';
+import Image from "next/image";
 // Banner
 import Development from "../../../public/assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Salon-Booking-App-Development.png";
 import Services from "../../../public/assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Salon-App-Development.png";
@@ -48,7 +48,7 @@ import Analytics from "../../../public/assets/images/SOLUTIONS/Popular Solutions
 import PaymentManagement from "../../../public/assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Admin App/Payment-Management-1.svg";
 
 import ContactUs from "../../../components/ContactUs";
-import HeroSection from '../../../components/HeroSection';
+import HeroSection from "../../../components/HeroSection";
 import { Helmet } from "react-helmet";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import Whatsapp from "../../../components/Whatsapp";
@@ -329,7 +329,6 @@ const SalonApp = () => {
   };
   const [modalOpen, setModalOpen] = useState(false);
 
-
   useEffect(() => {
     AOS.init();
   }, []);
@@ -342,11 +341,11 @@ const SalonApp = () => {
   return (
     <>
       <Helmet title="Salon Booking App Development Company | The App Ideas" />
-      <Header setOpenModal={setModalOpen}/>
+      <Header setOpenModal={setModalOpen} />
       {/* common Banner start */}
       <HeroSection
         title="Salon Booking App Development"
-        des="Here we are at The App Ideas, which is one of the leading Salon Booking app development company. We have a team of highly experienced and expert mobile app developers who will offer the best salon app development services at the best rates. Feel free to reach us and get a free quote for a Salon Booking app development service."
+        des="software Ideas is a top cheap salon booking software developer. Our mobile app developers are knowledgeable and dedicated to salon-specific solutions. We provide the best salon app development prices, quality, and reliability. We create user-friendly, feature-rich apps that streamline booking to boost salon efficiency and customer satisfaction. We can simplify and grow your boutique or chain salon. Upgrade your salon booking experience with a free quote."
         list1="7+ Years of experience in App Development"
         list2="Best Salon Service App Development Company"
         list3="Dedicated team for your Salon Service App Development"
@@ -449,7 +448,9 @@ const SalonApp = () => {
                         className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4"
                       >
                         <div className="food__delivery__box">
-                          <Image width={60} height={60}
+                          <Image
+                            width={60}
+                            height={60}
                             src={image}
                             alt="Check-Details-icons"
                             className="img-fluid"
@@ -527,7 +528,9 @@ const SalonApp = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     alt="food-1"
                     src={require("../../../public/assets/images/SOLUTIONS/Delivery App/Food-app/food1.webp")}
                     style={{
@@ -561,7 +564,9 @@ const SalonApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/why-should/quality-salon.png")}
                       alt="Custom-Mobile-App-Development"
                       className="img-fluid"
@@ -579,7 +584,9 @@ const SalonApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/why-should/nda-security.png")}
                       alt="Android-Enterprise-App-Development"
                       className="img-fluid"
@@ -597,7 +604,9 @@ const SalonApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/why-should/cross-platform.png")}
                       alt="Android-Wearable-App-Development"
                       className="img-fluid"
@@ -615,7 +624,9 @@ const SalonApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/why-should/customize-app.png")}
                       alt="Android-Game-App-Development"
                       className="img-fluid"
@@ -633,7 +644,9 @@ const SalonApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/why-should/affordable-cost.png")}
                       alt="Android-App-Redesign"
                       className="img-fluid"
@@ -651,7 +664,9 @@ const SalonApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/why-should/time-delivery.png")}
                       alt="Android-Support-And-Maintenance"
                       className="img-fluid"
@@ -669,7 +684,9 @@ const SalonApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/why-should/full-support.png")}
                       alt="Android-Support-And-Maintenance"
                       className="img-fluid"
@@ -687,7 +704,9 @@ const SalonApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/why-should/user-freindly.png")}
                       alt="Android-Support-And-Maintenance"
                       className="img-fluid"
@@ -705,7 +724,9 @@ const SalonApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/why-should/9.png")}
                       alt="Android-Support-And-Maintenance"
                       className="img-fluid"
@@ -968,7 +989,9 @@ const SalonApp = () => {
                 <div className="service_provide_box">
                   <div className="service_provide_content">
                     <div className="service_provide_title">
-                      <Image width={50} height={50}
+                      <Image
+                        width={50}
+                        height={50}
                         src={item?.images}
                         alt="smartphone-tablet"
                         className="img-fluid"
@@ -1010,13 +1033,13 @@ const SalonApp = () => {
       {/* Contact Section Start */}
       <ContactUs question="Would you like to create a Salon booking App?" />
       {/* Contact Section End */}
-      <Whatsapp/>
+      <Whatsapp />
       <GetAQuoteModal
         setOpenModal={setModalOpen}
         openModal={modalOpen}
         handleCloseModal={() => setModalOpen(false)}
       />
-      <Footer/>
+      <Footer />
     </>
   );
 };

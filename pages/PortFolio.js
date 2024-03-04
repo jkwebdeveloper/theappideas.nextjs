@@ -60,10 +60,9 @@ const PortFolio = () => {
         <div className="container">
           <h2 className="blog__title">Our Portfolio</h2>
           <p className="blog__para">
-            The App Ideas boasts of a strong portfolio of most successful
-            websites, ecommerce sites and mobile apps across a spectrum of
-            niches. Our portfolio offers you a detailed idea of our development
-            strength, reputation and abilities.
+            The App Ideas has created cutting-edge websites, e-commerce
+            platforms, and mobile applications in several areas. Our portfolio
+            shows our development skills and capabilities.
           </p>
           <div className="blog__tabing__box Portfolio__Blog">
             <ul

@@ -6,7 +6,7 @@ import CustomWordPress from "../../../public/assets/images/SERVICES/WEB DEVELOPM
 import WordPressWebsite from "../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/WordPress-Website-Development-Company.png";
 import Developer from "../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/WordPress-Website-Developer.png";
 
-import Image from 'next/image';
+import Image from "next/image";
 
 import { Helmet } from "react-helmet";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
@@ -137,11 +137,11 @@ const WordPressDeveloper = () => {
   return (
     <>
       <Helmet title="Certified WordPress development Company In India | The App Ideas" />
-      <Header setOpenModal={setModalOpen}/>
+      <Header setOpenModal={setModalOpen} />
       {/* Banner Section Start */}
       <HeroSection
         title="WordPress Development Company"
-        des="The App Ideas is one of the most popular web and app development company. We have a team of developers who have years of experience in offering the best web development services. We have a group of people who are highly expert in offering successful WordPress web development services along with integrating advanced features and unique designing. If you are planning to launch a WordPress website then feel free to reach us and get a free quotation."
+        des="App Ideas is a top online and app development company known for its competence and quality. Our specialists have years of expertise providing top-notch web development services. We specialize in WordPress site building, integrating complex features and unique designs effortlessly. Whether you're starting a WordPress website or improving one, our experts can help. Contact us for a free project quote."
         list1="7+ Years of experience in App Development"
         list2="Best WordPress  Development Company"
         list3="Dedicated team for your WordPress Development"
@@ -160,13 +160,17 @@ const WordPressDeveloper = () => {
           <div className="Title">
             <h3>What do we offer for WordPress Development Company?</h3>
             <p>
-              WordPress as leading the Content Management System (CMS) is behind
-              millions of websites and blogs across the niches. Ease of use,
-              flexibility, scalability, customization, and performance are some
-              of the reasons behind the popularity of WordPress. Our expert
-              WordPress Development Company has years of frontline experience in
-              building the most sophisticated WordPress blogs and websites for
-              various business and professional niches.
+              WordPress powers countless websites and blogs across industries.
+              User-friendliness, adaptability, scalability, customization, and
+              performance make it popular. We have extensive experience building
+              complicated WordPress blogs and websites for business and
+              professional clients as a top WordPress development company. Our
+              WordPress and tech abilities enable us to design cutting-edge
+              solutions that fit our clients' needs. Our WordPress experts can
+              create stunning company websites and e-commerce systems. Whether
+              you're a tiny business owner or a seasoned professional, our
+              experience can help you succeed. We can build your business by
+              maximizing WordPress's online potential.
             </p>
           </div>
           <div className="row mt-5">
@@ -177,13 +181,14 @@ const WordPressDeveloper = () => {
                   onClick={() => setActiveWeOffer("wordpress_web")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeOffer === "wordpress_web" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Website-Redesign.png")}
                       alt="Website-Redesign"
                       className="img-fluid"
@@ -196,13 +201,14 @@ const WordPressDeveloper = () => {
                   onClick={() => setActiveWeOffer("wordpress_theme")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeOffer === "wordpress_theme" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Group-235.png")}
                       alt="Group-235"
                       className="img-fluid"
@@ -215,13 +221,14 @@ const WordPressDeveloper = () => {
                   onClick={() => setActiveWeOffer("location_based")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeOffer === "location_based" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Location-Based-Services.png")}
                       alt="icons8-smart-watch-100-1"
                       className="img-fluid"
@@ -234,13 +241,14 @@ const WordPressDeveloper = () => {
                   onClick={() => setActiveWeOffer("wordpress_plugin")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeOffer === "wordpress_plugin" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Wordpress-plugin.png")}
                       alt="Group-53"
                       className="img-fluid"
@@ -253,13 +261,14 @@ const WordPressDeveloper = () => {
                   onClick={() => setActiveWeOffer("wordpress_mobile")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeOffer === "wordpress_mobile" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/WordPress-Mobile-App.png")}
                       alt="Group-184"
                       className="img-fluid"
@@ -272,13 +281,14 @@ const WordPressDeveloper = () => {
                   onClick={() => setActiveWeOffer("manitenance_support")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeOffer === "manitenance_support" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Mask-Group.png")}
                       alt="Mask-Group"
                       className="img-fluid"
@@ -459,7 +469,9 @@ const WordPressDeveloper = () => {
                 <div className="service_provide_box">
                   <div className="service_provide_content">
                     <div className="service_provide_title">
-                      <Image  width={50} height={50}
+                      <Image
+                        width={50}
+                        height={50}
                         src={item?.images}
                         alt="smartphone-tablet"
                         className="img-fluid"
@@ -516,25 +528,21 @@ const WordPressDeveloper = () => {
                       <ul className="ps-0">
                         <div className="work_head_box_link"></div>
                         <li>
-                          <div className="work_head_box_link">
-                            {" "}
-                          </div>
-                          <div className="work_head_item">
-                            E-Commerce
-                          </div>
+                          <div className="work_head_box_link"> </div>
+                          <div className="work_head_item">E-Commerce</div>
                         </li>
                         <li>
                           {" "}
-                          <div className="work_head_item">
-                            Hire Wordpress
-                          </div>
+                          <div className="work_head_item">Hire Wordpress</div>
                         </li>
                       </ul>
                     </div>
                   </div>
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
-                      <Image  width={492} height={300}
+                      <Image
+                        width={492}
+                        height={300}
                         src={require("../../../public/assets/images/Portfolio/port-ecommerce-website.webp")}
                         alt="port-ecommerce-website"
                         className="img-fluid"
@@ -558,25 +566,21 @@ const WordPressDeveloper = () => {
                       <ul className="ps-0">
                         <div className="work_head_box_link"></div>
                         <li>
-                          <div className="work_head_box_link">
-                            {" "}
-                          </div>
-                          <div className="work_head_item">
-                            E-Commerce
-                          </div>
+                          <div className="work_head_box_link"> </div>
+                          <div className="work_head_item">E-Commerce</div>
                         </li>
                         <li>
                           {" "}
-                          <div className="work_head_item">
-                            Hire Wordpress
-                          </div>
+                          <div className="work_head_item">Hire Wordpress</div>
                         </li>
                       </ul>
                     </div>
                   </div>
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
-                      <Image  width={492} height={300}
+                      <Image
+                        width={492}
+                        height={300}
                         src={require("../../../public/assets/images/Portfolio/port-ecommerce-website-one.webp")}
                         alt="port-ecommerce-website-one"
                         className="img-fluid"
@@ -600,32 +604,25 @@ const WordPressDeveloper = () => {
                       <ul className="ps-0">
                         <div className="work_head_box_link"></div>
                         <li>
-                          <div className="work_head_box_link">
-                            {" "}
-                          </div>
-                          <div className="work_head_item">
-                            Hire Wordpress
-                          </div>
+                          <div className="work_head_box_link"> </div>
+                          <div className="work_head_item">Hire Wordpress</div>
                         </li>
                         <li>
                           {" "}
-                          <div className="work_head_item">
-                            Web Development
-                          </div>
+                          <div className="work_head_item">Web Development</div>
                         </li>
                         <li>
                           {" "}
-                          <div className="work_head_item">
-                            {" "}
-                            Wordpress
-                          </div>
+                          <div className="work_head_item"> Wordpress</div>
                         </li>
                       </ul>
                     </div>
                   </div>
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
-                      <Image  width={492} height={300}
+                      <Image
+                        width={492}
+                        height={300}
                         src={require("../../../public/assets/images/Portfolio/port-webdevelop-webiste-two.webp")}
                         alt="port-webdevelop-webiste-two"
                         className="img-fluid"
@@ -649,25 +646,21 @@ const WordPressDeveloper = () => {
                       <ul className="ps-0">
                         <div className="work_head_box_link"></div>
                         <li>
-                          <div className="work_head_box_link">
-                            {" "}
-                          </div>
-                          <div className="work_head_item">
-                            E-Commerce
-                          </div>
+                          <div className="work_head_box_link"> </div>
+                          <div className="work_head_item">E-Commerce</div>
                         </li>
                         <li>
                           {" "}
-                          <div className="work_head_item">
-                            Hire Wordpress
-                          </div>
+                          <div className="work_head_item">Hire Wordpress</div>
                         </li>
                       </ul>
                     </div>
                   </div>
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
-                      <Image  width={492} height={300}
+                      <Image
+                        width={492}
+                        height={300}
                         src={require("../../../public/assets/images/Portfolio/port-ecommerce-website-tan.webp")}
                         alt="port-ecommerce-website-tan"
                         className="img-fluid"
@@ -691,31 +684,25 @@ const WordPressDeveloper = () => {
                       <ul className="ps-0">
                         <div className="work_head_box_link"></div>
                         <li>
-                          <div className="work_head_box_link">
-                            {" "}
-                          </div>
-                          <div className="work_head_item">
-                            E-Commerce
-                          </div>
+                          <div className="work_head_box_link"> </div>
+                          <div className="work_head_item">E-Commerce</div>
                         </li>
                         <li>
                           {" "}
-                          <div className="work_head_item">
-                            Hire Wordpress
-                          </div>
+                          <div className="work_head_item">Hire Wordpress</div>
                         </li>
                         <li>
                           {" "}
-                          <div className="work_head_item">
-                            Wordpress
-                          </div>
+                          <div className="work_head_item">Wordpress</div>
                         </li>
                       </ul>
                     </div>
                   </div>
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
-                      <Image  width={492} height={300}
+                      <Image
+                        width={492}
+                        height={300}
                         src={require("../../../public/assets/images/Portfolio/port-ecommerce-website-eleven.webp")}
                         alt="port-ecommerce-website-eleven"
                         className="img-fluid"
@@ -743,13 +730,14 @@ const WordPressDeveloper = () => {
                   onClick={() => setActiveWhyChoose("expertise_exprerience")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "expertise_exprerience" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Experience-And-Expertise-1.png")}
                       alt="Experience-And-Expertise"
                       className="img-fluid"
@@ -762,13 +750,14 @@ const WordPressDeveloper = () => {
                   onClick={() => setActiveWhyChoose("strong_portfolio")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "strong_portfolio" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/robust-portfolio.png")}
                       alt="robust-portfolio"
                       className="img-fluid"
@@ -781,13 +770,14 @@ const WordPressDeveloper = () => {
                   onClick={() => setActiveWhyChoose("time_bound")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "time_bound" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Time-Bound-Development..png")}
                       alt="Time-Bound-Development"
                       className="img-fluid"
@@ -800,13 +790,14 @@ const WordPressDeveloper = () => {
                   onClick={() => setActiveWhyChoose("superb_user")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "superb_user" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Superb-User-Experience.png")}
                       alt="Superb-User-Experience"
                       className="img-fluid"
@@ -819,13 +810,14 @@ const WordPressDeveloper = () => {
                   onClick={() => setActiveWhyChoose("agile")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "agile" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Agile-Development-1.png")}
                       alt="Agile-Development"
                       className="img-fluid"
@@ -838,13 +830,14 @@ const WordPressDeveloper = () => {
                   onClick={() => setActiveWhyChoose("competitve_pricing")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "competitve_pricing" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/competitive-pricing.png")}
                       alt="competitive-pricing"
                       className="img-fluid"
@@ -1022,7 +1015,9 @@ const WordPressDeveloper = () => {
                 <div className="service_provide_box">
                   <div className="service_provide_content">
                     <div className="service_provide_title">
-                      <Image  width={50} height={50}
+                      <Image
+                        width={50}
+                        height={50}
                         src={item?.images}
                         alt="smartphone-tablet"
                         className="img-fluid"
@@ -1065,14 +1060,14 @@ const WordPressDeveloper = () => {
       {/* Contact Section Start */}
       <ContactUs question="Are you planning to launch a Successful WordPress Web in the market?" />
       {/* Contact Section End */}
-      <Whatsapp/>
+      <Whatsapp />
       <GetAQuoteModal
         setOpenModal={setModalOpen}
         openModal={modalOpen}
         handleCloseModal={() => setModalOpen(false)}
       />
 
-      <Footer/>
+      <Footer />
     </>
   );
 };

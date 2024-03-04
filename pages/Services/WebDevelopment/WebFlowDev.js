@@ -4,7 +4,7 @@ import { Pagination, Autoplay, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import Image from 'next/image';
+import Image from "next/image";
 import Webflowservice from "../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/Webflow-Development-Services.png";
 import webflow from "../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/Webflow-web-development.png";
 import webflowdeveloper from "../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/Webflow-Developer.png";
@@ -38,8 +38,8 @@ const ServiceProvideData = [
     id: 3,
     images: require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/what do/psd2webflow.png"),
     que: "PSD to Webflow conversion",
-    ans: "If we talk about location-based services then this type of service is also getting highly popular in the market. Many of the businesses are launching online platforms and implementing location-based features to make the services easier to access as well as for a better understanding.",
-    ans2: "The App Ideas is one of the most popular software development services. We offer development services for mobile app, web app and E-commerce platform development. We are highly expert in offering a location-based online platform. We help various websites converting to WordPress CMS from their existing platforms and help to optimise existing WordPress websites.",
+    ans: "Location-based services are popular with businesses. Geographic information enhances these services' usability. Location-based skills are essential for service comprehension and access as more firms go online. The App Ideas excels in mobile, web, and E-commerce platform development. We specialize in location-based web solutions that maximise user engagement and convenience. We can migrate websites to WordPress and optimize them for speed and performance.",
+    ans2: "We use location-based technology to help organizations provide customized services to customers, enhancing satisfaction and loyalty. Our wide development services and technology knowledge enable our clients stay ahead in today's competitive digital environment.",
   },
   {
     id: 4,
@@ -137,7 +137,7 @@ const WebFlowDev = () => {
   return (
     <>
       <Helmet title="Webflow Web Development Services In India | The App Ideas" />
-      <Header setOpenModal={setModalOpen}/>
+      <Header setOpenModal={setModalOpen} />
       {/* Banner Section Start */}
       <HeroSection
         title="Webflow Development Services"
@@ -178,7 +178,6 @@ const WebFlowDev = () => {
                   onClick={() => setActiveWeOffer("website_management")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeOffer === "website_management" &&
                       "service__provide_tab_active"
@@ -197,7 +196,6 @@ const WebFlowDev = () => {
                   onClick={() => setActiveWeOffer("custom_theme")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeOffer === "custom_theme" &&
                       "service__provide_tab_active"
@@ -216,7 +214,6 @@ const WebFlowDev = () => {
                   onClick={() => setActiveWeOffer("psd_webflow")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeOffer === "psd_webflow" &&
                       "service__provide_tab_active"
@@ -235,7 +232,6 @@ const WebFlowDev = () => {
                   onClick={() => setActiveWeOffer("web_flow")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeOffer === "web_flow" &&
                       "service__provide_tab_active"
@@ -254,7 +250,6 @@ const WebFlowDev = () => {
                   onClick={() => setActiveWeOffer("easy_integration")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeOffer === "easy_integration" &&
                       "service__provide_tab_active"
@@ -273,7 +268,6 @@ const WebFlowDev = () => {
                   onClick={() => setActiveWeOffer("website_maintenance")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeOffer === "website_maintenance" &&
                       "service__provide_tab_active"
@@ -346,20 +340,22 @@ const WebFlowDev = () => {
                   <div className="Title">
                     <h3 className="Title_heading">PSD to Webflow conversion</h3>
                     <p className="Title_para">
-                      If we talk about location-based services then this type of
-                      service is also getting highly popular in the market. Many
-                      of the businesses are launching online platforms and
-                      implementing location-based features to make the services
-                      easier to access as well as for a better understanding.
+                      Location-based services are popular with businesses.
+                      Geographic information enhances these services' usability.
+                      Location-based skills are essential for service
+                      comprehension and access as more firms go online. The App
+                      Ideas excels in mobile, web, and E-commerce platform
+                      development. We specialize in location-based web solutions
+                      that maximise user engagement and convenience. We can
+                      migrate websites to WordPress and optimize them for speed
+                      and performance.
                     </p>
                     <p className="Title_para">
-                      The App Ideas is one of the most popular software
-                      development services. We offer development services for
-                      mobile app, web app and E-commerce platform development.
-                      We are highly expert in offering a location-based online
-                      platform. We help various websites converting to WordPress
-                      CMS from their existing platforms and help to optimise
-                      existing WordPress websites.
+                      We use location-based technology to help organizations
+                      provide customized services to customers, enhancing
+                      satisfaction and loyalty. Our wide development services
+                      and technology knowledge enable our clients stay ahead in
+                      today's competitive digital environment.
                     </p>
                   </div>
                 </div>
@@ -575,7 +571,6 @@ const WebFlowDev = () => {
                   onClick={() => setActiveWhyChoose("experienced_developers")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "experienced_developers" &&
                       "service__provide_tab_active"
@@ -594,7 +589,6 @@ const WebFlowDev = () => {
                   onClick={() => setActiveWhyChoose("ui_ux")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "ui_ux" &&
                       "service__provide_tab_active"
@@ -613,7 +607,6 @@ const WebFlowDev = () => {
                   onClick={() => setActiveWhyChoose("ecom_dev")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "ecom_dev" &&
                       "service__provide_tab_active"
@@ -632,7 +625,6 @@ const WebFlowDev = () => {
                   onClick={() => setActiveWhyChoose("migration_support")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "migration_support" &&
                       "service__provide_tab_active"
@@ -651,7 +643,6 @@ const WebFlowDev = () => {
                   onClick={() => setActiveWhyChoose("support_maintanance")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "support_maintanance" &&
                       "service__provide_tab_active"
@@ -670,7 +661,6 @@ const WebFlowDev = () => {
                   onClick={() => setActiveWhyChoose("cost")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "cost" &&
                       "service__provide_tab_active"
@@ -976,13 +966,13 @@ const WebFlowDev = () => {
       {/* Contact Section Start */}
       <ContactUs question="Are you planning to launch a Successful Webflow Web in the market?" />
       {/* Contact Section End */}
-      <Whatsapp/>
+      <Whatsapp />
       <GetAQuoteModal
         setOpenModal={setModalOpen}
         openModal={modalOpen}
         handleCloseModal={() => setModalOpen(false)}
       />
-      <Footer/>
+      <Footer />
     </>
   );
 };

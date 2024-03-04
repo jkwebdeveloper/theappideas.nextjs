@@ -141,7 +141,7 @@ const DrupalDev = () => {
       {/* Banner Section Start */}
       <HeroSection
         title="Drupal Web Development Company"
-        des="We are here at The App Ideas which is one of the leading web and app development company. We have years of experience in offering the best software services for all kinds of business niches at the best rates. We have a team of a highly skilled and expert team of Drupal developers who will offer future-ready solutions. If you are planning on converting your business into a Drupal platform then feel free to reach us."
+        des="Drupal is a top CMS due to its ease of use, wide feature set, and appealing style. It's been nearly a decade since we started Drupal. We have built Drupal abilities to deliver innovative and scalable solutions from its debut. Our knowledge enables us to design unique Drupal-based applications that meet our clients' needs and objectives for optimal performance and user experience."
         list1="7+ Years of experience in Development"
         list2="Best Drupal Development Company"
         list3="Dedicated team for your Food Delivery App Development"

@@ -10,7 +10,7 @@ import Header from "../../../components/Header/Header";
 import Footer from "../../../components/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Image from 'next/image';
+import Image from "next/image";
 // Banner
 import Development from "../../../public/assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/E-Learning-App-Development.png";
 import Services from "../../../public/assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/E-learning-Mobile-App-Development.png";
@@ -40,7 +40,7 @@ import Reviews from "../../../public/assets/images/SOLUTIONS/Popular Solutions/E
 import PaymentManagement from "../../../public/assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/Admin Panel/Payment-Management-1.svg";
 
 import ContactUs from "../../../components/ContactUs";
-import HeroSection from '../../../components/HeroSection';
+import HeroSection from "../../../components/HeroSection";
 import { Helmet } from "react-helmet";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import Whatsapp from "../../../components/Whatsapp";
@@ -64,39 +64,39 @@ const ElearningApp = () => {
       id: 1,
       images: require("../../../public/assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Anywhere-Anytime-Access.png"),
       que: "Anywhere-anytime access",
-      ans: "Elearning websites help learners with anytime-anywhere access to content and courseware."
+      ans: "Elearning websites help learners with anytime-anywhere access to content and courseware.",
     },
     {
       id: 2,
       images: require("../../../public/assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Custom-Module-For-Learners.png"),
       que: "Custom module for learners",
-      ans: "Elearning websites can also allow more customization as per the aptitude and learning ability of the participants."
+      ans: "Elearning websites can also allow more customization as per the aptitude and learning ability of the participants.",
     },
     {
       id: 3,
       images: require("../../../public/assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Equipped-For-Hands-On-Training.png"),
       que: "Equipped for hands-on training",
-      ans: "Thanks to the latest technologies like AR, VR, 3D photography, and the use of aerial drone photography, delivering hands-on training through e-learning is no longer impossible."
+      ans: "Thanks to the latest technologies like AR, VR, 3D photography, and the use of aerial drone photography, delivering hands-on training through e-learning is no longer impossible.",
     },
     {
       id: 4,
       images: require("../../../public/assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Affordable-Education.png"),
       que: "Affordable education",
-      ans: "Elearning websites allowing wider access to education beyond the constraints of institutions make education more affordable."
+      ans: "Elearning websites allowing wider access to education beyond the constraints of institutions make education more affordable.",
     },
     {
       id: 5,
       images: require("../../../public/assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Rigorous-Learning.png"),
       que: "Rigorous learning",
-      ans: "Elearning also allows learners to engage more rigorously to continue with multiple curriculums or completing a course at his own pace."
+      ans: "Elearning also allows learners to engage more rigorously to continue with multiple curriculums or completing a course at his own pace.",
     },
     {
       id: 6,
       images: require("../../../public/assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Real-Time-Industry-Exposure.png"),
       que: "Real-time industry exposure",
-      ans: "Thanks to the integrated digital platform, eLearning websites offer real-time industry exposure to people."
+      ans: "Thanks to the integrated digital platform, eLearning websites offer real-time industry exposure to people.",
     },
-  ]
+  ];
 
   const ElearningData = [
     {
@@ -243,11 +243,11 @@ const ElearningApp = () => {
   return (
     <>
       <Helmet title="E-Learning Mobile App Development Company India - The App Ideas" />
-      <Header setOpenModal={setModalOpen}/>
+      <Header setOpenModal={setModalOpen} />
       {/* common Banner start */}
       <HeroSection
         title="E-Learning App Store"
-        des="The modern education system is continuing to grow beyond the four walls of the classrooms thanks to the unprecedented growth in the elearning websites and apps in the last few years. As the demands for anywhere-anytime access to education is growing, more elearning websites and mobile apps will appear in the near future. We build sophisticated and future-ready elearning websites and apps for education and training curriculums of all types and categories."
+        des="The exponential growth of e-learning websites and apps is expanding education outside classrooms. The increased demand for mobile education requires innovative methods. Our company develops high-quality e-learning websites and future-ready mobile apps for education and training. Our academic, vocational, and specialized skill development options are personalized and easy to use. We employ cutting-edge technology to provide students educational resources anytime, anyplace to satisfy digital expectations. Our commitment to quality helps e-learning evolve."
         list1="7+ Years of experience in App Development"
         list2="Best E-learning App Development Company"
         list3="Dedicated team for your E-learning App Development"
@@ -339,7 +339,9 @@ const ElearningApp = () => {
                         className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4"
                       >
                         <div className="food__delivery__box">
-                          <Image width={60} height={60}
+                          <Image
+                            width={60}
+                            height={60}
                             src={image}
                             alt="search-food-icon"
                             className="img-fluid"
@@ -417,7 +419,9 @@ const ElearningApp = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     alt="food"
                     src={require("../../../public/assets/images/SOLUTIONS/Delivery App/Food-app/food1.webp")}
                     style={{
@@ -449,7 +453,9 @@ const ElearningApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Anywhere-Anytime-Access.png")}
                       alt="Custom-Mobile-App-Development"
                       className="img-fluid"
@@ -467,7 +473,9 @@ const ElearningApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Custom-Module-For-Learners.png")}
                       alt="Android-Enterprise-App-Development"
                       className="img-fluid"
@@ -485,7 +493,9 @@ const ElearningApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Equipped-For-Hands-On-Training.png")}
                       alt="Android-Wearable-App-Development"
                       className="img-fluid"
@@ -503,7 +513,9 @@ const ElearningApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Affordable-Education.png")}
                       alt="Android-Game-App-Development"
                       className="img-fluid"
@@ -521,7 +533,9 @@ const ElearningApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Rigorous-Learning.png")}
                       alt="Android-App-Redesign"
                       className="img-fluid"
@@ -539,7 +553,9 @@ const ElearningApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Real-Time-Industry-Exposure.png")}
                       alt="Android-Support-And-Maintenance"
                       className="img-fluid"
@@ -647,7 +663,9 @@ const ElearningApp = () => {
                 <div className="service_provide_box">
                   <div className="service_provide_content">
                     <div className="service_provide_title">
-                      <Image width={60} height={60}
+                      <Image
+                        width={60}
+                        height={60}
                         src={item?.images}
                         alt="smartphone-tablet"
                         className="img-fluid"
@@ -688,13 +706,13 @@ const ElearningApp = () => {
       {/* Contact Section Start */}
       <ContactUs question="Would you like to create E-learning Website or Mobile App?" />
       {/* Contact Section End */}
-      <Whatsapp/>
+      <Whatsapp />
       <GetAQuoteModal
         setOpenModal={setModalOpen}
         openModal={modalOpen}
         handleCloseModal={() => setModalOpen(false)}
       />
-      <Footer/>
+      <Footer />
     </>
   );
 };

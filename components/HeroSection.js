@@ -101,7 +101,7 @@ const HeroSection = ({
     onSubmit: (values, action) => {
       handlePost(values);
       console.log(values);
-      // action.resetForm();
+      action.resetForm();
     },
   });
 

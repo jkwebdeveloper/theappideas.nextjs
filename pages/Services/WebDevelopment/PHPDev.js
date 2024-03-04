@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import Image from 'next/image';
+import Image from "next/image";
 import CustomWordPress from "../../../public/assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/PHP-Web-Development.png";
 import WordPressWebsite from "../../../public/assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/PHP-Development-Services.png";
 import Developer from "../../../public/assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/PHP-Expert.png";
@@ -25,43 +25,42 @@ const ServiceProvideData = [
     id: 1,
     images: require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/ui-ux.png"),
     que: "Custom PHP Web Development",
-    ans: "The demand for online or digital platforms is increasing day by day. Many business owners and entrepreneurs are now converting their offline businesses to online businesses for offering a better user experience to their customers. PHP technology is a highly popular and demanding technology.",
-    ans2: "The App Ideas is the most popular PHP web development company. We have a team of highly skilled PHP developers who has years of experience in developing future-ready PHP web development services. By utilizing the versatility and flexibility of PHP language we build a richly layered custom website for business niches across the spectrum."
+    ans: "We create fully layered bespoke websites for a variety of company categories using PHP.",
   },
   {
     id: 2,
     images: require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/cms-icon1-1.png"),
     que: "PHP Based CMS Development",
     ans: "Nowadays, due to advancements in the field of technology, we are observing that each and every business category are moving towards online platforms. Food business, Grocery business, E-commerce business and more are shifting towards online platforms for increasing the engagement of the user.",
-    ans2: "The App Ideas is one of the leading web and app development company. We are highly expert in offering PHP web development services for every business niches. We build custom CMS solutions using the power of the PHP programming language to address specific web development needs."
+    ans2: "The App Ideas is one of the leading web and app development company. We are highly expert in offering PHP web development services for every business niches. We build custom CMS solutions using the power of the PHP programming language to address specific web development needs.",
   },
   {
     id: 3,
     images: require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/icons8-iphone-x-72-1.png"),
     que: "PHP Framework Development",
     ans: "PHP is one of the most popular CMS platforms which is used for developing the best web platforms helps in enhancing future-ready solutions. This is probably the best time to make an investment in web development services to offer online services to the users or customers. Online services are getting popular because this provides convenient ways of accessing the services.",
-    ans2: "The App Ideas is one of the leading web and app development company. We have a team of highly skilled developers who are proficient in delivering future-ready PHP web services in the market. We also use PHP to build custom web development frameworks equipped with a rich feature set and functional capabilities."
+    ans2: "The App Ideas is one of the leading web and app development company. We have a team of highly skilled developers who are proficient in delivering future-ready PHP web services in the market. We also use PHP to build custom web development frameworks equipped with a rich feature set and functional capabilities.",
   },
   {
     id: 4,
     images: require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/Mechanism-gears-1.png"),
     que: "PHP Mobile conversion",
     ans: "f you observe the market then you can clearly observe that every platform is now shifting towards the web and mobile app platform for offering satisfying services to the users. More than half the population are using smartphones for accessing daily life services. This is the main reason to digitalize your business.",
-    ans2: "The App Ideas is one of the leading web and app development company. We have a pool of talented PHP developers who have years of experience in offering the best PHP web as well as an app for every business niche. We also help to convert PHP based websites into richly-features and audience-specific cross platforms mobile apps."
+    ans2: "The App Ideas is one of the leading web and app development company. We have a pool of talented PHP developers who have years of experience in offering the best PHP web as well as an app for every business niche. We also help to convert PHP based websites into richly-features and audience-specific cross platforms mobile apps.",
   },
   {
     id: 5,
     images: require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/Group-184.png"),
     que: "PHP Custom Theme and Plugin Development",
     ans: "The demand for the online platform is getting popular day by day. People, as well as business owners, are shifting towards online platforms for increasing the profit rates of the business. Digital platforms are easy to use and easy to manage in a better way.PHP like web platforms offers additional features like custom theme development and plugin for better services development.",
-    ans2: "The App Ideas is one of the leading web and app development company. We have a team of highly skilled developers who are experienced in developing the best PHP web platforms at the best rates. We also utilize our PHP development expertise in building sophisticated custom website templates and plugins to deliver a high business-specific user experience."
+    ans2: "The App Ideas is one of the leading web and app development company. We have a team of highly skilled developers who are experienced in developing the best PHP web platforms at the best rates. We also utilize our PHP development expertise in building sophisticated custom website templates and plugins to deliver a high business-specific user experience.",
   },
   {
     id: 6,
     images: require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/Mask-Group.png"),
     que: "PHP Support and Maintenance",
     ans: "If you are a business owner or planning to start an online business then this is the right time to make an investment in online web platform development. The development of the web is not the final stage, the maintenance and support are also important to keep it successful in the market.",
-    ans2: "The App Ideas is one of the foremost software development company. We have a team of highly experienced and skilled developers who offer the best PHP web development services. For all PHP based websites, we also take responsibility for creating updates with relevant value additions. We offer robust post-development support and maintenance for all PHP based websites."
+    ans2: "The App Ideas is one of the foremost software development company. We have a team of highly experienced and skilled developers who offer the best PHP web development services. For all PHP based websites, we also take responsibility for creating updates with relevant value additions. We offer robust post-development support and maintenance for all PHP based websites.",
   },
 ];
 const IndustriesData = [
@@ -70,42 +69,42 @@ const IndustriesData = [
     images: require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Experience-And-Expertise-1.png"),
     que: "Expertise and Experience.",
     ans: "We are from The App Ideas which is one of the foremost web and app development company. We have a group of highly skilled developers who are experienced in providing the best web development services. Many business owners and entrepreneurs are converting their businesses into web platforms.",
-    ans2: "The main reason behind choosing The App Ideas is that we have years of experience in deploying the best business solution which can drive your business to the peak of the success. We initially understand the requirements then start the development. We flaunt a highly experienced team of WordPress developers with proven expertise in building the most sophisticated WordPress websites."
+    ans2: "The main reason behind choosing The App Ideas is that we have years of experience in deploying the best business solution which can drive your business to the peak of the success. We initially understand the requirements then start the development. We flaunt a highly experienced team of WordPress developers with proven expertise in building the most sophisticated WordPress websites.",
   },
   {
     id: 2,
     images: require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/robust-portfolio.png"),
     que: "Robust Portfolio",
     ans: "Before hiring any software development company, it is very important for you to check the past projects of the software services before hiring. By checking the past projects, you probably get the overall ideas of software development services like the expertise or experienced developers.",
-    ans2: "We are from The App Ideas is one of the leading web and app development. We have a team of highly skilled and experienced PHP developers who are experts in providing the best web services at the best possible rates. We boast a solid portfolio of the most successful PHP website across a broad variety of niches and categories."
+    ans2: "We are from The App Ideas is one of the leading web and app development. We have a team of highly skilled and experienced PHP developers who are experts in providing the best web services at the best possible rates. We boast a solid portfolio of the most successful PHP website across a broad variety of niches and categories.",
   },
   {
     id: 3,
     images: require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/why-Choose/icon.png"),
     que: "Unmatched Performance",
     ans: "The demands of software development services are getting popular day by day in the market. The users or we can say the audience is loving the online platform for accessing all kinds of services because it is easy as well as time-saving. As the demand is increasing, this is high time for business owners to convert their business into online business.",
-    ans2: "We are from The App Ideas which is one of the leading web and app development company. We have a team of highly skilled developers and designers who are expert PHP developers and provides successful web platforms solution for all business categories. We utilise the PHP programming language to ensure unmatched performance and highly audience-centric design."
+    ans2: "We are from The App Ideas which is one of the leading web and app development company. We have a team of highly skilled developers and designers who are expert PHP developers and provides successful web platforms solution for all business categories. We utilise the PHP programming language to ensure unmatched performance and highly audience-centric design.",
   },
   {
     id: 4,
     images: require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Agile-Development-1.png"),
     que: "Agile Development",
     ans: "Nowadays, the demand for PHP web development is getting increasing because the web platforms provide the comfort as well as convenience of accessing the services. If we check the market then there are a high number of smartphones users in the market. So this is probably the perfect time for you to make an investment in developing the best web platforms.",
-    ans2: "The App Ideas is one of the leading web and app development company. We have a group of highly skilled and experienced PHP web developers who are highly experts in offering the best services. We follow an agile development methodology for faster development while ensuring optimum quality through concurrent testing."
+    ans2: "The App Ideas is one of the leading web and app development company. We have a group of highly skilled and experienced PHP web developers who are highly experts in offering the best services. We follow an agile development methodology for faster development while ensuring optimum quality through concurrent testing.",
   },
   {
     id: 5,
     images: require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/competitive-pricing.png"),
     que: "Competitive Rate",
     ans: "The demand for software solutions or online platforms is getting higher in the market. Many entrepreneurs, startups and business owners are now launching their web app platforms in the market. The online platform can help in reaching a high number of users which can help in increasing user engagement.",
-    ans2: "We are from The App Ideas which is one of the leading web and app development company. We have a group of highly skilled PHP developers who offer the best solutions for all kinds of business niches. Our PHP web developers are highly experienced who can offer you advanced features. We provide highly competitive PHP development pricing without compromising on the quality parameters."
+    ans2: "We are from The App Ideas which is one of the leading web and app development company. We have a group of highly skilled PHP developers who offer the best solutions for all kinds of business niches. Our PHP web developers are highly experienced who can offer you advanced features. We provide highly competitive PHP development pricing without compromising on the quality parameters.",
   },
   {
     id: 6,
     images: require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Time-Bound-Development..png"),
     que: "Adhering to Strict Deadlines",
     ans: "This era is as highly popular as the digital era because now we have thousands of web app solutions in the market for every kind of business service. It is very easier for users to take out their smartphones or smart devices and start searching for the services they are looking for. This process is time-saving as well as cost-effective.",
-    ans2: "The App Ideas is one of the leading PHP web development company. We have years of hands-on experience in deploying successful PHP web development services for different business categories. We also offer expert advice on integrating some unique and advanced features into your online service platforms. We adhere to strict project deadlines and milestones and allow continuous iteration to open scopes for consistent value addition"
+    ans2: "The App Ideas is one of the leading PHP web development company. We have years of hands-on experience in deploying successful PHP web development services for different business categories. We also offer expert advice on integrating some unique and advanced features into your online service platforms. We adhere to strict project deadlines and milestones and allow continuous iteration to open scopes for consistent value addition",
   },
 ];
 
@@ -137,11 +136,11 @@ const PHPDev = () => {
   return (
     <>
       <Helmet title="Best PHP Development Company In India | The App Ideas" />
-      <Header setOpenModal={setModalOpen}/>
+      <Header setOpenModal={setModalOpen} />
       {/* Banner Section Start */}
       <HeroSection
         title="PHP Development Company"
-        des="The App Ideas is one of the foremost web and app development company. We are highly skilled, expert and experienced in offering awesome PHP web app development services which can be very useful and effective in increasing business profits. If you are planning to launch PHP web platforms in the market then this is the right time to make an investment. Feel free to reach us and get a free quotation."
+        des="App Ideas leads online and app development with unparalleled expertise. Our talented PHP web app developers improve business. Now is the time for PHP web platforms. Contact us for free project quotes. We assist PHP web businesses flourish in today's competitive industry with our track record and devotion."
         list1="7+ Years of experience in App Development"
         list2="Best PHP Development Company"
         list3="Dedicated team for your PHP Development"
@@ -160,15 +159,16 @@ const PHPDev = () => {
           <div className="Title">
             <h3>What do we offer in PHP Development Company?</h3>
             <p>
-              PHP is regarded to be the time tested programming language
-              powering millions of websites and CMS platforms on the web. The
-              popularity of PHP is continuously on the rise thanks to the ease
-              of coding, scopes of customisation, lean coding, reliable
-              architecture and scalability. At The App Ideas, we use PHP for
-              building the most versatile, flexible and user-optimised websites
-              across the niches. Having more than a decade of experience in PHP
-              development we have built several award-winning and commercially
-              successful PHP websites.
+              Popular websites and CMSs use PHP. Popular for its user-friendly
+              coding environment, huge customization options, efficient coding
+              techniques, robust design, and scalability. The App Ideas builds
+              adaptable, customizable, and user-friendly websites for different
+              industries using PHP. We build award-winning and lucrative PHP
+              websites with over a decade of PHP development experience. Our PHP
+              expertise makes our clients' websites attractive and smooth across
+              platforms and devices. We'll design innovative PHP solutions for
+              your e-commerce platform, business website, or dynamic web
+              application that exceed your expectations.
             </p>
           </div>
           <div className="row mt-5">
@@ -290,20 +290,8 @@ const PHPDev = () => {
                       Custom PHP Web Development
                     </h3>
                     <p className="Title_para">
-                      The demand for online or digital platforms is increasing
-                      day by day. Many business owners and entrepreneurs are now
-                      converting their offline businesses to online businesses
-                      for offering a better user experience to their customers.
-                      PHP technology is a highly popular and demanding
-                      technology.
-                    </p>
-                    <p className="Title_para">
-                      The App Ideas is the most popular PHP web development
-                      company. We have a team of highly skilled PHP developers
-                      who has years of experience in developing future-ready PHP
-                      web development services. By utilizing the versatility and
-                      flexibility of PHP language we build a richly layered
-                      custom website for business niches across the spectrum.
+                      We create fully layered bespoke websites for a variety of
+                      company categories using PHP.
                     </p>
                   </div>
                 </div>
@@ -705,7 +693,6 @@ const PHPDev = () => {
                   onClick={() => setActiveWhyChoose("expertise_experience")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "expertise_experience" &&
                       "service__provide_tab_active"
@@ -724,7 +711,6 @@ const PHPDev = () => {
                   onClick={() => setActiveWhyChoose("robust_portfolio")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "robust_portfolio" &&
                       "service__provide_tab_active"
@@ -743,7 +729,6 @@ const PHPDev = () => {
                   onClick={() => setActiveWhyChoose("unmatched_performance")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "unmatched_performance" &&
                       "service__provide_tab_active"
@@ -762,7 +747,6 @@ const PHPDev = () => {
                   onClick={() => setActiveWhyChoose("agile")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "agile" &&
                       "service__provide_tab_active"
@@ -781,7 +765,6 @@ const PHPDev = () => {
                   onClick={() => setActiveWhyChoose("competitive_rate")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "competitive_rate" &&
                       "service__provide_tab_active"
@@ -800,7 +783,6 @@ const PHPDev = () => {
                   onClick={() => setActiveWhyChoose("adhering_strict")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "adhering_strict" &&
                       "service__provide_tab_active"
@@ -1027,13 +1009,13 @@ const PHPDev = () => {
       {/* Contact Section Start */}
       <ContactUs question="Are you planning to launch a Successful PHP Mobile app in the market?" />
       {/* Contact Section End */}
-      <Whatsapp/>
+      <Whatsapp />
       <GetAQuoteModal
         setOpenModal={setModalOpen}
         openModal={modalOpen}
         handleCloseModal={() => setModalOpen(false)}
       />
-      <Footer/>
+      <Footer />
     </>
   );
 };

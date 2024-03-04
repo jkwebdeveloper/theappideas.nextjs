@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react'
-import background from '../../../public/assets/images/Home-our-services/bg-download.svg'
-import background1 from '../../../public/assets/images/Home-our-services/download (1).png'
-import { HiOutlineArrowRight } from 'react-icons/hi'
-import './services.module.css'
-import Link from 'next/link';
-import Image from 'next/image';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React, { useEffect } from "react";
+import background from "../../../public/assets/images/Home-our-services/bg-download.svg";
+import background1 from "../../../public/assets/images/Home-our-services/download (1).png";
+import { HiOutlineArrowRight } from "react-icons/hi";
+import "./services.module.css";
+import Link from "next/link";
+import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Services = () => {
   useEffect(() => {
-    AOS.init()
-  }, [])
+    AOS.init();
+  }, []);
   return (
     <>
       {/* ======= Services Section ======= */}
@@ -21,10 +21,13 @@ const Services = () => {
             <h3>Our Services</h3>
           </div>
           <p className="services-heading-text">
-            Over the years we have established ourselves as the leading service
-            provider for Mobile App Development, Web Development, Web and
-            Graphic Design, Ecommerce Development, IOT development and Games
-            Development.
+            We specialize in mobile app development, online services, graphic
+            design, e-commerce, IoT, and games. We provide innovative,
+            customised solutions for success in several domains. We are a
+            leading supplier of complete digital solutions, including engaging
+            mobile applications, effective web platforms, dynamic graphic
+            designs, strong e-commerce solutions, cutting-edge IoT projects, and
+            exciting game development.
           </p>
           <div className="row clearfix">
             <div
@@ -47,29 +50,32 @@ const Services = () => {
                 />
                 <div className="icon-box">
                   <Image
-                    src={require('../../../public/assets/images/Home-our-services/WEB DEVELOPMENT.gif')}
+                    src={require("../../../public/assets/images/Home-our-services/WEB DEVELOPMENT.gif")}
                     alt="Web Development"
-                       width={70}
-                        height={70}
+                    width={70}
+                    height={70}
                   />
                 </div>
                 <h4>
                   <Link
                     href="/web-development"
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     <h4>WEB DEVELOPMENT</h4>
                   </Link>
                 </h4>
                 <div className="text">
-                  We help you build robust web presence with our expertise ...
+                  We use visual and digital design to build substantial
+                  open-source platform solutions. We construct robust web
+                  presences for your organization using WordPress, Magento,
+                  CodeIgniter, Laravel, AngularJS, and NodeJS...
                 </div>
                 <Link
                   href="/web-development"
                   onClick={() => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                    window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
                 >
                   <div className="arrow-icon">
@@ -98,29 +104,31 @@ const Services = () => {
                 />
                 <div className="icon-box">
                   <Image
-                    src={require('../../../public/assets/images/Home-our-services/E-COMMERCE DEVELOPMENT.gif')}
+                    src={require("../../../public/assets/images/Home-our-services/E-COMMERCE DEVELOPMENT.gif")}
                     alt="E-COMMERCE DEVELOPMENT"
                     width={70}
-                        height={70}
+                    height={70}
                   />
                 </div>
                 <h4>
                   <Link
                     href="/e-commerce-website-development"
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     E-COMMERCE DEVELOPMENT
                   </Link>
                 </h4>
                 <div className="text">
-                  We help your business connect to the customers over ...
+                  Our sophisticated eCommerce and mobile commerce solutions and
+                  online storefronts link your organization to customers online
+                  and on their phones...
                 </div>
                 <Link
                   href="/e-commerce-website-development"
                   onClick={() => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                    window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
                 >
                   <div className="arrow-icon">
@@ -149,7 +157,7 @@ const Services = () => {
                 />
                 <div className="icon-box">
                   <Image
-                    src={require('../../../public/assets/images/Home-our-services/WEB DEVELOPMENT (1).gif')}
+                    src={require("../../../public/assets/images/Home-our-services/WEB DEVELOPMENT (1).gif")}
                     alt="MOBILE APP DEVELOPMENT"
                     width={70}
                     height={70}
@@ -159,19 +167,20 @@ const Services = () => {
                   <Link
                     href="/mobile-app-development"
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     MOBILE APP DEVELOPMENT
                   </Link>
                 </h4>
                 <div className="text">
-                  We assist your brand to enjoy the edge of mobile by ...
+                  We develop successful iOS and Android applications to help
+                  your business succeed on mobile. To provide a seamless and ...
                 </div>
                 <Link
                   href="/mobile-app-development"
                   onClick={() => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                    window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
                 >
                   <div className="arrow-icon">
@@ -200,7 +209,7 @@ const Services = () => {
                 />
                 <div className="icon-box">
                   <Image
-                    src={require('../../../public/assets/images/Home-our-services/INTERNET OF THINGS.gif')}
+                    src={require("../../../public/assets/images/Home-our-services/INTERNET OF THINGS.gif")}
                     alt="INTERNET OF THING"
                     width={70}
                     height={70}
@@ -210,19 +219,22 @@ const Services = () => {
                   <Link
                     href="/iot-app-development"
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     INTERNET OF THINGS
                   </Link>
                 </h4>
                 <div className="text">
-                  We build intuitive mobile apps connecting the gadgets in ...
+                  Our IoT expertise helps us design simple smartphone apps that
+                  connect and integrate all home and business devices. Consumers
+                  get a smooth experience with our applications that quickly
+                  connect and control networked devices...
                 </div>
                 <Link
                   href="/iot-app-development"
                   onClick={() => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                    window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
                 >
                   <div className="arrow-icon">
@@ -251,31 +263,33 @@ const Services = () => {
                 />
                 <div className="icon-box">
                   <Image
-                    src={require('../../../public/assets/images/Home-our-services/GAME DEVELOPMENT.gif')}
+                    src={require("../../../public/assets/images/Home-our-services/GAME DEVELOPMENT.gif")}
                     alt="GAME DEVELOPMENT"
                     width={70}
-                        height={70}
+                    height={70}
                   />
                 </div>
                 <h4>
                   <Link
                     href="/"
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     GAME DEVELOPMENT
                   </Link>
                 </h4>
                 <div className="text">
-                  We build 2D & 3D engaging and addictive mobile games for all
-                  ...
+                  We have unique and addictive mobile games. Our 2D and 3D games
+                  span genres and audiences. We like making fun games for
+                  different preferences. Both casual and serious players may
+                  play our mobile games...
                 </div>
                 <Link
                   href="/"
                   className="arrow-icon"
                   onClick={() => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                    window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
                 >
                   <HiOutlineArrowRight />
@@ -302,31 +316,31 @@ const Services = () => {
                 />
                 <div className="icon-box">
                   <Image
-                    src={require('../../../public/assets/images/Home-our-services/Hire Developer.gif')}
+                    src={require("../../../public/assets/images/Home-our-services/Hire Developer.gif")}
                     alt="Hire Developer"
                     width={70}
-                        height={70}
+                    height={70}
                   />
                 </div>
                 <h4>
                   <Link
                     href="/hire-us"
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     HIRE A DEVELOPER
                   </Link>
                 </h4>
                 <div className="text">
-                  The App Ideas providing best skilled, experienced developers
-                  ...
+                  The App Ideas can match you with the best and most experienced
+                  coders based on your time zone...
                 </div>
                 <Link
                   href="/hire-us"
                   className="arrow-icon"
                   onClick={() => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                    window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
                 >
                   <HiOutlineArrowRight />
@@ -339,7 +353,7 @@ const Services = () => {
 
       {/* End Services Section */}
     </>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;

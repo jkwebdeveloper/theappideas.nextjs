@@ -10,7 +10,7 @@ import Header from "../../../components/Header/Header";
 import Footer from "../../../components/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Image from 'next/image';
+import Image from "next/image";
 // Banner
 import Development from "../../../public/assets/images/SOLUTIONS/Delivery App/Grocery-app/Grocery-App-Development.png";
 import Services from "../../../public/assets/images/SOLUTIONS/Delivery App/Grocery-app/Grocery-Delivery-App-Development.png";
@@ -51,9 +51,8 @@ import PaymentManagement from "../../../public/assets/images/SOLUTIONS/Delivery 
 import GroceryStoremanagement from "../../../public/assets/images/SOLUTIONS/Delivery App/Grocery-app/Admin Panel/Grocery Store Management.svg";
 import Reports from "../../../public/assets/images/SOLUTIONS/Delivery App/Grocery-app/Admin Panel/Reports.svg";
 
-
 import ContactUs from "../../../components/ContactUs";
-import HeroSection from '../../../components/HeroSection';
+import HeroSection from "../../../components/HeroSection";
 import { Helmet } from "react-helmet";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import Whatsapp from "../../../components/Whatsapp";
@@ -374,11 +373,11 @@ const GroceryApp = () => {
   return (
     <>
       <Helmet title="Grocery Store App Development Company | The App Ideas" />
-      <Header setOpenModal={setModalOpen}/>
+      <Header setOpenModal={setModalOpen} />
       {/* common Banner start */}
       <HeroSection
         title="Grocery Store App"
-        des="Here we are at The App Ideas, which is one of the foremost Grocery Store App Development company. We have a team of highly skilled as well as experienced mobile app developers and designers who will offer the best Grocery app development services at the best rates. Feel free to connect with us and get a free quote for developing a Grocery Store app."
+        des="Welcome to The App Ideas, a leading On-Demand grocery delivery app developer. Our skilled mobile app developers and designers create high-quality Grocery apps at low prices. Grab a free Grocery Store app development quote. We help actualize your vision."
         list1="7+ Years of experience in App Development"
         list2="Best Grocery App Development Company"
         list3="Dedicated team for your Grocery App Development"
@@ -499,7 +498,9 @@ const GroceryApp = () => {
                         className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4"
                       >
                         <div className="food__delivery__box">
-                          <Image width={70} height={70}
+                          <Image
+                            width={70}
+                            height={70}
                             src={image}
                             alt="search-food-icon"
                             className="img-fluid"
@@ -578,7 +579,9 @@ const GroceryApp = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     src={require("../../../public/assets/images/SOLUTIONS/Delivery App/Food-app/food1.webp")}
                     alt="food1"
                     style={{
@@ -591,7 +594,9 @@ const GroceryApp = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     src={require("../../../public/assets/images/SOLUTIONS/Delivery App/Food-app/Food-2.webp")}
                     alt="food1"
                     style={{
@@ -604,7 +609,9 @@ const GroceryApp = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     src={require("../../../public/assets/images/SOLUTIONS/Delivery App/Food-app/Food-3.webp")}
                     alt="food1"
                     style={{
@@ -642,7 +649,9 @@ const GroceryApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/Delivery App/Grocery-app/why-should/1high_scale.png")}
                       alt="Custom-Mobile-App-Development"
                       className="img-fluid"
@@ -660,7 +669,9 @@ const GroceryApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/Delivery App/Grocery-app/why-should/2fully_customize.png")}
                       alt="Android-Enterprise-App-Development"
                       className="img-fluid"
@@ -678,7 +689,9 @@ const GroceryApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/Delivery App/Grocery-app/why-should/3time_cost.png")}
                       alt="Android-Wearable-App-Development"
                       className="img-fluid"
@@ -696,7 +709,9 @@ const GroceryApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/Delivery App/Grocery-app/why-should/4multi_support (1).png")}
                       alt="Android-Game-App-Development"
                       className="img-fluid"
@@ -714,7 +729,9 @@ const GroceryApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/Delivery App/Grocery-app/why-should/5multi_currency.png")}
                       alt="Android-App-Redesign"
                       className="img-fluid"
@@ -732,7 +749,9 @@ const GroceryApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/Delivery App/Grocery-app/why-should/6user_freindly.png")}
                       alt="Android-Support-And-Maintenance"
                       className="img-fluid"
@@ -750,7 +769,9 @@ const GroceryApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/Delivery App/Grocery-app/why-should/7offer_customize.png")}
                       alt="Android-Support-And-Maintenance"
                       className="img-fluid"
@@ -768,7 +789,9 @@ const GroceryApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/Delivery App/Grocery-app/why-should/8third_party.png")}
                       alt="Android-Support-And-Maintenance"
                       className="img-fluid"
@@ -786,7 +809,9 @@ const GroceryApp = () => {
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SOLUTIONS/Delivery App/Grocery-app/why-should/4multi_support (1).png")}
                       alt="Android-Support-And-Maintenance"
                       className="img-fluid"
@@ -1042,7 +1067,9 @@ const GroceryApp = () => {
                 <div className="service_provide_box">
                   <div className="service_provide_content">
                     <div className="service_provide_title">
-                      <Image width={60} height={60}
+                      <Image
+                        width={60}
+                        height={60}
                         src={item?.images}
                         alt="smartphone-tablet"
                         className="img-fluid"
@@ -1087,13 +1114,13 @@ const GroceryApp = () => {
                   the market?"
       />
       {/* Contact Section End */}
-      <Whatsapp/>
+      <Whatsapp />
       <GetAQuoteModal
         setOpenModal={setModalOpen}
         openModal={modalOpen}
         handleCloseModal={() => setModalOpen(false)}
       />
-      <Footer/>
+      <Footer />
     </>
   );
 };

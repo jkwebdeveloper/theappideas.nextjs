@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./About.module.css";
-import Link from 'next/link';
+import Link from "next/link";
 import CountUp from "react-countup";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -19,21 +19,25 @@ const About = () => {
             </div>
             <p className="about-text">WEB AND MOBILE APP DEVELOPMENT COMPANY</p>
             <p style={{ textAlign: "justify" }}>
-              The App Ideas is a forefront Web and Mobile App Development
-              Company, we propel business growth through innovative solutions.
-              Crafting cutting-edge digital solutions with swift, engaging user
-              interfaces and experiences is our forte.
-            </p>
-            <p style={{ textAlign: "justify" }}>
-              Our adept team of experienced Web and Mobile App Developers and
-              designers prioritizes understanding and analyzing client
-              requirements. This comprehensive approach ensures delivering the
-              best solutions for your on demand business and services success at
-              the most competitive prices. Following strict adherence to agile
-              methodology, we meticulously divide projects into small
-              milestones, achieving each with client approval and confirmation.
-              This commitment defines our path to excellence in web and mobile
-              app development and on-demand business solutions.
+              The App Ideas, a leading Web and Mobile App Development Company,
+              helps businesses thrive with unique and engaging solutions. Our
+              strategy is to quickly create cutting-edge digital solutions with
+              engaging user interfaces and seamless user experiences. We have
+              competent Web and Mobile App Developers and Designers that
+              understand and evaluate consumer needs. Agile online and mobile
+              app development shows our customer-centricity. We manage
+              complexity using iterative and collaborative project management.
+              We set achievable goals and create a customer-satisfying approach.
+              This method encourages transparency and happiness by obtaining
+              customer agreement and affirmation throughout. We recommend
+              user-friendly Web and Mobile app development for a pleasant
+              experience. Our client-centric approach recognizes that every
+              organization is unique and requires customized solutions.
+              Technological expertise, innovation, and customer service make us
+              competitive. The App Ideas is a trusted partner helping
+              organizations prosper by improving user experience, streamlining
+              processes, and creating cost-effective digital solutions that
+              reach the target audience.
             </p>
             <Link
               href="/about-us"

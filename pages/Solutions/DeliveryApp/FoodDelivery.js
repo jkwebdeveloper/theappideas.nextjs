@@ -392,7 +392,7 @@ const FoodDelivery = () => {
       {/* common Banner start */}
       <HeroSection
         title="Food Delivery App Development"
-        des="Food ordering apps became the new fad that fit into our instantly gratifying digital lifestyle. While the market potential for such app is huge, food apps also represent a highly competitive niche of apps. We at the App Ideas build highly sophisticated, feature-rich and user-optimised food ordering apps that can withstand the market competition."
+        des="In our fast-paced digital culture, on-demand food delivery applications are popular. Food delivery apps compete fiercely despite their immense market potential. To compete, App Ideas creates clever, feature-rich, user-optimized food ordering apps."
         list1="7+ Years of experience in App Development"
         list2="Best Food Ordering or Food Delivery App Development Company"
         list3="Dedicated team for your Food Delivery App Development"

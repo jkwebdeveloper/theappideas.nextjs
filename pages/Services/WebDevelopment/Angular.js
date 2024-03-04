@@ -133,7 +133,7 @@ const Angular = () => {
       {/* Banner Section Start */}
       <HeroSection
         title="Angular JS Development Company"
-        des="The App Ideas is one of the foremost software development company. We offer the top services for web development, E-commerce platform development as well as mobile app development. We have a team of highly experienced and skilled developers who are experts in offering awesome Angular JS web development services at the best possible rates."
+        des="Top online, E-commerce, and mobile app developer App Ideas. Our skilled AngularJS web developers provide affordable services. Through AngularJS, a strong front-end development framework, we create exceptional and scalable solutions to meet our clients' particular needs. Our industry-standard AngularJS services increase your digital presence for dynamic web applications and interactive user interfaces. Join us to redefine web development using AngularJS."
         list1="7+ Years of experience in Angular JS Development"
         list2="Best Angular JS Development Company"
         list3="Dedicated team for your Angular JS Development"

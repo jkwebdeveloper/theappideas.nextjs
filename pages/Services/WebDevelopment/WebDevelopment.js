@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import WorkSlider from "../../../components/WorkSlider";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Image from 'next/image';
+import Image from "next/image";
 import mobileweb from "../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Web Development.svg";
 import mobileaap from "../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Web Development Services.svg";
 import webapp from "../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Website Development Company.svg";
@@ -45,9 +45,9 @@ const ServiceProvideData = [
     id: 1,
     images: smartphone,
     que: "Website Development",
-    ans: "The App Ideas is one of the most popular web development company. We offer the best services for website development for all kinds of businesses and categories. We are highly experienced as well as experts in providing the best web development services by accessing the trendy technologies. We have worked on various website development and provide the best solution at the best possible rates as per the client’s requirements.",
+    ans: "With significant knowledge and skill, we provide top-notch web development services using the newest technologies. Our staff has completed several website projects, providing customized solutions at low prices to match our customers' demands.",
     ans2: "Are you looking for the best Website Development services?",
-    ans3: "If yes, then this is probably the best time for you to think and make an investment in digitalizing your business with advanced features. We are happy to help you to launch a successful website development service which will be very advantageous for the business. We initially gather the requirements, analyze your requirements, arrange a meeting, update clients at every module development and deploy the project on time.",
+    ans3: "If yes, invest in digital firm development immediately. We're thrilled to help you construct a profitable website development service for your business. Our process begins with your specifications, extensive analysis, discussions, regular module development updates, and timely project execution. Let us assist you improve your digital presence throughout this innovative journey.",
   },
   {
     id: 2,
@@ -213,11 +213,11 @@ const WebDev = () => {
   return (
     <>
       <Helmet title="Custom Web Development Company India - The App Ideas" />
-      <Header setOpenModal={setModalOpen}/>
+      <Header setOpenModal={setModalOpen} />
       {/* Banner Section Start */}
       <HeroSection
         title="WEB DEVELOPMENT"
-        des="Web development is one of the leading solutions in this present time. Nowadays we have thousands of web solutions available for all kinds of services like E-commerce solutions, Food ordering platforms, E-learning app, Dating apps, Taxi booking apps, Doctor hiring app and more. The App Ideas is a proficient software development company. We have a pool of talented web developers who offer the best solutions."
+        des="Web development is used for various needs nowadays. The sector offers hundreds of online e-commerce, restaurant ordering, e-learning, dating, taxi booking, doctor hiring, and other options. App Ideas is a leading software company with outstanding web developers. Our skilled developers work hard to suit your web development needs. Our experience and dedication will exceed your expectations for unique solutions and platform enhancements. Join us to increase your company's digital presence with web development."
         list1="7+ Years of experience in Web Development"
         list2="Best Web Development Company"
         list3="Dedicated team for your Web Development"
@@ -236,13 +236,15 @@ const WebDev = () => {
           <div className="Title">
             <h3>Why choose us for Website Designing & Development?</h3>
             <p>
-              The App Ideas with a team of creative minds and experienced web
-              development professionals can help you shape your web presence to
-              cater to the target audience. With every business looking for its
-              own space on the web it is increasingly becoming competitive and
-              this is why to help you connect your audience with the brand
-              message we focus on custom website solutions instead of run of the
-              mill web development
+              Our unique ideas and professional web developers at The App Ideas
+              will design your online presence to attract your target audience.
+              Be unique in today's digital landscape, where every company seeks
+              its niche. Unique website solutions are preferred over generic
+              ones. To attract and engage website visitors, we tailor our
+              approach to your objectives and brand message. We develop websites
+              for startups and established companies that reflect their brands
+              and engage audiences. We can help you improve your website and
+              stay ahead online.
             </p>
           </div>
           <div className="row mt-5">
@@ -440,27 +442,23 @@ const WebDev = () => {
                   <div className="Title">
                     <h3 className="Title_heading">Website Development</h3>
                     <p className="Title_para">
-                      The App Ideas is one of the most popular web development
-                      company. We offer the best services for website
-                      development for all kinds of businesses and categories. We
-                      are highly experienced as well as experts in providing the
-                      best web development services by accessing the trendy
-                      technologies. We have worked on various website
-                      development and provide the best solution at the best
-                      possible rates as per the client’s requirements.
+                      With significant knowledge and skill, we provide top-notch
+                      web development services using the newest technologies.
+                      Our staff has completed several website projects,
+                      providing customized solutions at low prices to match our
+                      customers' demands.
                     </p>
                     <p className="Title_para">
                       Are you looking for the best Website Development services?
                     </p>
                     <p className="Title_para">
-                      If yes, then this is probably the best time for you to
-                      think and make an investment in digitalizing your business
-                      with advanced features. We are happy to help you to launch
-                      a successful website development service which will be
-                      very advantageous for the business. We initially gather
-                      the requirements, analyze your requirements, arrange a
-                      meeting, update clients at every module development and
-                      deploy the project on time.
+                      If yes, invest in digital firm development immediately.
+                      We're thrilled to help you construct a profitable website
+                      development service for your business. Our process begins
+                      with your specifications, extensive analysis, discussions,
+                      regular module development updates, and timely project
+                      execution. Let us assist you improve your digital presence
+                      throughout this innovative journey.
                     </p>
                   </div>
                 </div>
@@ -868,7 +866,11 @@ const WebDev = () => {
                       "service__provide_tab_active"
                     } `}
                   >
-                    <Image src={Food} alt="Food-Industry" className="img-fluid" />
+                    <Image
+                      src={Food}
+                      alt="Food-Industry"
+                      className="img-fluid"
+                    />
                     <p>
                       Food <br />
                       Industry
@@ -1395,13 +1397,13 @@ const WebDev = () => {
       {/* Contact Section Start */}
       <ContactUs question="Are you looking for the best Web app development company?" />
       {/* Contact Section End */}
-      <Whatsapp/>
+      <Whatsapp />
       <GetAQuoteModal
         setOpenModal={setModalOpen}
         openModal={modalOpen}
         handleCloseModal={() => setModalOpen(false)}
       />
-      <Footer/>
+      <Footer />
     </>
   );
 };
