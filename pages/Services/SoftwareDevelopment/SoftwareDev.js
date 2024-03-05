@@ -135,57 +135,43 @@ const IndustriesData = [
     id: 3,
     images: Real,
     que: "Real Estate industry",
-    ans: "The App Ideas is one of the foremost software development company. We have skilled software developers who are providing unique designing and advanced features services for all kinds of software development services. If we talk about the Real Estate industry then a software solution can make the process much easier for them by digitalizing the platform.",
-    ans2: "Are you planning to launch a Real Estate Industry Software?",
-    ans3: "If yes, then without wasting much feel free to connect with us and get a free quotation for your real estate software development services. We are highly experts in providing the best services like mobile app development, web app development and website development. We are just a click away, feel free to connect with us, share your requirements and get the best quotation for real estate software development.",
+    ans: "A dynamic market like real estate needs digital innovation. App Ideas develops real estate agent and corporate applications. Our skilled developers understand real estate's intricacy. Brokerages, property management organizations, and real estate tech startups may use our services to create robust digital solutions. We increase your business with property listing platforms, CRM systems, virtual property tours, and analytics dashboards. To exceed your expectations, we focus usability, scalability, and security in our software solution.",
   },
   {
     id: 4,
     images: Restaurant,
     que: "Restaurant business",
-    ans: "The App Ideas is one of the highly popular software development company. We have years of experience in providing the best solution for all kinds of business categories like Hotel management, food court services and restaurant business. We have also worked on various online platform development services related to the restaurant industry. Having an online platform can make the work easier for your restaurant business.",
-    ans2: "Are you planning to launch a Restaurant Industry software?",
-    ans3: "If yes, then this is probably the best time for you to develop a Restaurant app or web app. Restaurant businesses are now converting their services into online business because by this method they can easily connect with the customers through the internet methods. If you want to digitalize your restaurant business then this is probably the best time for you to launch an online solution at the best rates.",
+    ans: "Technology may determine success in the competitive restaurant sector. At App Ideas, we create unique software to enhance restaurant operations and customer service. Our developers understand restaurant issues including order processing, table reservations, online presence, and customer service. We tailor solutions for fine dining, fast-casual, and food delivery. Our powerful POS systems, online ordering platforms, loyalty programs, and mobile apps help companies succeed in the digital era.",
   },
   {
     id: 5,
     images: Travel,
     que: "Travel and Tourism",
-    ans: "The App Ideas is one of the leading web and app development company. We have a team of highly skilled developers as well as designers, who are proficient in providing the best solution for all types of business categories. If we talk about the travel and tourism industry then it is also investing in digitalizing its services to enhance the user experience and to manage all the details easily from a single platform.",
-    ans2: "Are you planning to launch a Travel and Tourism Industry software?",
-    ans3: "If yes then you are on the right page because here we provide the best online platforms services for all kinds of business niches including the Travel and tourism industry. Having an online platform for the travel and tourism industry can be very beneficial for you as it can help you to get more users attention. Feel free to connect with us and get a free quotation for a Travel and tourism app.",
+    ans: "To compete and provide new experiences, travel and tourism need digital innovation. App Ideas develops tourist apps. Our skilled developers understand industry difficulties and possibilities. We assist travel agencies, tour operators, hotel chains, and destination marketing organizations expand and reach clients using technology. Our booking and reservation systems, traveler mobile apps, and destination management are customized for you. To exceed your expectations, we focus user experience, scalability, and security in your software solution.",
   },
   {
     id: 6,
     images: Construction,
     que: "Construction Industry",
-    ans: "The App Ideas is one of the foremost software development company. We have a group of the best developers who are highly proficient in providing the best software development services, along with unique designing services. If we talk about the construction industry then this industry is also investing in digitalizing the services as it helps in increasing the customer base easily.",
-    ans2: "Are you planning to launch a Construction Industry software?",
-    ans3: "If yes, then this is the best time for you to make an investment in Construction software development services. We have a team of highly skilled developers as well as designers who are proficient in offering the best construction app. An online platform can be very helpful to manage the data as well as get more user attentions. For more details, feel free to connect with us and get a free quotation.",
+    ans: "Technology improves efficiency, production, and safety in the ever-changing construction business. App Ideas specializes in custom building software for enterprises and specialists. Our construction-savvy developers manage, schedule, allocate resources, and reduce risk. Contractors, architects, and project managers may utilize our innovative digital tools. We provide construction project management software, BIM solutions, and mobile apps for on-site communication and safety compliance to speed up operations and enhance project outcomes.",
   },
   {
     id: 7,
     images: IT,
     que: "IT industry",
-    ans: "The App Ideas is one of the leading web and app development company. We have a team of highly efficient developers who are experienced in providing the best software solutions. As IT service providers are also converting their business into the online platform to make the service more accessible for the users as well as for the service providers. It is worth making an investment in digitizing the IT industry.",
-    ans2: "Are you planning to launch an IT Industry Software?",
-    ans3: "If yes, then this is the best time for you to access or collaborate with us for software development services. We are highly skilled in providing the best services which can help in increasing the growth of the business. We follow the simple procedure of gathering information, analyzing it, developing the software and deploying it at the best rates and on time.",
+    ans: "In fast-paced digital, innovation drives success. App Ideas develops IT software. Our professionals know IT infrastructure, from network management and cybersecurity to software development and cloud computing. Technology startups, software firms, and company IT departments may use our services to create efficient digital solutions. We provide ERP, CRM, bespoke applications, and IT automation to improve and grow your business. With our latest technologies, stay ahead in the ever-changing IT industry. Build technology's future together!",
   },
   {
     id: 8,
     images: Healthcare,
     que: "Healthcare Industry",
-    ans: "The App Ideas is one of the best software development company. We are highly skilled in providing the best solution for mobile app, web app and website development company. Like all businesses, Healthcare services are also launching online platforms as it makes the process faster and easier to access. Users are more inclined towards online platforms.",
-    ans2: "Are you planning to launch a Healthcare`Industry Software?",
-    ans3: "If yes, then feel free to connect with us and get a free quote for the healthcare industry. Nowadays, healthcare industry owners are developing software solutions because this helps in saving thousands of records easily and accessing the data whenever required. We have worked on similar some similar kinds of software solutions, so without taking much time, feel free to connect with us and get a free quotation.",
+    ans: "Technology improves patient care, operational efficiency, and innovation in healthcare, which is always evolving. App Ideas customizes software for healthcare's needs and opportunities. From EHRs and telemedicine platforms to medical billing and practice management software, our engineers know healthcare systems. We provide groundbreaking digital technologies to hospitals, clinics, medical practices, and healthcare technology enterprises. Our HIPAA-compliant applications, remote patient monitoring, AI-driven diagnostics, and healthcare analytics tools meet your needs. Help us improve healthcare, patient outcomes, and organizational efficiency. Team up for a healthier future!",
   },
   {
     id: 9,
     images: Entertainment,
     que: "Entertainment Industry",
-    ans: "The App Ideas is one of the foremost web and app development company. We have years of experience who are providing the best solution for mobile app development, web app development and website development services for all kinds of business categories. Similarly, we are also proficient in delivering software solutions for the entertainment industry.",
-    ans2: "Are you planning to launch an Entertainment`Industry Software?",
-    ans3: "If yes, then let me tell you, this is probably the best time to make an investment in entertainment software development services. This solution can help you to easily understand the process in a much better manner as everything can be easily managed through a single online system. If you are planning to launch an entertainment software solution then feel free to reach e and get a free quote.",
+    ans: "Technology is essential for spectator engagement and entertainment innovation. We develop cutting-edge software at App Ideas to expand your entertainment firm. Our expert engineers comprehend movie, music, gaming, and live event challenges and opportunities. Content management, streaming, ticketing, and audience engagement systems are our tailored solutions. We prioritize user experience, scalability, and cutting-edge technology to ensure your software solution exceeds industry standards. Join us to improve audience engagement, operations, and entertainment industry growth. We can enrich your audience's experiences.",
   },
 ];
 
@@ -1125,28 +1111,16 @@ const SoftwareDev = () => {
                   <div className="Title">
                     <h3 className="Title_heading">Travel and Tourism</h3>
                     <p className="Title_para">
-                      The App Ideas is one of the leading web and app
-                      development company. We have a team of highly skilled
-                      developers as well as designers, who are proficient in
-                      providing the best solution for all types of business
-                      categories. If we talk about the travel and tourism
-                      industry then it is also investing in digitalizing its
-                      services to enhance the user experience and to manage all
-                      the details easily from a single platform.
-                    </p>
-                    <p className="Title_para">
-                      Are you planning to launch a Travel and Tourism Industry
-                      software?
-                    </p>
-                    <p className="Title_para">
-                      If yes then you are on the right page because here we
-                      provide the best online platforms services for all kinds
-                      of business niches including the Travel and tourism
-                      industry. Having an online platform for the travel and
-                      tourism industry can be very beneficial for you as it can
-                      help you to get more users attention. Feel free to connect
-                      with us and get a free quotation for a Travel and tourism
-                      app.
+                      To compete and provide new experiences, travel and tourism
+                      need digital innovation. App Ideas develops tourist apps.
+                      Our skilled developers understand industry difficulties
+                      and possibilities. We assist travel agencies, tour
+                      operators, hotel chains, and destination marketing
+                      organizations expand and reach clients using technology.
+                      Our booking and reservation systems, traveler mobile apps,
+                      and destination management are customized for you. To
+                      exceed your expectations, we focus user experience,
+                      scalability, and security in your software solution.
                     </p>
                   </div>
                 </div>
@@ -1158,28 +1132,16 @@ const SoftwareDev = () => {
                   <div className="Title">
                     <h3 className="Title_heading">Construction Industry</h3>
                     <p className="Title_para">
-                      The App Ideas is one of the foremost software development
-                      company. We have a group of the best developers who are
-                      highly proficient in providing the best software
-                      development services, along with unique designing
-                      services. If we talk about the construction industry then
-                      this industry is also investing in digitalizing the
-                      services as it helps in increasing the customer base
-                      easily.
-                    </p>
-                    <p className="Title_para">
-                      Are you planning to launch a Construction Industry
-                      software?
-                    </p>
-                    <p className="Title_para">
-                      If yes, then this is the best time for you to make an
-                      investment in Construction software development services.
-                      We have a team of highly skilled developers as well as
-                      designers who are proficient in offering the best
-                      construction app. An online platform can be very helpful
-                      to manage the data as well as get more user attentions.
-                      For more details, feel free to connect with us and get a
-                      free quotation.
+                      Technology improves efficiency, production, and safety in
+                      the ever-changing construction business. App Ideas
+                      specializes in custom building software for enterprises
+                      and specialists. Our construction-savvy developers manage,
+                      schedule, allocate resources, and reduce risk.
+                      Contractors, architects, and project managers may utilize
+                      our innovative digital tools. We provide construction
+                      project management software, BIM solutions, and mobile
+                      apps for on-site communication and safety compliance to
+                      speed up operations and enhance project outcomes.
                     </p>
                   </div>
                 </div>
@@ -1191,26 +1153,16 @@ const SoftwareDev = () => {
                   <div className="Title">
                     <h3 className="Title_heading">IT industry</h3>
                     <p className="Title_para">
-                      The App Ideas is one of the leading web and app
-                      development company. We have a team of highly efficient
-                      developers who are experienced in providing the best
-                      software solutions. As IT service providers are also
-                      converting their business into the online platform to make
-                      the service more accessible for the users as well as for
-                      the service providers. It is worth making an investment in
-                      digitizing the IT industry.
-                    </p>
-                    <p className="Title_para">
-                      Are you planning to launch an IT Industry Software?
-                    </p>
-                    <p className="Title_para">
-                      If yes, then this is the best time for you to access or
-                      collaborate with us for software development services. We
-                      are highly skilled in providing the best services which
-                      can help in increasing the growth of the business. We
-                      follow the simple procedure of gathering information,
-                      analyzing it, developing the software and deploying it at
-                      the best rates and on time.
+                      In fast-paced digital, innovation drives success. App
+                      Ideas develops IT software. Our professionals know IT
+                      infrastructure, from network management and cybersecurity
+                      to software development and cloud computing. Technology
+                      startups, software firms, and company IT departments may
+                      use our services to create efficient digital solutions. We
+                      provide ERP, CRM, bespoke applications, and IT automation
+                      to improve and grow your business. With our latest
+                      technologies, stay ahead in the ever-changing IT industry.
+                      Build technology's future together!
                     </p>
                   </div>
                 </div>
@@ -1222,26 +1174,19 @@ const SoftwareDev = () => {
                   <div className="Title">
                     <h3 className="Title_heading">Healthcare Industry</h3>
                     <p className="Title_para">
-                      The App Ideas is one of the best software development
-                      company. We are highly skilled in providing the best
-                      solution for mobile app, web app and website development
-                      company. Like all businesses, Healthcare services are also
-                      launching online platforms as it makes the process faster
-                      and easier to access. Users are more inclined towards
-                      online platforms.
-                    </p>
-                    <p className="Title_para">
-                      Are you planning to launch a Healthcare`Industry Software?
-                    </p>
-                    <p className="Title_para">
-                      If yes, then feel free to connect with us and get a free
-                      quote for the healthcare industry. Nowadays, healthcare
-                      industry owners are developing software solutions because
-                      this helps in saving thousands of records easily and
-                      accessing the data whenever required. We have worked on
-                      similar some similar kinds of software solutions, so
-                      without taking much time, feel free to connect with us and
-                      get a free quotation.
+                      Technology improves patient care, operational efficiency,
+                      and innovation in healthcare, which is always evolving.
+                      App Ideas customizes software for healthcare's needs and
+                      opportunities. From EHRs and telemedicine platforms to
+                      medical billing and practice management software, our
+                      engineers know healthcare systems. We provide
+                      groundbreaking digital technologies to hospitals, clinics,
+                      medical practices, and healthcare technology enterprises.
+                      Our HIPAA-compliant applications, remote patient
+                      monitoring, AI-driven diagnostics, and healthcare
+                      analytics tools meet your needs. Help us improve
+                      healthcare, patient outcomes, and organizational
+                      efficiency. Team up for a healthier future!
                     </p>
                   </div>
                 </div>
@@ -1253,27 +1198,18 @@ const SoftwareDev = () => {
                   <div className="Title">
                     <h3 className="Title_heading">Entertainment Industry</h3>
                     <p className="Title_para">
-                      The App Ideas is one of the foremost web and app
-                      development company. We have years of experience who are
-                      providing the best solution for mobile app development,
-                      web app development and website development services for
-                      all kinds of business categories. Similarly, we are also
-                      proficient in delivering software solutions for the
-                      entertainment industry.
-                    </p>
-                    <p className="Title_para">
-                      Are you planning to launch an Entertainment`Industry
-                      Software?
-                    </p>
-                    <p className="Title_para">
-                      If yes, then let me tell you, this is probably the best
-                      time to make an investment in entertainment software
-                      development services. This solution can help you to easily
-                      understand the process in a much better manner as
-                      everything can be easily managed through a single online
-                      system. If you are planning to launch an entertainment
-                      software solution then feel free to reach e and get a free
-                      quote.
+                      Technology is essential for spectator engagement and
+                      entertainment innovation. We develop cutting-edge software
+                      at App Ideas to expand your entertainment firm. Our expert
+                      engineers comprehend movie, music, gaming, and live event
+                      challenges and opportunities. Content management,
+                      streaming, ticketing, and audience engagement systems are
+                      our tailored solutions. We prioritize user experience,
+                      scalability, and cutting-edge technology to ensure your
+                      software solution exceeds industry standards. Join us to
+                      improve audience engagement, operations, and entertainment
+                      industry growth. We can enrich your audience's
+                      experiences.
                     </p>
                   </div>
                 </div>

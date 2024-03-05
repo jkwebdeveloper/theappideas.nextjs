@@ -1044,12 +1044,14 @@ section {
   -o-transition: all 600ms ease;
 }
 
-.HireIOS-block .inner-box:hover h5 div,
+.HireIOS-block .inner-box:hover div,
 .HireIOS-block .inner-box:hover .text,
 .HireIOS-block .inner-box:hover .icon-box {
-  color: #ffffff;
+  color: #fff;
 }
-
+.HireIOS-block .inner-box:hover h5 a {
+  color: #fff;
+}
 .HireIOS-block .inner-box h5 {
   position: relative;
   line-height: 1.3em;
@@ -1072,6 +1074,7 @@ section {
   color: #777777;
   font-size: 15px;
   line-height: 1.7em;
+  text-align: justify;
   margin-top: 15px;
   transition: all 600ms ease;
   -moz-transition: all 600ms ease;
@@ -4897,3 +4900,6 @@ a:hover{
   color: #000;
 }
 /* =========== Phone Input css end ==========  */
+.required_error {
+  color: red;
+}

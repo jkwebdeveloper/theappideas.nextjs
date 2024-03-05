@@ -37,7 +37,6 @@ import axios from "axios";
 import Lottie from "lottie-react";
 import Loading from "../../../public/assets/images/loading.json";
 
-
 const HireWordPressDev = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [portfolio, setPortFolios] = useState([]);
@@ -76,7 +75,7 @@ const HireWordPressDev = () => {
       {/* Banner Section Start */}
       <HeroSection
         title="Hire WordPress Developers In India"
-        des="WordPress has always been the most popular CMS platform with millions blogs and content rich websites actively using it all over the the globe. WordPress always enjoyed popularity as a CMS platform because of its unmatched flexibility, versatility, scalability, great scope of customization with hundreds of plugins, themes and extensions. WordPress as a CMS platform offers exceptional ease of use for the user and unmatched ease and rich tools for the administrators."
+        des="WordPress is the most popular CMS, with millions of blogs and content-rich websites. Customizable with plugins, themes, and extensions, its versatility, adaptability, and scalability make it popular. WordPress provides simple tools for users and administrators. Administrators gain advanced content control, while users enjoy an easy-to-use interface. WordPress's flexibility, from personal blogs to corporate websites, making it the best content management system for businesses and individuals."
         list1="7+ Years of experience in App Development"
         list2="Best WordPress  Development Company"
         list3="Dedicated team for your WordPress  Development"
@@ -404,9 +403,8 @@ const HireWordPressDev = () => {
                   </div>
                 </h5>
                 <div className="text">
-                  We have also proven expertise in converting a WordPress
-                  website into highly responsive and feature rich cross platform
-                  native mobile apps.
+                  We also excel in turning WordPress websites into responsive,
+                  feature-rich cross-platform native mobile applications.
                 </div>
                 {/* <Link className="arrow-icon">
                   <HiOutlineArrowRight />
@@ -445,9 +443,8 @@ const HireWordPressDev = () => {
                   <div className="text_heading">WORDPRESS THEME DESIGN</div>
                 </h5>
                 <div className="text">
-                  We at The App Ideas develop a wide variety of custom WordPress
-                  themes for a variety but of content rich websites belonging to
-                  a wide variety of niches.
+                  The App Ideas creates unique WordPress themes for content-rich
+                  websites in many areas.
                 </div>
                 {/* <Link className="arrow-icon">
                   <HiOutlineArrowRight />

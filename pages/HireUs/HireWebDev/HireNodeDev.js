@@ -93,29 +93,9 @@ const HireNodeDev = () => {
           <div className="Title">
             <h3>Our Feat in Node JS Development</h3>
             <p>
-              As a Best{" "}
-              <Link
-                href="/"
-                className="Title_Color"
-                style={{ color: "#d6aa0b" }}
-                onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
-              >
-                <b> software development company</b>
-              </Link>{" "}
-              , we are highly experienced as well as experts in delivering the
-              best Node js web platforms solution to our clients. We have 4+
-              years of experience in developing the best software solution at
-              the best rates.
-            </p>
-            <p>
-              Node js offers the various rich library of Javascript modules
-              which simplifies the development of the web applications .Node js
-              is a lightweight and efficient platform which helps in developing
-              the best web application. The App Ideas is one of the experienced
-              Node js development company and also deployed the best Node js
-              solutions.
+              Node.js is lightweight and efficient for building high-quality
+              online apps. The App Ideas is an experienced Node.js development
+              business that delivers high-quality solutions.
             </p>
             <div className="text-center">
               <Link

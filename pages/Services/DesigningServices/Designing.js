@@ -285,27 +285,16 @@ const Designing = () => {
               <div className="common_banner_lft">
                 <h2>Designing</h2>
                 <p>
-                  Designing an online platform like mobile app, web app,
-                  software or website services can add more value to the
-                  platforms. The first impression of your online business is
-                  totally dependent on the look or the design of your online
-                  platforms. A well designed and functional website is
-                  considered is an invaluable asset for any business category.
-                  But as there is high competition, it is very important to
-                  integrate unique or customized designers into your website
-                  designing services which also helps in beguiling the
-                  customers.
-                </p>
-                <p>
-                  As we mentioned earlier, how designing plays a vital role in
-                  the success of online platforms. Here at The App Ideas which
-                  is one of the leading web and app development company. We have
-                  a team of highly skilled graphic designers who are proficient
-                  in providing unique designing services based on the client’s
-                  requirements as well as the business niches. For more details
-                  on the design, please feel free to reach us and get the best
-                  design services for all kinds of online platforms at a
-                  competitive costing.
+                  Adding a mobile app, online app, software, or internet service
+                  may boost its value. Digital platforms' design and
+                  functionality impact your online business's initial
+                  impression. Businesses need well-designed, successful
+                  websites. Due to strong competition, your website building
+                  services must have distinctive and specialized design
+                  elements. This draws customers and differentiates your
+                  platform. Thus, unique design is essential to your online
+                  presence's success and competitiveness in a crowded digital
+                  environment.
                 </p>
               </div>
             </div>

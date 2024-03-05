@@ -4,9 +4,6 @@ import { FaRegDotCircle } from "react-icons/fa";
 import { MdLocationPin } from "react-icons/md";
 import { HiOutlineMail } from "react-icons/hi";
 import { Helmet } from "react-helmet";
-import { BiErrorCircle } from "react-icons/bi";
-import { useFormik } from "formik";
-// import { careerApplySchema } from "./schemas";
 import axios from "axios";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -18,15 +15,9 @@ import GetAQuoteModal from "../components/GetAQuoteModal";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ReCAPTCHA from "react-google-recaptcha";
-import { careerApplySchema } from "../components/schemas";
-const initialValues = {
-  fullName: "",
-  email: "",
-  phoneNumber: "",
-  totalExperience: "",
-  myFile: "",
-  recaptchaToken: ""
-};
+import ValidationSchema from "../components/schemas";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 const SITE_KEY = "6LflLYApAAAAAA94dzKNSl35WtkPT9X6VfLH5p_f";
 
@@ -34,12 +25,12 @@ const CareerApply = () => {
   const [careers, setCareers] = useState();
   const [loading, setLoading] = useState(true);
   const [recaptchavalue, SetRecaptchaValue] = useState("");
+  const [myFile, setmyFile] = useState(null);
 
   const [modalOpen, setModalOpen] = useState(false);
 
   const router = useRouter();
   const { slug } = router.query;
-  console.log(slug);
 
   const onChange = (value) => {
     console.log(value);
@@ -56,8 +47,6 @@ const CareerApply = () => {
       })
       .then((res) => {
         setCareers(res.data.careers);
-        // toast.success(res.data.message);
-        // console.log(res.data.careers);
         setLoading(false);
       })
       .catch((err) => {
@@ -69,14 +58,15 @@ const CareerApply = () => {
   }, [slug]);
 
   const handlePost = (values) => {
+    console.log(values, "values==========");
     setLoading(true);
     const formData = new FormData();
     formData.append("fullName", values.fullName);
     formData.append("email", values.email);
     formData.append("phoneNumber", values.phoneNumber);
     formData.append("totalExperience", values.totalExperience);
-    formData.append("myFile", values.myFile);
-    formData.append("recaptchaToken", values.recaptchavalue);
+    formData.append("myFile", values.myFile[0]);
+    // formData.append("recaptchaToken", values.recaptchavalue);
 
     axios("https://the-app-ideas.onrender.com/api/career", {
       method: "post",
@@ -86,32 +76,44 @@ const CareerApply = () => {
       },
     })
       .then((res) => {
+        console.log(res, "=======res=======");
         SetRecaptchaValue("");
-
-        toast.success(res.data.message);
-
+        toast.success(res?.data?.message, {
+          zIndex: "9999px",
+        });
+        reset();
+        setValue("myFile", null);
+        captchaRef.current?.reset();
+        setmyFile(false)
         setLoading(false);
       })
       .catch((err) => {
+        console.log(err, "=========error======");
+        toast.error("Phone is invalid", { duration: 3000 });
         setLoading(false);
       });
   };
 
+  const { careerApplySchema } = ValidationSchema();
+
   const {
-    values,
-    errors,
-    touched,
-    handleBlur,
-    handleChange,
+    register,
     handleSubmit,
-    setFieldValue,
-  } = useFormik({
-    initialValues: initialValues,
-    validationSchema: careerApplySchema,
-    onSubmit: (values, action) => {
-      console.log(values)
-      handlePost(values);
-      action.resetForm();
+    getValues,
+    setValue,
+    control,
+    watch,
+    reset,
+    formState: { errors },
+  } = useForm({
+    shouldFocusError: true,
+    resolver: yupResolver(careerApplySchema),
+    defaultValues: {
+      fullName: "",
+      email: "",
+      phoneNumber: "",
+      totalExperience: "",
+      myFile: null,
     },
   });
   return (
@@ -250,7 +252,7 @@ const CareerApply = () => {
               <div className="row">
                 <div className="col-12">
                   <div className="career_mdl_rht">
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit(handlePost)}>
                       <div className="hover_color_bubble" />
                       <div className="mb-3">
                         <input
@@ -259,25 +261,11 @@ const CareerApply = () => {
                           className="form-control"
                           placeholder="Full Name*"
                           id="rfrom"
-                          value={values.fullName}
-                          onChange={handleChange}
-                          onBlur={handleBlur}
+                          {...register("fullName")}
                         />
-                        <span
-                          className="error"
-                          style={{ color: "red", fontSize: "14px" }}
-                        >
-                          {errors.fullName}
+                        <span className="required_error">
+                          {errors?.fullName?.message}
                         </span>
-                        {errors.fullName && touched.fullName ? (
-                          <BiErrorCircle
-                            style={{
-                              float: "right",
-                              marginTop: "5px",
-                              color: "red",
-                            }}
-                          />
-                        ) : null}
                       </div>
                       <div className="mb-3">
                         <input
@@ -285,25 +273,11 @@ const CareerApply = () => {
                           name="email"
                           className="form-control"
                           placeholder="Email* "
-                          value={values.email}
-                          onChange={handleChange}
-                          onBlur={handleBlur}
+                          {...register("email")}
                         />
-                        <span
-                          className="error"
-                          style={{ color: "red", fontSize: "14px" }}
-                        >
-                          {errors.email}
+                        <span className="required_error">
+                          {errors?.email?.message}
                         </span>
-                        {errors.email && touched.email ? (
-                          <BiErrorCircle
-                            style={{
-                              float: "right",
-                              marginTop: "5px",
-                              color: "red",
-                            }}
-                          />
-                        ) : null}
                       </div>
                       <div className="mb-3">
                         <PhoneInput
@@ -318,27 +292,15 @@ const CareerApply = () => {
                           }}
                           country={"in"}
                           placeholder="Phone Number"
-                          value={values.phoneNumber}
+                          value={getValues().phoneNumber}
                           onChange={(value) =>
-                            setFieldValue("phoneNumber", "+".concat(value).trim())
+                            setValue("phoneNumber", "+".concat(value).trim())
                           }
-                          onBlur={handleBlur}
+                          disabled={loading}
                         />
-                        <span
-                          className="error"
-                          style={{ color: "red", fontSize: "14px" }}
-                        >
-                          {errors.phoneNumber}
+                        <span className="required_error">
+                          {errors?.phoneNumber?.message}
                         </span>
-                        {errors.phoneNumber && touched.phoneNumber ? (
-                          <BiErrorCircle
-                            style={{
-                              float: "right",
-                              marginTop: "5px",
-                              color: "red",
-                            }}
-                          />
-                        ) : null}
                       </div>
                       <div className="mb-3">
                         <input
@@ -347,78 +309,59 @@ const CareerApply = () => {
                           placeholder="Total Experince In Years"
                           aria-label="totalExperience"
                           name="totalExperience"
-                          value={values.totalExperience}
-                          onChange={handleChange}
-                          onBlur={handleBlur}
+                          {...register("totalExperience")}
                         />
-                        <span
-                          className="error"
-                          style={{ color: "red", fontSize: "14px" }}
-                        >
-                          {errors.totalExperience}
+                        <span className="required_error">
+                          {errors?.totalExperience?.message}
                         </span>
-                        {errors.totalExperience && touched.totalExperience ? (
-                          <BiErrorCircle
-                            style={{
-                              float: "right",
-                              marginTop: "5px",
-                              color: "red",
-                            }}
-                          />
-                        ) : null}
                       </div>
+                      <label htmlFor="">
+                        Please upload your latest CV in either DOC, DOCX, or PDF
+                        format.
+                      </label>
                       <div className="upload-btn-wrapper">
                         <button type="button" className="Upload_Btn">
                           Upload Resume
                         </button>
                         <input
                           type="file"
+                          {...register("myFile", {
+                            onChange: (e) => setmyFile(e.target.files[0]),
+                          })}
                           style={{ cursor: "pointer" }}
                           name="myFile"
-                          // value={values.cv}
+                          // value={getValues().myFile}
                           // onChange={handleChange}
-                          onChange={(e) => {
-                            setFieldValue("myFile", e.target.files[0]);
-                          }}
-                          onBlur={handleBlur}
-                          accept="application/pdf"
+                          // onChange={(e) => {
+                          //   setValue("myFile", e.target.files[0]);
+                          // }}
+                          accept=".pdf, .doc, .docx"
+                          // {...register("myFile")}
                         />
+                        <span className="required_error">
+                          {errors?.myFile?.message}
+                        </span>
+                        {myFile !== null && (
+                          <div className="text-center mt-2 text-lg">
+                            {myFile?.name}
+                          </div>
+                        )}
                       </div>
-                      <span
-                        className="error"
-                        style={{ color: "red", fontSize: "14px" }}
-                      >
-                        {errors.myFile}
-                      </span>
-                      {errors.myFile && touched.myFile ? (
-                        <BiErrorCircle
-                          style={{
-                            float: "right",
-                            marginTop: "5px",
-                            color: "red",
-                          }}
-                        />
-                      ) : null}
-
                       <ReCAPTCHA
                         style={{ padding: "15px 15px" }}
                         sitekey={SITE_KEY}
                         onChange={onChange}
                         ref={captchaRef}
-                        // value={values.recaptchaToken}
+                        name="recaptchaToken"
                       />
                       {recaptchavalue !== "" ? null : (
-                      <span
-                        className="error"
-                        style={{ color: "red", fontSize: "13px" }}
-                      >
-                        {errors.recaptchaToken}
-                      </span>
-                    )}
+                        <span className="required_error">
+                          {errors?.recaptchaToken?.message}
+                        </span>
+                      )}
                       <div className="mb-3 mt-3 text-end">
                         <button type="submit" className="submit_btn">
                           {loading ? "loading..." : "submit"}
-                          {/* Submit */}
                         </button>
                       </div>
                     </form>

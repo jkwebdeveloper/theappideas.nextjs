@@ -14,6 +14,7 @@ import "../styles/mobileAppDevelopment.css";
 import "../public/assets/bootstrap.min.css";
 import GetAQuoteModal from "../components/GetAQuoteModal";
 import Header from "../components/Header/Header";
+import { Provider } from "react-redux";
 
 function MyApp({ Component, pageProps }) {
   const [modalOpen, setModalOpen] = useState(false);

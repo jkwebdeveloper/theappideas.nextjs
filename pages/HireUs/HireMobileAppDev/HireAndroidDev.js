@@ -32,8 +32,7 @@ import Whatsapp from "../../../components/Whatsapp";
 import GetAQuoteModal from "../../../components/GetAQuoteModal";
 import axios from "axios";
 import Lottie from "lottie-react";
-import Loading from "../../../public/assets/images/loading.json"
-
+import Loading from "../../../public/assets/images/loading.json";
 
 const HireAndroidDev = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -73,7 +72,7 @@ const HireAndroidDev = () => {
       <Header setOpenModal={setModalOpen} />
       <HeroSection
         title="Hire Android App Developers In India"
-        des="Do you like to build your mobile presence with a crisp and beautiful Android app for your business? Are you trying to find some expert Android app developers who can give shape to your app idea with sophisticated Android development? Well, the Android app developers at The App Ideas ensure can ensure building highly objectively designed Android apps with custom features to help your business with a mobile presence."
+        des="Want to design a great Android app to increase your business's mobile presence? Looking for expert Android app developers that can transform your app concept into a finished product utilizing latest Android development techniques? Stop looking. App Ideas' Android app developers offer well-designed apps that meet corporate objectives. Our Android app developers provide custom features to increase your brand's mobile exposure. Work with us to improve your mobile market presence using Android."
         list1="7+ Years of experience in App Development"
         list2="Best Android App Development Company"
         list3="Dedicated team for your Android App Development"
@@ -91,30 +90,17 @@ const HireAndroidDev = () => {
           <div className="Title">
             <h3>Our Feat in Android App Development</h3>
             <p>
-              Over the years we mastered the art and science of{" "}
-              <Link
-                href="/"
-                className="Title_Color"
-                onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
-              >
-                <b>mobile app development</b>
-              </Link>{" "}
-              with exceptional command over mobile app aesthetics and technical
-              skills to build features that make an app useful. When it comes to
-              the Android platform we build apps that cater to the versatility
-              of the device ecosystem Android is known of. Instead of addressing
-              with an “one size fits all” kind of approach we build highly
-              responsive Android apps specifically to address the constraints of
-              each device screen and varied range of device functions. We have
-              built a gamut of successful Android apps across diver niches and
-              business needs.
+              We're experts in combining creativity and technology to build
+              feature-rich mobile applications. Android's device diversity
+              allows us to tailor solutions. We make our Android apps sensitive
+              to each device's screen and features. In various companies and
+              requirements, our Android apps have succeeded.
             </p>
             <p>
-              The developers at The App Ideas can develop custom designed and
-              highly user optimised Android apps with a highly competitive
-              pricing and stringent deadline.
+              The App Ideas develops custom, user-optimized Android apps on time
+              and cheaply. Our meticulous attention to detail and quality help
+              organizations develop a strong mobile presence and engage Android
+              customers.
             </p>
             <div className="text-center">
               <Link

@@ -14,20 +14,19 @@ import { AiOutlineBehance } from "react-icons/ai";
 import { Helmet } from "react-helmet";
 import { Country } from "country-state-city";
 import { useEffect } from "react";
-import { Formik } from "formik";
-import * as yup from "yup";
-import { BiErrorCircle } from "react-icons/bi";
 import axios from "axios";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import ReCAPTCHA from "react-google-recaptcha";
-
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer";
 import Whatsapp from "../components/Whatsapp";
 import GetAQuoteModal from "../components/GetAQuoteModal";
 import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
+import ValidationSchema from "../components/schemas";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
 // localhost Key
 const SITE_KEY = "6LflLYApAAAAAA94dzKNSl35WtkPT9X6VfLH5p_f";
 
@@ -35,11 +34,27 @@ const ContactUs = () => {
   const [loading, setLoading] = useState(false);
   const [recaptchavalue, SetRecaptchaValue] = useState("");
 
-
   const onChange = (value) => {
     SetRecaptchaValue(value);
   };
   const captchaRef = useRef();
+
+  const { contactUsSchema } = ValidationSchema();
+
+  const {
+    register,
+    handleSubmit,
+    getValues,
+    setValue,
+    control,
+    watch,
+    reset,
+    formState: { errors },
+  } = useForm({
+    shouldFocusError: true,
+    resolver: yupResolver(contactUsSchema),
+    // defaultValues: {}
+  });
 
   const handlePost = (values) => {
     console.log(values);
@@ -57,39 +72,29 @@ const ContactUs = () => {
         recaptchaToken: recaptchavalue,
       },
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "multipart/form-data",
       },
     })
       .then((res) => {
+        console.log(res, "=======res=======");
         SetRecaptchaValue("");
-
-        toast.success(res.data.message);
-
-        captchaRef.current.reset();
+        toast.success(res?.data?.message, {
+          zIndex: "9999px",
+        });
+        reset();
+        captchaRef.current?.reset();
         setLoading(false);
       })
       .catch((err) => {
-        // console.log(err);
+        console.log(err, "=========error======");
+        toast.error("Phone is invalid", { duration: 3000 });
         setLoading(false);
       });
   };
 
-  // const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
-  const ContactSchema = yup.object().shape({
-    name: yup.string().required("This field is required !"),
-    email: yup
-      .string()
-      .email("Invalid email")
-      .required("This field is required"),
-    phoneNumber: yup.string().required("Phone number is must be required"),
-    projectRequirement: yup.string().required("This field is required"),
-    skypeId: yup.string().required("This field is required"),
-    country: yup.string().required("This field is required"),
-  });
   const formref = useRef(null);
   const [countries, setCountries] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
-
 
   useEffect(() => {
     setCountries(Country.getAllCountries());
@@ -98,7 +103,7 @@ const ContactUs = () => {
   return (
     <>
       <Helmet title="Contact Us - THE APP IDEAS" />
-      <Header setOpenModal={setModalOpen}/>
+      <Header setOpenModal={setModalOpen} />
       <section
         className="blog__section"
         style={{ paddingTop: "23px", paddingBottom: "70px" }}
@@ -110,258 +115,138 @@ const ContactUs = () => {
             <div className="col-12 col-md-12 col-lg-8 mt-4">
               <div className="contact__form_box">
                 <h2>Get in touch with us</h2>
-                <Formik
-                  initialValues={{
-                    name: "",
-                    email: "",
-                    phoneNumber: "",
-                    skypeId: "",
-                    projectRequirement: "",
-                    country: "",
-                    budget: "",
-                  }}
-                  validationSchema={ContactSchema}
-                  onSubmit={(values, action) => {
-                    console.log(values, "values");
-                    handlePost(values);
-                    action.resetForm();
-                  }}
-                >
-                  {(formik) => (
-                    <form
-                      id="rform"
-                      ref={formref}
-                      onSubmit={formik.handleSubmit}
-                      action=""
-                    >
-                      <div className="row g-3">
-                        <div className="col-sm-6 mt-4">
-                          <input
-                            type="text"
-                            name="name"
-                            className="form-control"
-                            placeholder="Name"
-                            // aria-label="Name*"
-                            id="rfrom"
-                            value={formik.values.name}
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
+                <form onSubmit={handleSubmit(handlePost)}>
+                  <div className="row g-3">
+                    <div className="col-sm-6 mt-4">
+                      <input
+                        type="text"
+                        name="name"
+                        className="form-control"
+                        placeholder="Name"
+                        // aria-label="Name*"
+                        {...register("name")}
+                      />
+                      <span className="required_error">
+                        {errors?.name?.message}
+                      </span>
+                    </div>
+                    <div className="col-sm-6 mt-4">
+                      <input
+                        type="email"
+                        name="email"
+                        className="form-control"
+                        placeholder="Email"
+                        aria-label="Email"
+                        {...register("email")}
+                      />
+                      <span className="required_error">
+                        {errors?.email?.message}
+                      </span>
+                    </div>
+                    <div className="col-sm-6 mt-4">
+                      <input
+                        type="text"
+                        name="skypeId"
+                        className="form-control"
+                        placeholder="skype ID"
+                        aria-label="skype ID"
+                        {...register("skypeId")}
+                      />
+                      <span className="required_error">
+                        {errors?.skypeId?.message}
+                      </span>
+                    </div>
+                    <div className="col-sm-6 h-100 mt-4">
+                      <select
+                        className="form-select"
+                        style={{ width: "100%", padding: "6px" }}
+                        name="budget"
+                        {...register("budget")}
+                      >
+                        <option label="Budget">Budget</option>
+                        <option>Less Than 1000</option>
+                        <option>1001 - 3000 USD</option>
+                        <option>3001 - 5000 USD</option>
+                        <option>5001 - 10000 USD</option>
+                        <option>More Than 10000 USD</option>
+                      </select>
+                    </div>
+                    <div className="col-sm-6 h-100 select__country mt-4">
+                      <select
+                        className="select2 w-100 h-100"
+                        style={{ width: "100%", padding: "6px" }}
+                        name="country"
+                      >
+                        <option label="Country"></option>
+                        {countries.map((country) => (
+                          <option
+                            value={country.name}
+                            label={country.name}
+                            key={country.name}
+                            {...register("country")}
                           />
-                          <span
-                            className="error"
-                            style={{ color: "#fff", fontSize: "14px" }}
-                          >
-                            {formik.errors.name}
-                          </span>
-                          {formik.errors.name ? (
-                            <BiErrorCircle
-                              style={{
-                                float: "right",
-                                marginTop: "5px",
-                                color: "#fff",
-                              }}
-                            />
-                          ) : null}
-                        </div>
-                        <div className="col-sm-6 mt-4">
-                          <input
-                            type="email"
-                            name="email"
-                            className="form-control"
-                            placeholder="Email"
-                            aria-label="Email"
-                            value={formik.values.email}
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                          />
-                          <span
-                            className="error"
-                            style={{ color: "#fff", fontSize: "14px" }}
-                          >
-                            {formik.errors.email}
-                          </span>
-                          {formik.errors.name ? (
-                            <BiErrorCircle
-                              style={{
-                                float: "right",
-                                marginTop: "5px",
-                                color: "#fff",
-                              }}
-                            />
-                          ) : null}
-                        </div>
-                        <div className="col-sm-6 mt-4">
-                          <input
-                            type="text"
-                            name="skypeId"
-                            className="form-control"
-                            placeholder="skype ID"
-                            aria-label="skype ID"
-                            value={formik.values.skypeId}
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                          />
-                          <span
-                            className="error"
-                            style={{ color: "#fff", fontSize: "14px" }}
-                          >
-                            {formik.errors.skypeId}
-                          </span>
-                          {formik.errors.name ? (
-                            <BiErrorCircle
-                              style={{
-                                float: "right",
-                                marginTop: "5px",
-                                color: "#fff",
-                              }}
-                            />
-                          ) : null}
-                        </div>
-                        <div className="col-sm-6 h-100 mt-4">
-                          <select
-                            className="form-select"
-                            style={{ width: "100%", padding: "6px" }}
-                            name="budget"
-                            value={formik.values.budget}
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                          >
-                            <option label="Budget">Budget</option>
-                            <option>Less Than 1000</option>
-                            <option>1001 - 3000 USD</option>
-                            <option>3001 - 5000 USD</option>
-                            <option>5001 - 10000 USD</option>
-                            <option>More Than 10000 USD</option>
-                            <span
-                              className="error"
-                              style={{ color: "#fff", fontSize: "14px" }}
-                            >
-                              {formik.errors.budget}
-                            </span>
-                            {formik.errors.name ? (
-                              <BiErrorCircle
-                                style={{
-                                  float: "right",
-                                  marginTop: "5px",
-                                  color: "#fff",
-                                }}
-                              />
-                            ) : null}
-                          </select>
-                        </div>
-                        <div className="col-sm-6 h-100 select__country mt-4">
-                          <select
-                            className="select2 w-100 h-100"
-                            style={{ width: "100%", padding: "6px" }}
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                            name="country"
-                          >
-                            <option label="Country"></option>
-                            {countries.map((country) => (
-                              <option
-                                value={country.name}
-                                label={country.name}
-                                key={country.name}
-                              />
-                            ))}
-                            <span
-                              className="error"
-                              style={{ color: "#fff", fontSize: "14px" }}
-                            >
-                              {formik.errors.country}
-                            </span>
-                            {formik.errors.name ? (
-                              <BiErrorCircle
-                                style={{
-                                  float: "right",
-                                  marginTop: "5px",
-                                  color: "#fff",
-                                }}
-                              />
-                            ) : null}
-                          </select>
-                        </div>
-                        <div className="col-sm-6 mt-4">
-                          <PhoneInput
-                            countryCodeEditable={false}
-                            enableSearch={true}
-                            inputProps={{
-                              name: "phoneNumber",
-                            }}
-                            country={"in"}
-                            placeholder="Phone Number"
-                            value={formik.values.phoneNumber}
-                            onChange={(value) =>
-                              formik.setFieldValue("phoneNumber", value)
-                            }
-                            onBlur={formik.handleBlur}
-                            inputStyle={{
-                              width: "100%",
-                              padding: "21px",
-                              paddingLeft: "54px",
-                            }}
-                          />
-                          <span
-                            className="error"
-                            style={{ color: "#fff", fontSize: "14px" }}
-                          >
-                            {formik.errors.phoneNumber}
-                          </span>
-                          {formik.errors.phoneNumber ? (
-                            <BiErrorCircle
-                              style={{
-                                float: "right",
-                                marginTop: "5px",
-                                color: "#fff",
-                              }}
-                            />
-                          ) : null}
-                        </div>
-                        <div className="col-sm-12 mt-4">
-                          <textarea
-                            className="form-control h-100"
-                            id="exampleFormControlTextarea1"
-                            rows={5}
-                            placeholder="Project Requirement*"
-                            name="projectRequirement"
-                            value={formik.values.projectRequirement}
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                          />
-                          <span
-                            className="error"
-                            style={{ color: "#fff", fontSize: "14px" }}
-                          >
-                            {formik.errors.projectRequirement}
-                          </span>
-                          {formik.errors.projectRequirement ? (
-                            <BiErrorCircle
-                              style={{
-                                float: "right",
-                                marginTop: "5px",
-                                color: "#fff",
-                              }}
-                            />
-                          ) : null}
-                        </div>
-                        <ReCAPTCHA
-                          style={{ padding: "15px 15px" }}
-                          sitekey={SITE_KEY}
-                          onChange={onChange}
-                          ref={captchaRef}
-                        />
-                        <div className="col-sm-12 text-center mt-4">
-                          <button type="submit" className="request__btn">
-                            {loading ? "loading..." : "submit"}
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  )}
-                </Formik>
-          
-
+                        ))}
+                      </select>
+                      <span className="required_error">
+                        {errors?.country?.message}
+                      </span>
+                    </div>
+                    <div className="col-sm-6 mt-4">
+                      <PhoneInput
+                        country={"in"}
+                        countryCodeEditable={false}
+                        enableSearch={true}
+                        inputProps={{
+                          name: "phoneNumber",
+                        }}
+                        onChange={(value) =>
+                          setValue("phoneNumber", "+".concat(value).trim())
+                        }
+                        value={getValues().phoneNumber}
+                        inputStyle={{
+                          width: "100%",
+                          padding: "1.2rem 0 1.2rem 3rem",
+                        }}
+                        disabled={loading}
+                      />
+                      <span className="required_error">
+                        {errors?.phoneNumber?.message}
+                      </span>
+                    </div>
+                    <div className="col-sm-12 mt-4">
+                      <textarea
+                        className="form-control h-100"
+                        id="exampleFormControlTextarea1"
+                        rows={5}
+                        placeholder="Project Requirement*"
+                        name="projectRequirement"
+                        {...register("projectRequirement")}
+                      />
+                      <span className="required_error">
+                        {errors?.projectRequirement?.message}
+                      </span>
+                    </div>
+                    <div className="mt-4">
+                      <ReCAPTCHA
+                        style={{ padding: "15px 15px" }}
+                        sitekey={SITE_KEY}
+                        onChange={onChange}
+                        name="recaptchaToken"
+                        ref={captchaRef}
+                      />
+                      {recaptchavalue !== "" ? null : (
+                        <span className="required_error">
+                          {errors?.recaptchaToken?.message}
+                        </span>
+                      )}
+                    </div>
+                    <div className="col-sm-12 text-center mt-4">
+                      <button type="submit" className="request__btn">
+                        {loading ? "loading..." : "submit"}
+                      </button>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
             <div className="col-12 col-md-12 col-lg-4">
@@ -423,15 +308,26 @@ const ContactUs = () => {
           </div>
         </div>
       </section>
-      <Whatsapp/>
-      <GetAQuoteModal       
+      <Whatsapp />
+      <GetAQuoteModal
         setOpenModal={setModalOpen}
         openModal={modalOpen}
-        handleCloseModal={() => setModalOpen(false)}/>
-      <ToastContainer position="top-right" autoClose={2000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="light" />
+        handleCloseModal={() => setModalOpen(false)}
+      />
+      <ToastContainer
+        position="top-center"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
 
-      <Footer/>
-  
+      <Footer />
     </>
   );
 };

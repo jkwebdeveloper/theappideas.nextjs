@@ -74,7 +74,7 @@ const HireShopify = () => {
       {/* Banner Section Start */}
       <HeroSection
         title="Hire Shopify Developers In India"
-        des="Shopify is popular ecommerce platform with all inbuilt features to ensure fast development with custom user experience and high degree of flexibility and scalability. Hire Shopify developers from The App Ideas to build a customized online store or a fully featured dynamic e-commerce website for your business using the Shopify platform."
+        des="Popular ecommerce platform Shopify has several built-in features that allow speedy development, unique user experiences, flexibility, and scalability. Shopify experts at App Ideas can build unique online stores and dynamic ecommerce websites for your business. Our Shopify professionals can build a custom online store or ecommerce website. With a focus on functionality and user experience, our Shopify developers smoothly integrate cutting-edge ecommerce technology to increase your business."
         list1="7+ Years of experience in App Development"
         list2="Best Shopify Development Company"
         list3="Dedicated team for your Shopify Development"
@@ -308,9 +308,11 @@ const HireShopify = () => {
                   <Link href="/">IOS GAME DEVELOPMENT</Link>
                 </h5>
                 <div className="text">
-                  We boast of a large team of experienced game developers who
-                  have built several successful mobile game apps for IOS
-                  platform.
+                  Gaming is about seamless transactions and entertaining
+                  experiences. For iOS game creation, App Ideas offers unique
+                  e-commerce solutions. Our developers know gaming platform
+                  demands and can easily integrate e-commerce. We can help game
+                  creators monetize and platforms engage users.
                 </div>
                 {/* <Link href="/services" className="arrow-icon">
               <HiOutlineArrowRight />
@@ -474,9 +476,11 @@ const HireShopify = () => {
                   <Link href="/services">IOS Wearable App Development</Link>
                 </h5>
                 <div className="text">
-                  Our iOS app developers also have the necessary expertise and
-                  skills to build sophisticated Apple Watch apps and connected
-                  apps for various IOT gadgets.
+                  E-commerce integration is easy for our specialist wearable
+                  device developers. We can help merchants adopt wearables and
+                  brands engage customers. We provide wearable app-specific
+                  e-commerce, including in-app purchases, tailored shopping
+                  experiences, loyalty programs, and mobile payments.
                 </div>
                 {/* <Link href="/services" className="arrow-icon">
               <HiOutlineArrowRight />

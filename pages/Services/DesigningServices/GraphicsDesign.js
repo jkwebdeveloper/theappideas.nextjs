@@ -4,7 +4,7 @@ import { Pagination, Autoplay, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import Image from 'next/image';
+import Image from "next/image";
 import CustomWordPress from "../../../public/assets/images/SERVICES/Designing/Graphic-design/Graphic-Design.png";
 import WordPressWebsite from "../../../public/assets/images/SERVICES/Designing/Graphic-design/Graphic-Design-Services.png";
 import Developer from "../../../public/assets/images/SERVICES/Designing/Graphic-design/Professional-Graphic-Designer.png";
@@ -138,11 +138,11 @@ const GraphicsDesign = () => {
   return (
     <>
       <Helmet title="Best Graphics Design Company in India | The App Ideas" />
-      <Header setOpenModal={setModalOpen}/>
+      <Header setOpenModal={setModalOpen} />
       {/* Banner Section Start */}
       <HeroSection
         title="Best Graphic Design Company"
-        des="The App Ideas is one of the leading web and app development company. Along with the development services, we are also proficient in providing the best graphic designing services based on the business and requirements of the modern time. If you have an online platform or planning to launch an online platform, then it is very important for you to focus on Graphic designing services and offer the foremost designing service."
+        des="Top online and app developer App Ideas is recognized for its unique solutions. We produce beautiful graphics for contemporary companies in addition to programming. Building an online presence or developing an existing platform involves visual design. Audiences will like your digital interface, enhancing brand image. Use optimal design practices to communicate your brand and engage customers. In today's dynamic business, professional graphic design services improve your online platform's efficiency, competitiveness, and appearance."
         list1="7+ Years of experience in App Development"
         list2="Best Graphic design Development Company"
         list3="Dedicated team for your Graphic design Development"
@@ -161,15 +161,14 @@ const GraphicsDesign = () => {
           <div className="Title">
             <h3>What do we offer in a Graphic Design Company?</h3>
             <p>
-              Graphic design is very important in all kinds of business online
-              platforms as it helps in attracting a high number of users.
-              Graphic designers are a type of tool that is very crucial because
-              it helps in enhancing the way of communicating with the users
-              using your online platforms screen. This is one of the best
-              methods of conveying your ideas directly to the users or the
-              customers in a very effective way. All kinds of business solutions
-              are now implementing better thoughts on designing their services
-              to give the best user experience.
+              Online business platforms need graphic design to attract users.
+              Graphic designers boost online platform user connection using
+              visual interfaces. Directly sharing ideas to customers boosts
+              engagement and enjoyment. Businesses across industries emphasize
+              intelligent design to enhance user experiences. Advanced visual
+              design may boost brand loyalty and user engagement. Today's
+              digital industry requires outstanding visual design in online
+              platforms for competitive advantage and sustained growth.
             </p>
           </div>
           <div className="row mt-5">
@@ -180,13 +179,14 @@ const GraphicsDesign = () => {
                   onClick={() => setActiveWeOffer("logo_designing")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeOffer === "logo_designing" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/Designing/Graphic-design/what-do/logo-design.png")}
                       alt="Website-Redesign"
                       className="img-fluid"
@@ -199,13 +199,14 @@ const GraphicsDesign = () => {
                   onClick={() => setActiveWeOffer("web_ui_ux")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeOffer === "web_ui_ux" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/Designing/Graphic-design/what-do/web-ui-ux.png")}
                       alt="Group-235"
                       className="img-fluid"
@@ -218,13 +219,14 @@ const GraphicsDesign = () => {
                   onClick={() => setActiveWeOffer("landing_page")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeOffer === "landing_page" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/Designing/Graphic-design/what-do/landing-page.png")}
                       alt="icons8-smart-watch-100-1"
                       className="img-fluid"
@@ -237,13 +239,14 @@ const GraphicsDesign = () => {
                   onClick={() => setActiveWeOffer("brouchure_design")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeOffer === "brouchure_design" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/Designing/Graphic-design/what-do/brochure-design.png")}
                       alt="Group-53"
                       className="img-fluid"
@@ -256,13 +259,14 @@ const GraphicsDesign = () => {
                   onClick={() => setActiveWeOffer("brand_identify")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeOffer === "brand_identify" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/Designing/Graphic-design/what-do/brand-identity.png")}
                       alt="Group-184"
                       className="img-fluid"
@@ -275,13 +279,14 @@ const GraphicsDesign = () => {
                   onClick={() => setActiveWeOffer("business_card")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWeOffer === "business_card" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/Designing/Graphic-design/what-do/business-card.png")}
                       alt="Mask-Group"
                       className="img-fluid"
@@ -460,7 +465,9 @@ const GraphicsDesign = () => {
                 <div className="service_provide_box">
                   <div className="service_provide_content">
                     <div className="service_provide_title">
-                      <Image  width={50} height={50}
+                      <Image
+                        width={50}
+                        height={50}
                         src={item?.images}
                         alt="smartphone-tablet"
                         className="img-fluid"
@@ -556,7 +563,9 @@ const GraphicsDesign = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image  width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     src={require("../../../public/assets/images/SERVICES/Designing/Graphic-design/work-had/1-2.webp")}
                     style={{
                       width: "100%",
@@ -568,7 +577,9 @@ const GraphicsDesign = () => {
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
-                  <Image  width={1110} height={628}
+                  <Image
+                    width={1110}
+                    height={628}
                     src={require("../../../public/assets/images/SERVICES/Designing/Graphic-design/work-had/2-1.webp")}
                     style={{
                       width: "100%",
@@ -595,13 +606,14 @@ const GraphicsDesign = () => {
                   onClick={() => setActiveWhyChoose("expertise_experience")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "expertise_experience" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Experience-And-Expertise-1.png")}
                       alt="Experience-And-Expertise"
                       className="img-fluid"
@@ -614,13 +626,14 @@ const GraphicsDesign = () => {
                   onClick={() => setActiveWhyChoose("strong_portfolio")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "strong_portfolio" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/Designing/Graphic-design/why-choose/portfolio.png")}
                       alt="robust-portfolio"
                       className="img-fluid"
@@ -633,13 +646,14 @@ const GraphicsDesign = () => {
                   onClick={() => setActiveWhyChoose("agile")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "agile" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Agile-Development-1.png")}
                       alt="Time-Bound-Development"
                       className="img-fluid"
@@ -652,13 +666,14 @@ const GraphicsDesign = () => {
                   onClick={() => setActiveWhyChoose("on_time_delivery")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "on_time_delivery" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/Designing/Graphic-design/why-choose/time-delivery.png")}
                       alt="Superb-User-Experience"
                       className="img-fluid"
@@ -671,13 +686,14 @@ const GraphicsDesign = () => {
                   onClick={() => setActiveWhyChoose("competitive_pricing")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "competitive_pricing" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/competitive-pricing.png")}
                       alt="Agile-Development"
                       className="img-fluid"
@@ -690,13 +706,14 @@ const GraphicsDesign = () => {
                   onClick={() => setActiveWhyChoose("support_maintenance")}
                 >
                   <div
-                    
                     className={`service__provide_tab ${
                       activeWhyChoose === "support_maintenance" &&
                       "service__provide_tab_active"
                     }`}
                   >
-                    <Image  width={60} height={60}
+                    <Image
+                      width={60}
+                      height={60}
                       src={require("../../../public/assets/images/SERVICES/Software development/asp-net-dev/why-choose/6-9.png")}
                       alt="competitive-pricing"
                       className="img-fluid"
@@ -876,7 +893,9 @@ const GraphicsDesign = () => {
                 <div className="service_provide_box">
                   <div className="service_provide_content">
                     <div className="service_provide_title">
-                      <Image  width={50} height={50}
+                      <Image
+                        width={50}
+                        height={50}
                         src={item?.images}
                         alt="smartphone-tablet"
                         className="img-fluid"
@@ -918,13 +937,13 @@ const GraphicsDesign = () => {
       {/* Contact Section Start */}
       <ContactUs question="Are you planning to launch a Successful Graphic Designing Company in the market?" />
       {/* Contact Section End */}
-      <Whatsapp/>
+      <Whatsapp />
       <GetAQuoteModal
         setOpenModal={setModalOpen}
         openModal={modalOpen}
         handleCloseModal={() => setModalOpen(false)}
       />
-      <Footer/>
+      <Footer />
     </>
   );
 };

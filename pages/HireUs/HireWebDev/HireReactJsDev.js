@@ -75,7 +75,7 @@ const HireReactJsDev = () => {
       {/* Banner Section Start */}
       <HeroSection
         title="Hire React JS Developers In India"
-        des="ReactJS which is also known as ReactJS or React which is a Javascript library maintained by Facebook helps in developing or we can say that rendering UI components for web development. React JS supports Frontend development as well as Server side development. React JS is an open-source library of Javascript that is efficient, declarative, and flexible which is used for developing a User interface in the best way and is used as a base for developing single-page web development."
+        des="A Javascript library provided by Facebook, ReactJS helps construct or render UI components for web development."
         list1="7+ Years of experience in App Development"
         list2="Best ReactJS Development Company"
         list3="Dedicated team for your ReactJS Development"
@@ -93,16 +93,8 @@ const HireReactJsDev = () => {
           <div className="Title">
             <h3>Our Feat in the ReactJS Developers</h3>
             <p>
-              We offer the best ReactJS services. We are highly expert as well
-              as have years of experience in providing the best software
-              solution using the React JS Library and offer the best UI
-              components in the web solutions. Hire us and experience our
-              expertise.
-            </p>
-            <p>
-              The App Ideas is a leading React JS development company and have
-              experienced ReactJS developers in India who are expertise in
-              deploying the best solutions.
+              The App Ideas is a top React JS development company in India with
+              skilled developers that deliver the finest solutions.
             </p>
             <div className="text-center">
               <Link

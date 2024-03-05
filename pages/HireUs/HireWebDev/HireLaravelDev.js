@@ -76,7 +76,7 @@ const HireLaravelDev = () => {
       {/* Banner Section Start */}
       <HeroSection
         title="Hire Laravel Developers"
-        des="Laravel is an open-source and free PHP web framework which is developed by Tylor Otwell. Laravel is mainly introduced for web application development following the model-view-controller(MVC) architecture and highly based on the Symfony framework. Laravel offers the syntaxes and features which helps in deploying high-end web applications. Laravel Technology facilitates the developer to save a huge amount of time to develop the entire website from scratch."
+        des="Taylor Otwell built Laravel, an open-source PHP web framework based on Symfony and MVC. Use Laravel to build applications. Development of complex web applications is easy with Laravel's extensive feature set and strict syntax. This technique speeds up projects by removing website development. Laravel's complete toolkit and simple structure speed up development and improve code maintainability, making it a popular framework for high-performance online applications. Laravel streamlines development, enables developers innovate, and boosts web projects."
         list1="7+ Years of experience in App Development"
         list2="Best Laravel Development Company"
         list3="Dedicated team for your Laravel Development"
@@ -94,26 +94,16 @@ const HireLaravelDev = () => {
           <div className="Title">
             <h3>Our Feat in Laravel Development</h3>
             <p>
-              We are highly expert in providing the best{" "}
-              <Link
-                href="/web-development"
-                className="Title_Color"
-                style={{ color: "#d6aa0b" }}
-                onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
-              >
-                <b> Laravel web solution</b>
-              </Link>{" "}
-              to our clients and always satisfy them with our services. We have
-              years of experience deploying the best software solutions at the
-              best rates. Hire us and experience our expertise.
+              We specialize in giving the finest Laravel web solution to our
+              customers and always satisfy them. We have years of expertise
+              delivering top software at excellent prices. Experience our
+              expertise by hiring us.
             </p>
             <p>
-              Laravel is a server-side PHP framework that helps in developing
-              full-stack apps, mobile apps with features, and more. The App
-              Ideas is one of the experienced Laravel development company and
-              also deployed the best laravel solutions.
+              The server-side PHP framework Laravel enables build full-stack
+              applications, mobile apps with functionality, and more. A leading
+              Laravel development firm, App Ideas has implemented the greatest
+              solutions.
             </p>
             <div className="text-center">
               <Link

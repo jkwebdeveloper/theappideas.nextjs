@@ -1,18 +1,21 @@
 // import { Country } from "country-state-city";
-import React, { Fragment, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
 import ReactModal from "react-modal";
-import { Formik, useFormik } from "formik";
-import { getAQuoteSchema, getAQuoteValidation } from "./schemas";
-import { BiErrorCircle } from "react-icons/bi";
+import ValidationSchema from "./schemas";
 import axios from "axios";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import ReCAPTCHA from "react-google-recaptcha";
-// import {
-//   isPossiblePhoneNumber,
-//   isValidPhoneNumber,
-// } from "react-phone-number-input";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import toast from "react-hot-toast";
+
+import {
+  isPossiblePhoneNumber,
+  isValidPhoneNumber,
+} from "react-phone-number-input";
+import { useDispatch } from "react-redux";
 
 // localhost Key
 const SITE_KEY = "6LflLYApAAAAAA94dzKNSl35WtkPT9X6VfLH5p_f";
@@ -27,6 +30,23 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
   };
   const captchaRef = useRef();
 
+  const { getAQuoteSchema } = ValidationSchema();
+
+  const {
+    register,
+    handleSubmit,
+    getValues,
+    setValue,
+    control,
+    watch,
+    reset,
+    formState: { errors },
+  } = useForm({
+    shouldFocusError: true,
+    resolver: yupResolver(getAQuoteSchema),
+    // defaultValues: {}
+  });
+
   const handlePost = (values) => {
     console.log(values);
     setLoading(true);
@@ -40,24 +60,25 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
         recaptchaToken: recaptchavalue,
       },
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "multipart/form-data",
       },
     })
       .then((res) => {
-        console.log(res.data);
+        console.log(res, "=======res=======");
         SetRecaptchaValue("");
-        captchaRef.current.reset();
+        toast.success(res?.data?.message, {
+          zIndex:"9999px"
+        })
+        reset();
+        captchaRef.current?.reset();
         setLoading(false);
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err, "=========error======");
+        toast.error("Phone is invalid", { duration: 3000 });
         setLoading(false);
       });
   };
-
-  // useEffect(() => {
-  //   setCountries(Country.getAllCountries());
-  // }, []);
 
   return (
     <ReactModal
@@ -88,167 +109,88 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
               <h2>Contact us</h2>
             </div>
             <div className="contact_body">
-              <Formik
-                initialValues={getAQuoteValidation.initialState}
-                validationSchema={getAQuoteValidation.schema}
-                onSubmit={(values, action) => {
-                  console.log(values);
-                  handlePost(values);
-                  action.resetForm();
-                }}
-              >
-                {({
-                  values,
-                  errors,
-                  touched,
-                  handleBlur,
-                  handleChange,
-                  handleSubmit,
-                  setFieldValue,
-                }) => (
-                  <form onSubmit={handleSubmit}>
-                    <div className="mb-3">
-                      <input
-                        type="text"
-                        name="name"
-                        className="form-control"
-                        placeholder="Name"
-                        value={values.name}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                      />
-                      <span
-                        className="error"
-                        style={{ color: "red", fontSize: "14px" }}
-                      >
-                        {errors.name}
-                      </span>
-                      {errors.name && touched.name ? (
-                        <BiErrorCircle
-                          style={{
-                            float: "right",
-                            marginTop: "5px",
-                            color: "red",
-                          }}
-                        />
-                      ) : null}
-                    </div>
-                    <div className="mb-3">
-                      <input
-                        type="email"
-                        className="form-control"
-                        name="email"
-                        placeholder="Email"
-                        value={values.email}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                      />
-                      <span
-                        className="error"
-                        style={{ color: "red", fontSize: "14px" }}
-                      >
-                        {errors.email}
-                      </span>
-                      {errors.email && touched.email ? (
-                        <BiErrorCircle
-                          style={{
-                            float: "right",
-                            marginTop: "5px",
-                            color: "red",
-                          }}
-                        />
-                      ) : null}
-                    </div>
-                    <div className="mb-3">
-                      <PhoneInput
-                        country={"in"}
-                        countryCodeEditable={false}
-                        enableSearch={true}
-                        inputProps={{
-                          name: "phoneNumber",
-                        }}
-                        onChange={(value) =>
-                          setFieldValue("phoneNumber", "+".concat(value).trim())
-                        }
-                        value={values.phoneNumber}
-                        inputStyle={{
-                          width: "100%",
-                          padding: "1.2rem 0 1.2rem 3rem",
-                        }}
-                        // disabled={loading}
-                      />
-                      <span
-                        className="error"
-                        style={{ color: "red", fontSize: "14px" }}
-                      >
-                        {errors.phoneNumber}
-                      </span>
-                      {errors.phoneNumber && touched.phoneNumber ? (
-                        <BiErrorCircle
-                          style={{
-                            float: "right",
-                            marginTop: "5px",
-                            color: "red",
-                          }}
-                        />
-                      ) : null}
-                    </div>
-                    <div className="mb-3">
-                      <textarea
-                        className="form-control"
-                        name="projectRequirement"
-                        rows={3}
-                        placeholder="Project Requirement*"
-                        defaultValue={""}
-                        value={values.projectRequirement}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                      />
-                      <span
-                        className="error"
-                        style={{ color: "red", fontSize: "14px" }}
-                      >
-                        {errors.projectRequirement}
-                      </span>
-                      {errors.projectRequirement &&
-                      touched.projectRequirement ? (
-                        <BiErrorCircle
-                          style={{
-                            float: "right",
-                            marginTop: "5px",
-                            color: "red",
-                          }}
-                        />
-                      ) : null}
-                    </div>
-                    <ReCAPTCHA
-                      style={{ padding: "15px 15px" }}
-                      sitekey={SITE_KEY}
-                      name="recaptchaToken"
-                      onChange={onChange}
-                      ref={captchaRef}
-                      value={values.recaptchaToken}
-                    />
-                    {recaptchavalue !== "" ? null : (
-                      <span
-                        className="error"
-                        style={{ color: "red", fontSize: "13px" }}
-                      >
-                        {errors.recaptchaToken}
-                      </span>
-                    )}
-                    <div className="text-center">
-                      <button
-                        type="submit"
-                        className="submit__btn"
-                        // onSubmit={handleSubmit}
-                      >
-                        {loading ? "loading..." : "submit"}
-                      </button>
-                    </div>
-                  </form>
+              <form onSubmit={handleSubmit(handlePost)}>
+                <div className="mb-3">
+                  <input
+                    type="text"
+                    name="name"
+                    className="form-control"
+                    placeholder="Name"
+                    {...register("name")}
+                  />
+                  <span className="required_error">
+                    {errors?.name?.message}
+                  </span>
+                </div>
+                <div className="mb-3">
+                  <input
+                    type="email"
+                    className="form-control"
+                    name="email"
+                    placeholder="Email"
+                    {...register("email")}
+                  />
+                  <span className="required_error">
+                    {errors?.email?.message}
+                  </span>
+                </div>
+                <div className="mb-3">
+                  <PhoneInput
+                    country={"in"}
+                    countryCodeEditable={false}
+                    enableSearch={true}
+                    inputProps={{
+                      name: "phoneNumber",
+                    }}
+                    onChange={(value) =>
+                      setValue("phoneNumber", "+".concat(value).trim())
+                    }
+                    value={getValues().phoneNumber}
+                    inputStyle={{
+                      width: "100%",
+                      padding: "1.2rem 0 1.2rem 3rem",
+                    }}
+                    disabled={loading}
+                  />
+                  <span className="required_error">
+                    {errors?.phoneNumber?.message}
+                  </span>
+                </div>
+                <div className="mb-3">
+                  <textarea
+                    className="form-control"
+                    name="projectRequirement"
+                    rows={3}
+                    placeholder="Project Requirement*"
+                    defaultValue={""}
+                    {...register("projectRequirement")}
+                  />
+                  <span className="required_error">
+                    {errors?.projectRequirement?.message}
+                  </span>
+                </div>
+                <ReCAPTCHA
+                  style={{ padding: "15px 15px" }}
+                  sitekey={SITE_KEY}
+                  name="recaptchaToken"
+                  onChange={onChange}
+                  ref={captchaRef}
+                />
+                {recaptchavalue !== "" ? null : (
+                  <span className="required_error">
+                    {errors?.recaptchaToken?.message}
+                  </span>
                 )}
-              </Formik>
+                <div className="text-center">
+                  <button
+                    type="submit"
+                    className="submit__btn"
+                    onSubmit={handleSubmit}
+                  >
+                    {loading ? "loading..." : "submit"}
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>

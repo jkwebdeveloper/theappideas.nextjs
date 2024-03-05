@@ -1,47 +1,47 @@
-import React, { useEffect, useState } from 'react'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-import Link from 'next/link';
-import Image from 'next/image';
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Link from "next/link";
+import Image from "next/image";
 
-import background from '../../../public/assets/images/Home-our-services/bg-download.svg'
-import background1 from '../../../public/assets/images/Home-our-services/download (1).png'
+import background from "../../../public/assets/images/Home-our-services/bg-download.svg";
+import background1 from "../../../public/assets/images/Home-our-services/download (1).png";
 
-import UnityMobileApp from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/UnityMobileApp.webp'
-import Apps from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/Mobile-Apps-Development.png'
-import Game from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/Game-App-Development-Company.webp'
+import UnityMobileApp from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/UnityMobileApp.webp";
+import Apps from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/Mobile-Apps-Development.png";
+import Game from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/Game-App-Development-Company.webp";
 
-import Laravel from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/1/CUSTOM CODEIGNITER APPS.svg'
-import Offer from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/1/CODEIGNITER THEME INTEGRATION.svg'
-import Features from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/1/Provide UPGRADE AND SUPPORT.svg'
-import Secure from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/1/WEB DEVELOPMENT.svg'
-import Consulting from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/1/3RD PARTY API INTEGRATION.svg'
+import Laravel from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/1/CUSTOM CODEIGNITER APPS.svg";
+import Offer from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/1/CODEIGNITER THEME INTEGRATION.svg";
+import Features from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/1/Provide UPGRADE AND SUPPORT.svg";
+import Secure from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/1/WEB DEVELOPMENT.svg";
+import Consulting from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/1/3RD PARTY API INTEGRATION.svg";
 
-import Expertise from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/EXPERIENCE AND EXPERTISE.svg'
-import Implement from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/AGILE DEVELOPMENT.svg'
-import Affordable from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/TRANSPARENT AND TIME HONOURED DEVELOPMENT.svg'
-import STRONG from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/A Strong Portfolio.svg'
-import PRICING from '../../../public/assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/Competitive price.svg'
+import Expertise from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/EXPERIENCE AND EXPERTISE.svg";
+import Implement from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/AGILE DEVELOPMENT.svg";
+import Affordable from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/TRANSPARENT AND TIME HONOURED DEVELOPMENT.svg";
+import STRONG from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/A Strong Portfolio.svg";
+import PRICING from "../../../public/assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/Competitive price.svg";
 
-import { Helmet } from 'react-helmet'
-import Header from '../../../components/Header/Header';
-import Footer from '../../../components/Footer';
+import { Helmet } from "react-helmet";
+import Header from "../../../components/Header/Header";
+import Footer from "../../../components/Footer";
 import ContactUs from "../../../components/ContactUs";
 import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import HeroSection from '../../../components/HeroSection';
-import Whatsapp from '../../../components/Whatsapp';
-import GetAQuoteModal from '../../../components/GetAQuoteModal';
+import HeroSection from "../../../components/HeroSection";
+import Whatsapp from "../../../components/Whatsapp";
+import GetAQuoteModal from "../../../components/GetAQuoteModal";
 
 const HireCodeIgniter = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
-    AOS.init()
-  }, [])
+    AOS.init();
+  }, []);
   return (
     <>
       <Helmet title="Hire CodeIgniter Developers | Hire Expert CodeIgniter Web Developer" />
-      <Header setOpenModal={setModalOpen}/>
+      <Header setOpenModal={setModalOpen} />
       {/* Banner Section Start */}
       <HeroSection
         title="Hire CodeIgniter App Developers In India"
@@ -63,17 +63,17 @@ const HireCodeIgniter = () => {
           <div className="Title">
             <h3>Our Feat in CodeIgniter Development</h3>
             <p>
-              We are into{' '}
+              We are into{" "}
               <Link
                 href="/web-development"
                 className="Title_Color"
-                style={{ color: '#d6aa0b' }}
+                style={{ color: "#d6aa0b" }}
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                  window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
                 <b> web development</b>
-              </Link>{' '}
+              </Link>{" "}
               for years and our experience with the PHP and PHP based frameworks
               goes well beyond a decade. We are one of the early adopters of
               CodeIgniter framework and over the years have built an array of
@@ -90,13 +90,14 @@ const HireCodeIgniter = () => {
             </p>
             <div className="text-center">
               <Link
-                href="/contact-us"  className='text-decoration-none'
+                href="/contact-us"
+                className="text-decoration-none"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                  window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
-                <div className="contact_btn" style={{ color: '#000' }}>
-                  Contact us{' '}
+                <div className="contact_btn" style={{ color: "#000" }}>
+                  Contact us{" "}
                 </div>
               </Link>
             </div>
@@ -121,7 +122,7 @@ const HireCodeIgniter = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '425px' }}
+                style={{ height: "425px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -133,10 +134,12 @@ const HireCodeIgniter = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={50} height={57}
+                  <Image
+                    width={50}
+                    height={57}
                     src={Laravel}
                     alt="Laravel Web Application Development"
-                    style={{ width: '50px' }}
+                    style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
@@ -160,7 +163,7 @@ const HireCodeIgniter = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '425px' }}
+                style={{ height: "425px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -172,10 +175,12 @@ const HireCodeIgniter = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={50} height={50}
+                  <Image
+                    width={50}
+                    height={50}
                     src={Offer}
                     alt="Offer Customization"
-                    style={{ width: '50px' }}
+                    style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
@@ -199,7 +204,7 @@ const HireCodeIgniter = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '425px' }}
+                style={{ height: "425px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -211,19 +216,20 @@ const HireCodeIgniter = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={50} height={50}
+                  <Image
+                    width={50}
+                    height={50}
                     src={Features}
                     alt="CUSTOM WORDPRESS DEVELOPMENT"
-                    style={{ width: '50px' }}
+                    style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
                   <div>UPGRADE AND SUPPORT</div>
                 </h5>
                 <div className="text">
-                  We also offer experienced IOS developers who can address
-                  issues from time to time and give facelift to your apps with
-                  timely and new updates and upgrades.
+                  We also have expert IOS developers that can fix difficulties
+                  and update your applications regularly.
                 </div>
                 {/* <div className="arrow-icon">
                   <HiOutlineArrowRight />
@@ -238,7 +244,7 @@ const HireCodeIgniter = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '400px' }}
+                style={{ height: "400px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -250,10 +256,12 @@ const HireCodeIgniter = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={50} height={50}
+                  <Image
+                    width={50}
+                    height={50}
                     src={Secure}
                     alt="Secure Web Solutions"
-                    style={{ width: '50px' }}
+                    style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
@@ -277,7 +285,7 @@ const HireCodeIgniter = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '400px' }}
+                style={{ height: "400px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -289,10 +297,12 @@ const HireCodeIgniter = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={50} height={50}
+                  <Image
+                    width={50}
+                    height={50}
                     src={Consulting}
                     alt="Laravel Consulting Services"
-                    style={{ width: '50px' }}
+                    style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
@@ -335,7 +345,7 @@ const HireCodeIgniter = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '385px' }}
+                style={{ height: "385px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -347,10 +357,12 @@ const HireCodeIgniter = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={70} height={81}
+                  <Image
+                    width={70}
+                    height={81}
                     src={Expertise}
                     alt="Expertise In Web Solutions"
-                    style={{ width: '70px' }}
+                    style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
@@ -374,7 +386,7 @@ const HireCodeIgniter = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '385px' }}
+                style={{ height: "385px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -386,16 +398,18 @@ const HireCodeIgniter = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={70} height={70}
+                  <Image
+                    width={70}
+                    height={70}
                     src={STRONG}
                     alt="Sophisticated Portfolio"
-                    style={{ width: '70px' }}
+                    style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
                   <div>A STRONG PORTFOLIO</div>
                 </h5>
-                <div className="text" style={{ marginBottom: '-26px' }}>
+                <div className="text" style={{ marginBottom: "-26px" }}>
                   As of now we are credited with a bounty of most successful
                   CodeIgniter apps across several business niches.
                 </div>
@@ -412,7 +426,7 @@ const HireCodeIgniter = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '385px' }}
+                style={{ height: "385px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -424,10 +438,12 @@ const HireCodeIgniter = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={70} height={70}
+                  <Image
+                    width={70}
+                    height={70}
                     src={Implement}
                     alt="Implement Agile Methods"
-                    style={{ width: '70px' }}
+                    style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
@@ -451,7 +467,7 @@ const HireCodeIgniter = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '385px' }}
+                style={{ height: "385px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -463,18 +479,18 @@ const HireCodeIgniter = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={70} height={70}
+                  <Image
+                    width={70}
+                    height={70}
                     src={Affordable}
                     alt="Affordable Costing"
-                    style={{ width: '70px' }}
+                    style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
-                  <div>
-                    TRANSPARENT AND TIME HONOURED DEVELOPMENT
-                  </div>
+                  <div>TRANSPARENT AND TIME HONOURED DEVELOPMENT</div>
                 </h5>
-                <div className="text" style={{ marginBottom: '-25px' }}>
+                <div className="text" style={{ marginBottom: "-25px" }}>
                   With our CodeIgniter developers, you can ensure a transparent
                   development process and completion of project deadlines.
                 </div>
@@ -491,7 +507,7 @@ const HireCodeIgniter = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: '385px' }}
+                style={{ height: "385px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -503,10 +519,12 @@ const HireCodeIgniter = () => {
                   style={{ backgroundImage: `url(${background1})` }}
                 />
                 <div className="icon-box">
-                  <Image width={70} height={70}
+                  <Image
+                    width={70}
+                    height={70}
                     src={PRICING}
                     alt="Time-Bound Deployment"
-                    style={{ width: '70px' }}
+                    style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
@@ -530,17 +548,17 @@ const HireCodeIgniter = () => {
       <ContactUs
         question="Do you want to know more about the expertise of our
                   CodeIgniter developers? Just feel free to contact us."
-      />{' '}
+      />{" "}
       {/* Contact Section End */}
-      <Whatsapp/>
+      <Whatsapp />
       <GetAQuoteModal
         setOpenModal={setModalOpen}
         openModal={modalOpen}
         handleCloseModal={() => setModalOpen(false)}
       />
-      <Footer/>
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default HireCodeIgniter
+export default HireCodeIgniter;
