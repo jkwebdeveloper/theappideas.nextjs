@@ -1,6 +1,6 @@
 // import { Country } from "country-state-city";
 import React, { useRef, useState } from "react";
-import { AiFillCloseCircle } from "react-icons/ai";
+import { AiFillCloseCircle, AiOutlineClose } from "react-icons/ai";
 import ReactModal from "react-modal";
 import ValidationSchema from "./schemas";
 import axios from "axios";
@@ -10,12 +10,14 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import toast from "react-hot-toast";
+import success from "../public/assets/images/successfull.json";
 
 import {
   isPossiblePhoneNumber,
   isValidPhoneNumber,
 } from "react-phone-number-input";
 import { useDispatch } from "react-redux";
+import Lottie from "lottie-react";
 
 // localhost Key
 const SITE_KEY = "6LflLYApAAAAAA94dzKNSl35WtkPT9X6VfLH5p_f";
@@ -24,6 +26,8 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
   const [loading, setLoading] = useState(false);
   // const [countries, setCountries] = useState([]);
   const [recaptchavalue, SetRecaptchaValue] = useState("");
+  const [successModal, setSuccessModal] = useState(false);
+
   const onChange = (value) => {
     SetRecaptchaValue(value);
     console.log(value, "recaptcha");
@@ -66,9 +70,10 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
       .then((res) => {
         console.log(res, "=======res=======");
         SetRecaptchaValue("");
+        setSuccessModal(true);
         toast.success(res?.data?.message, {
-          zIndex:"9999px"
-        })
+          zIndex: "9999px",
+        });
         reset();
         captchaRef.current?.reset();
         setLoading(false);
@@ -193,6 +198,36 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
               </form>
             </div>
           </div>
+          {successModal && (
+            <div
+              className="get_a_quote_modal"
+              onClick={() => setSuccessModal(false)}
+            >
+              <div className="modal_box">
+                <AiOutlineClose
+                  onClick={() => setSuccessModal(false)}
+                  style={{
+                    cursor: "pointer",
+                    position: "absolute",
+                    right: "30px",
+                  }}
+                />
+                <div className="lottie">
+                  <Lottie
+                    animationData={success}
+                    loop={true}
+                    style={{
+                      width: "200px",
+                      margin: "0 auto",
+                    }}
+                  />
+                </div>
+                <div>
+                  <p>Thanks for submitting an Enquiry</p>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </section>
     </ReactModal>

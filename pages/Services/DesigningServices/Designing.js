@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Work from "../../../components/Workdone/Work";
 import AOS from "aos";
 import Image from "next/image";
@@ -24,9 +24,20 @@ import TestiMonial from "../../../components/Testimonial/TestiMonial";
 // import { getFreeQuoteSchema } from "../../schemas";
 import Whatsapp from "../../../components/Whatsapp";
 import GetAQuoteModal from "../../../components/GetAQuoteModal";
-import { getFreeQuoteSchema } from "../../../components/schemas";
+import ValidationSchema, {
+  getFreeQuoteSchema,
+} from "../../../components/schemas";
 import banner from "../../../public/assets/images/MobileAppDev/bg.png";
 import contact from "../../../public/assets/images/MobileAppDev/contact-bg.png";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
+import { ToastContainer } from "react-toastify";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import toast from "react-hot-toast";
+
+// localhost Key
+const SITE_KEY = "6LflLYApAAAAAA94dzKNSl35WtkPT9X6VfLH5p_f";
 
 const ServiceProvideData = [
   {
@@ -177,14 +188,6 @@ const IndustriesData = [
   },
 ];
 
-// Industries  section images
-const initialValues = {
-  name: "",
-  email: "",
-  country: "",
-  phoneNumber: "",
-  projectReq: "",
-};
 const Designing = () => {
   const [activeService, setActiveService] = useState("banner_designing");
   const [activeWeServe, setActiveWeServe] = useState("security_gaurd");
@@ -200,6 +203,7 @@ const Designing = () => {
     SetRecaptchaValue(value);
     console.log(value, "recaptcha");
   };
+  const captchaRef = useRef();
 
   const toggleOpen = (i) => {
     if (openServicesProvide === i) {
@@ -213,8 +217,23 @@ const Designing = () => {
     }
     SetOpenIndustries(i);
   };
+  const { getFreeQuoteSchema } = ValidationSchema();
+  const {
+    register,
+    handleSubmit,
+    getValues,
+    setValue,
+    control,
+    watch,
+    reset,
+    formState: { errors },
+  } = useForm({
+    shouldFocusError: true,
+    resolver: yupResolver(getFreeQuoteSchema),
+  });
 
   const handlePost = (values) => {
+    console.log(values, "values");
     setLoading(true);
     axios("https://the-app-ideas.onrender.com/api/contact", {
       method: "post",
@@ -222,21 +241,27 @@ const Designing = () => {
         name: values.name,
         email: values.email,
         phoneNumber: values.phoneNumber,
-        skypeId: values.skypeId,
-        budget: values.budget,
         country: values.country,
-        projectRequirement: values.projectReq,
+        projectRequirement: values.projectRequirement,
+        recaptchaToken: recaptchavalue,
       },
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "multipart/form-data",
       },
     })
       .then((res) => {
-        console.log(res.data);
+        console.log(res, "=======res=======");
+        SetRecaptchaValue("");
+        toast.success(res?.data?.message, {
+          zIndex: "9999px",
+        });
+        reset();
+        captchaRef.current?.reset();
         setLoading(false);
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err, "=========error======");
+        toast.error("Phone is invalid", { duration: 3000 });
         setLoading(false);
       });
   };
@@ -249,16 +274,6 @@ const Designing = () => {
     AOS.init();
   }, []);
 
-  const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
-    useFormik({
-      initialValues: initialValues,
-      validationSchema: getFreeQuoteSchema,
-      onSubmit: (values, action) => {
-        handlePost(values);
-        console.log(values);
-        // action.resetForm();
-      },
-    });
   return (
     <>
       <Helmet title="designing services - THE APP IDEAS" />
@@ -320,7 +335,7 @@ const Designing = () => {
                 </div>
                 <div className="contact__body">
                   <div className="contact__form">
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit(handlePost)}>
                       <div className="row g-3">
                         <div className="col-sm-12 my-3">
                           <input
@@ -330,25 +345,11 @@ const Designing = () => {
                             className="form-control"
                             placeholder="Name"
                             aria-label="Name*"
-                            value={values.name}
-                            onChange={handleChange}
-                            onBlur={handleBlur}
+                            {...register("name")}
                           />
-                          <span
-                            className="error"
-                            style={{ color: "red", fontSize: "14px" }}
-                          >
-                            {errors.name}
+                          <span className="required_error">
+                            {errors?.name?.message}
                           </span>
-                          {errors.name && touched.name ? (
-                            <BiErrorCircle
-                              style={{
-                                float: "right",
-                                marginTop: "5px",
-                                color: "red",
-                              }}
-                            />
-                          ) : null}
                         </div>
                         <div className="col-sm-12">
                           <input
@@ -359,117 +360,80 @@ const Designing = () => {
                             placeholder="Email"
                             id="email"
                             aria-label="Email"
-                            value={values.email}
-                            onChange={handleChange}
-                            onBlur={handleBlur}
+                            {...register("email")}
                           />
-                          <span
-                            className="error"
-                            style={{ color: "red", fontSize: "14px" }}
-                          >
-                            {errors.email}
+                          <span className="required_error">
+                            {errors?.email?.message}
                           </span>
-                          {errors.email && touched.email ? (
-                            <BiErrorCircle
-                              style={{
-                                float: "right",
-                                marginTop: "5px",
-                                color: "red",
-                              }}
-                            />
-                          ) : null}
                         </div>
                         <div className="col-sm-6 h-100 select__country my-3">
                           <select
                             className="select2 w-100 h-100"
                             name="country"
-                            value={values.country}
-                            onChange={handleChange}
-                            onBlur={handleBlur}
                           >
                             <option label="country"></option>
                             {countries.map((country) => (
-                              <option key={country.name} value={country.name}>
-                                {country.name}
-                              </option>
+                              <option
+                                value={country.name}
+                                label={country.name}
+                                key={country.name}
+                                {...register("country")}
+                              />
                             ))}
                           </select>
-                          <span
-                            className="error"
-                            style={{ color: "red", fontSize: "14px" }}
-                          >
-                            {errors.country}
+                          <span className="required_error">
+                            {errors?.country?.message}
                           </span>
-                          {errors.country && touched.country ? (
-                            <BiErrorCircle
-                              style={{
-                                float: "right",
-                                marginTop: "5px",
-                                color: "red",
-                              }}
-                            />
-                          ) : null}
                         </div>
                         <div className="col-sm-6 my-3">
-                          <input
-                            type="number"
-                            name="phoneNumber"
-                            className="form-control"
-                            placeholder="Phone Number*"
-                            aria-label="Phone Number"
-                            value={values.phoneNumber}
-                            onChange={handleChange}
-                            onBlur={handleBlur}
+                          <PhoneInput
+                            countryCodeEditable={false}
+                            enableSearch={true}
+                            inputProps={{
+                              name: "phoneNumber",
+                            }}
+                            inputStyle={{
+                              width: "100%",
+                              padding: "15px 0px 21px 50px",
+                            }}
+                            country={"in"}
+                            placeholder="Phone Number"
+                            onChange={(value) =>
+                              setValue("phoneNumber", "+".concat(value).trim())
+                            }
+                            value={getValues().phoneNumber}
+                            disabled={loading}
                           />
-                          <span
-                            className="error"
-                            style={{ color: "red", fontSize: "14px" }}
-                          >
-                            {errors.phoneNumber}
+                          <span className="required_error">
+                            {errors?.phoneNumber?.message}
                           </span>
-                          {errors.phoneNumber && touched.phoneNumber ? (
-                            <BiErrorCircle
-                              style={{
-                                float: "right",
-                                marginTop: "5px",
-                                color: "red",
-                              }}
-                            />
-                          ) : null}
                         </div>
                         <div className="col-sm-12">
                           <textarea
                             className="form-control"
                             id="exampleFormControlTextarea1"
                             rows={3}
-                            name="projectReq"
+                            name="projectRequirement"
                             placeholder="Project Requirement*"
                             defaultValue={""}
-                            value={values.projectReq}
-                            onChange={handleChange}
-                            onBlur={handleBlur}
+                            {...register("projectRequirement")}
                           />
-                          <span
-                            className="error"
-                            style={{ color: "red", fontSize: "14px" }}
-                          >
-                            {errors.projectReq}
+                          <span className="required_error">
+                            {errors?.projectRequirement?.message}
                           </span>
-                          {errors.projectReq && touched.projectReq ? (
-                            <BiErrorCircle
-                              style={{
-                                float: "right",
-                                marginTop: "5px",
-                                color: "red",
-                              }}
-                            />
-                          ) : null}
                         </div>
                         <ReCAPTCHA
                           style={{ padding: "15px 15px" }}
-                          sitekey="Your Client site key"
+                          sitekey={SITE_KEY}
                           onChange={onChange}
+                          name="recaptchaToken"
+                          ref={captchaRef}
                         />
+                        {recaptchavalue !== "" ? null : (
+                          <span className="required_error">
+                            {errors?.recaptchaToken?.message}
+                          </span>
+                        )}
                         <div className="col-sm-12 text-center my-3">
                           <button type="submit" className="request__btn">
                             {loading ? "loading..." : "Request a FREE Quote"}
@@ -485,6 +449,18 @@ const Designing = () => {
           </div>
         </div>
       </section>
+      <ToastContainer
+        position="top-center"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       {/* Banner Section End */}
       {/* Service Section Start */}
       <section className="service__provide__section py-5">

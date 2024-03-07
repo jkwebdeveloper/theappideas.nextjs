@@ -2227,7 +2227,6 @@ section {
   background-color: #fff;
 }
 
-
 .testimonial_content {
   text-align: center;
   margin-top: 40px;
@@ -4881,12 +4880,12 @@ Title .Title_Color {
 
 /* new  */
 
-.inner-box:hover .text_heading{
-  color:#ffffff;
+.inner-box:hover .text_heading {
+  color: #ffffff;
 }
 
-a:hover{
-  text-decoration: none!important;
+a:hover {
+  text-decoration: none !important;
 }
 
 @media (max-width: 1023px) {
@@ -4902,4 +4901,35 @@ a:hover{
 /* =========== Phone Input css end ==========  */
 .required_error {
   color: red;
+}
+
+.get_a_quote_modal {
+  position: absolute !important;
+  inset: 0 !important;
+  border: 1px solid rgb(204, 204, 204) !important;
+  background: transparent !important;
+  overflow: hidden !important;
+  border-radius: 4px !important;
+  outline: none !important;
+  padding: 20px !important;
+  z-index: 999 !important;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+}
+.modal_box {
+  background-color: #fff;
+  width: 40%;
+  border-radius: 12px;
+  position: relative;
+  justify-content: center;
+  justify-items: center;
+  overflow-y: auto;
+  margin: 0 auto;
+  padding: 25px;
+  color: #000;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  top: 100px;
+}
+.modal_box p {
+  text-align: center;
 }
