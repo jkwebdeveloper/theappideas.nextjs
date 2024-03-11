@@ -18,6 +18,8 @@ import {
 } from "react-phone-number-input";
 import { useDispatch } from "react-redux";
 import Lottie from "lottie-react";
+import Link from "next/link";
+import { Navigate } from "react-router-dom";
 
 // localhost Key
 const SITE_KEY = "6LflLYApAAAAAA94dzKNSl35WtkPT9X6VfLH5p_f";
@@ -75,6 +77,7 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
           zIndex: "9999px",
         });
         reset();
+        Navigate("/")
         captchaRef.current?.reset();
         setLoading(false);
       })
@@ -204,14 +207,16 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
               onClick={() => setSuccessModal(false)}
             >
               <div className="modal_box">
-                <AiOutlineClose
-                  onClick={() => setSuccessModal(false)}
-                  style={{
-                    cursor: "pointer",
-                    position: "absolute",
-                    right: "30px",
-                  }}
-                />
+                <Link href="/">
+                  <AiOutlineClose
+                    onClick={() => setSuccessModal(false)}
+                    style={{
+                      cursor: "pointer",
+                      position: "absolute",
+                      right: "30px",
+                    }}
+                  />
+                </Link>
                 <div className="lottie">
                   <Lottie
                     animationData={success}

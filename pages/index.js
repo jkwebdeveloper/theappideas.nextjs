@@ -9,7 +9,6 @@ import Banner from "../components/Home/Banner/Banner";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer";
 import Head from "next/head";
-
 import axios from "axios";
 import OndemandProduct from "../components/Home/OndemandProducts/OndemandProduct";
 import WhyChoose from "../components/Home/Why Choose/WhyChoose";
