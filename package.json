@@ -38,7 +38,7 @@
     "yup": "^1.2.0"
   },
   "scripts": {
-    "dev": "next",
+    "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start"
   },

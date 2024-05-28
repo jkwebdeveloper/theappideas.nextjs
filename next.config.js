@@ -1,6 +1,9 @@
 // next.config.js
 
 module.exports = {
+  server: {
+    port: 3001,
+  },
   images: {
     domains: [
       "the-app-ideas.onrender.com",
